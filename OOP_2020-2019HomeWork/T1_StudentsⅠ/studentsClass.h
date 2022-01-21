@@ -11,7 +11,6 @@
 #include <string>
 #include <vector>
 using std::string;using std::vector;
-const int MaxNumOfScore = 3;
 
 class Students{
 private:
