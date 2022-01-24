@@ -7,7 +7,6 @@
  */
 #ifndef __STUDENTS__
 #define __STUDENTS__
-
 #include <string>
 #include <vector>
 using std::string;using std::vector;
