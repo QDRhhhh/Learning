@@ -5,7 +5,6 @@
  * Summary:   The Entrance of the program.
  * 
  */
-
 #include <iostream>
 #include <iomanip>
 #include <cstdio>

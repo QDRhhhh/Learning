@@ -1,3 +1,10 @@
+/* 
+ *
+ * FileName:  studentsClass.cpp
+ * Auther:    Isshiki修
+ * Summary:   The defination of the class "Students".
+ * 
+ */
 #include "studentsClass.h"
 
 Students::Students(int ID,string name,vector<float> score){
