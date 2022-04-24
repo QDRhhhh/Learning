@@ -18,7 +18,7 @@ void init();
 void forward(double dis);
 
 // Be used to change the current angle of cursor 
-// clockwise by delta angle ang(double).
+// anti-clockwise by delta angle ang(double).
 void turn(double ang);
 
 // Be used to move the cursor int the current 
