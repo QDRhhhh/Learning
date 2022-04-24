@@ -39,7 +39,7 @@ void forward(double dis){
 }
 
 // Be used to change the current angle of cursor 
-// clockwise by delta angle ang(double).
+// anti-clockwise by delta angle ang(double).
 void turn(double ang){
     ANGLE += ang / 180 * 3.1415926535;
 }
