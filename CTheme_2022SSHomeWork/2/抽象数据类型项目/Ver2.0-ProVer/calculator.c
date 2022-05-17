@@ -3,7 +3,8 @@
 // -------------------------------------------------------
 // some utils interface that needn't to be expose
 
-// change a number of string type to the one of double type
+// change a number(string) to the one with double type
+// TODO: There are ready-made libraries.
 double StrtoNum(char * num){
     double ret = 0;
     int offset = 0;
@@ -30,6 +31,8 @@ double calShortExpr(double u, double v, char opt){
     if(opt == '*') return u*v;
     if(opt == '/') return u/v;
     if(opt == '^') return _pow(u,v);
+    // it's supported to add new binary operator, but remember update
+    // both `calShortExpr()` & `cmpGeq()` & 'isValidOption()'
 }
 
 // ( */ +- ) 
@@ -50,7 +53,7 @@ int isValidOption(char x){
 }
 
 // judge whether the func exists
-// a function is like $funcName(args,...)
+// a function is like funcName(arg) (well, multiple args is not support here)
 // and return the func id
 int isValidFunc(char * p){
     char *pp = p;
@@ -61,6 +64,7 @@ int isValidFunc(char * p){
     for(;pp != p;++pp) subStr[ len++ ] = *pp;
     subStr[len] = '\0';
 
+    // Not elegant.
     if(printLog) printf("[INFO] finding func \t[%s]\n", subStr);
 
     return isFuncExist(subStr);
@@ -75,6 +79,10 @@ char * findPair(char * p){
         if(del == 0 && hasPair) return p;
         ++p;
     }
+
+    // Not elegant.
+    if(printLog) printf("[FATAL] Parentheses do not match!");
+    exit(0);
 }
 
 // be used to push a number into the stack
@@ -149,6 +157,7 @@ Stack * toReversePolishExpression(char * str){
                 ++p;
             } else {
                 __Invalid_Sign_exitLable__: 
+                // Not elegant
                 printf("[FATAL] Invalid Syntax!\n");
                 exit(0);
             }

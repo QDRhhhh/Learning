@@ -15,12 +15,14 @@ static int printLog = 0;
 // a customized class of value
 // it can be an number or a character
 typedef struct MyGeneralElement{
+    // TODO: maybe 'ch' can be set as negative if 'negative 
+    // number is seen as minus and a positive number
     int type;
     double num; // 0
     char ch; // 1
 } Ele;
 
-// a customized stack based on array
+// a customized stack based on array (preferably pointers)
 // the element of the stack is another customized struct
 typedef struct MyStack{
     int top;
@@ -43,6 +45,7 @@ typedef struct MyStack{
 double calExpr(char * expr);
 
 // be used to set the state of logger
+// TODO: it's more elegant to make 'logger' a single library 
 void setLogStates(int x);
 
 #endif
