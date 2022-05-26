@@ -10,7 +10,6 @@
 
 #define MAXN 4096
 #define TIMER_BLINK500  1
-const int mseconds500 = 100;
 
 // A class of TextLabel.
 struct TextLabelObject{

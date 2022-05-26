@@ -148,7 +148,7 @@ void initScreen(){
 	registerKeyboardEvent(KeyboardEventProcess);
     registerCharEvent(CharEventProcess);
 	registerTimerEvent(TimerEventProcess);
-    startTimer(TIMER_BLINK500, mseconds500);
+    startTimer(TIMER_BLINK500, 100);
     return;
 }
 
