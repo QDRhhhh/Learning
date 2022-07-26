@@ -10,20 +10,20 @@
 
 ```assembly
 0011 0000 0000 0000   ; set program at x3000
-; ------------------------------------------------------------------------------- ;
-; Read a word at x3100.                                                           ;
-; Check if it contains 4 continuous 1, and put the answer to R2 (1 or 0).         ;
-;                                                                                 ;
-; Special define of register:                                                     ;
-; R0: store input                                                                 ;
-; R1: mask                                                                        ;
-; R2: output and zero                                                             ;
-; R3: result of <(mask AND input) - mask>                                         ;
-; R4:                                                                             ;
-; R5: -1                                                                          ;
-; R6: -mask                                                                       ;
-; R7: rest cnt of loop (start from 13)                                            ;
-; ------------------------------------------------------------------------------- ;
+; ---------------------------------------------------------------------------- ;
+; Read a word at x3100.                                                        ;
+; Check if it contains 4 continuous 1, and put the answer to R2 (1 or 0).      ;
+;                                                                              ;
+; Special define of register:                                                  ;
+; R0: store input                                                              ;
+; R1: mask                                                                     ;
+; R2: output and zero                                                          ;
+; R3: result of <(mask AND input) - mask>                                      ;
+; R4:                                                                          ;
+; R5: -1                                                                       ;
+; R6: -mask                                                                    ;
+; R7: rest cnt of loop (start from 13)                                         ;
+; ---------------------------------------------------------------------------- ;
 
 ; Init:
 0010 000 011111111      ; LD:   R0 <- mem[PC+x00ff] (expect x3100) ; Get input.
@@ -56,14 +56,6 @@
 
 ## Questions TA asked you and your answer in Check
 
-| Q:   |
-| ---- |
-| A:   |
+Q: explain the algorithm.
 
-| Q:   |
-| ---- |
-| A:   |
-
-| Q:   |
-| ---- |
-| A:   |
+A: see subtitle above.
