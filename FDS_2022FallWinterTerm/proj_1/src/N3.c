@@ -1,6 +1,5 @@
 #include "N3.h"
 
-#include "helper/CNewbieHelper.h"
 
 // This function will preprocess the sumM and make it to
 // a matrix that has the following feature:
@@ -49,8 +48,8 @@ int calMaxSubSegmentSum(Matrix * vec){
 // in mat.
 int calMaxSubMatrixSum(Matrix * mat){
     // Logger util.
-    SET_CNH_SHOW(0);
-    SET_CNH_BRIEF_MODE(1);
+    // SET_CNH_SHOW(0);
+    // SET_CNH_BRIEF_MODE(1);
 
     int ret = -0x3F3F3F3F;
 

@@ -3,6 +3,7 @@
 
 #include "stdlib.h"
 #include "matrix_utils.h"
+// #include "helper/CNewbieHelper.h"
 
 int calMaxSubMatrixSum(Matrix * mat);
 
