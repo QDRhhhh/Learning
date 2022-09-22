@@ -2,14 +2,10 @@
 #include "stdlib.h"
 #include "time.h"
 
-#include "matrix_utils.h"
-#include "N3.h"
-
-#define MAX_N 1024
-#define MAX_M 1024
-
 #include "helper/CNewbieHelper.h"
 #include "matrix_utils.h"
+#include "N3.h"
+#include "N4.h"
 #include "N6.h"
 
 int main(){
@@ -27,7 +23,7 @@ int main(){
     M_DEL(mat);
 
     clock_t timerF = clock();
-    LOG("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLOCKS_PER_SEC); // For Mac.
-    // LOG("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLK_TCK); // For Win/Lin.
+    LOG("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLOCKS_PER_SEC);
+    // LOG("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLK_TCK);
     return 0;
 }

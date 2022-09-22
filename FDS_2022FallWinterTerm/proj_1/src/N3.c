@@ -4,14 +4,14 @@
 
 // This function will preprocess the sumM and make it to
 // a matrix that has the following feature:
-// sumM[I][J] = { \sum^{I}_{i} mat[i][J] }
+// sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
 void initSumMatrix(Matrix * sumM, Matrix * mat){
     M_CP_SHAPE(sumM, mat);
     int i, j;
     for(j = 1; j <= mat->m; ++j){
         M_ELE(sumM, 0, j) = 0;
     }
-    // sumM[I][J] = { \sum^{I}_{i} mat[i][J] }
+    // sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
     //            = sumM[I-1][J] + mat[I][J]
     for(i = 1; i <= mat->n; ++i){
         for(j = 1; j <= mat->m; ++j){
@@ -49,13 +49,13 @@ int calMaxSubSegmentSum(Matrix * vec){
 // in mat.
 int calMaxSubMatrixSum(Matrix * mat){
     // Logger util.
-    SET_CNH_SHOW(1);
+    SET_CNH_SHOW(0);
     SET_CNH_BRIEF_MODE(1);
 
     int ret = -0x3F3F3F3F;
 
     // This matrix is to store the 2d-prefix sum on the n-axis.
-    // That is, sumM[I][J] = ${ \sum^{I,J}_{i,j} mat[i][j] }$
+    // That is, sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
     Matrix sumMObj, * sumM = &sumMObj;
     initSumMatrix(sumM, mat);
     // M_SHOW(sumM); // For debug.

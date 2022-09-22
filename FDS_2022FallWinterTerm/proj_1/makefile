@@ -1,4 +1,6 @@
-method = N3
+# method = N3
+method = N4
+# method = N6
 
 run.exe: main.o $(method).o
 	gcc -o run.exe ./src/main.o ./src/$(method).o
