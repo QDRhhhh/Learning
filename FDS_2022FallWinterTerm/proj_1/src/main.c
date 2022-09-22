@@ -15,21 +15,20 @@ int main(){
     // LOG("Program Started!");
     clock_t timerI = clock();
 
-    int n, m;
     Matrix matrixObj, *mat = &matrixObj;
     M_INIT(mat);
 
     int ans = calMaxSubMatrixSum(mat);
-    printf("The ans is: %d \n", ans);
+    printf("[%d*%d]The ans is: %d \n", mat->n, mat->m, ans);
     M_DEL(mat);
 
     clock_t timerF = clock();
     double delTime = (double)(timerF-timerI)/CLOCKS_PER_SEC;
-    printf("Program Finished in %.4lf seconds!", delTime);
+    printf("Program Finished in %.4lf seconds!\n", delTime);
     // printf("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLK_TCK);
     
-    FILE * fp = fopen("output.txt", "w+");
-    fprintf(fp, "%d %lf\n", ans, delTime);
+    FILE * fp = fopen("output.txt", "a");
+    fprintf(fp, "%d %lf \n", ans, delTime);
     fclose(fp);
     return 0;
 }

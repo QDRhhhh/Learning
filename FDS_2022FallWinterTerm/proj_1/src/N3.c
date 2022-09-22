@@ -27,7 +27,7 @@ void calFoldMatrix(Matrix * foldM, Matrix * sumM, int l1, int l2){
     int j;
     // Using the feature of prefix sum algorithm.
     for(j = 1; j <= sumM->m; ++j){
-        M_ELE(foldM, 1, j) = M_ELE(sumM, l2-1, j) - M_ELE(sumM, l1-1, j);
+        M_ELE(foldM, 1, j) = M_ELE(sumM, l2, j) - M_ELE(sumM, l1-1, j);
     }
     return;
 }
