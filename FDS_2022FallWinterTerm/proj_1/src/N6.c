@@ -25,3 +25,7 @@ int calMaxSubMatrixSum(Matrix * mat){
     }
     return ans;
 }
+
+int getMethod(){
+    return 6;
+}

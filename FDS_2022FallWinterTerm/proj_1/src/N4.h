@@ -4,6 +4,7 @@
 #include "stdlib.h"
 #include "matrix_utils.h"
 
+int getMethod();
 int calMaxSubMatrixSum(Matrix * mat);
 
 #endif

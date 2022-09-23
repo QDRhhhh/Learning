@@ -1,0 +1,3348 @@
+Method: N3,  Size: 5*5,  Round: 0
+  The ans is: 1139 
+  The delta time is: 0.000018
+Method: N3,  Size: 5*5,  Round: 1
+  The ans is: 717 
+  The delta time is: 0.000010
+Method: N3,  Size: 5*5,  Round: 2
+  The ans is: 2475 
+  The delta time is: 0.000010
+Method: N3,  Size: 5*5,  Round: 3
+  The ans is: 2745 
+  The delta time is: 0.000009
+Method: N3,  Size: 5*5,  Round: 4
+  The ans is: 733 
+  The delta time is: 0.000008
+Method: N3,  Size: 5*5,  Round: 5
+  The ans is: 1576 
+  The delta time is: 0.000008
+Method: N3,  Size: 5*5,  Round: 6
+  The ans is: 1497 
+  The delta time is: 0.000008
+Method: N3,  Size: 5*5,  Round: 7
+  The ans is: 946 
+  The delta time is: 0.000010
+Method: N3,  Size: 5*5,  Round: 8
+  The ans is: 1711 
+  The delta time is: 0.000011
+Method: N3,  Size: 5*5,  Round: 9
+  The ans is: 3186 
+  The delta time is: 0.000010
+Method: N3,  Size: 5*5,  Round: 10
+  The ans is: 1451 
+  The delta time is: 0.000009
+Method: N3,  Size: 5*5,  Round: 11
+  The ans is: 2991 
+  The delta time is: 0.000008
+Method: N3,  Size: 5*5,  Round: 12
+  The ans is: 1013 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 13
+  The ans is: 967 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 14
+  The ans is: 947 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 15
+  The ans is: 1540 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 16
+  The ans is: 3464 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 17
+  The ans is: 3034 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 18
+  The ans is: 695 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 19
+  The ans is: 916 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 20
+  The ans is: 1869 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 21
+  The ans is: 1905 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 22
+  The ans is: 828 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 23
+  The ans is: 1634 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 24
+  The ans is: 1982 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 25
+  The ans is: 2368 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 26
+  The ans is: 1094 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 27
+  The ans is: 1037 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 28
+  The ans is: 1608 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 29
+  The ans is: 3119 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 30
+  The ans is: 2457 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 31
+  The ans is: 1399 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 32
+  The ans is: 2558 
+  The delta time is: 0.000007
+Method: N3,  Size: 5*5,  Round: 33
+  The ans is: 869 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 34
+  The ans is: 1013 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 35
+  The ans is: 1622 
+  The delta time is: 0.000004
+Method: N3,  Size: 5*5,  Round: 36
+  The ans is: 1223 
+  The delta time is: 0.000006
+Method: N3,  Size: 5*5,  Round: 37
+  The ans is: 1095 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 38
+  The ans is: 1325 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 39
+  The ans is: 1495 
+  The delta time is: 0.000004
+Method: N3,  Size: 5*5,  Round: 40
+  The ans is: 1803 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 41
+  The ans is: 1640 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 42
+  The ans is: 1362 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 43
+  The ans is: 4417 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 44
+  The ans is: 2681 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 45
+  The ans is: 876 
+  The delta time is: 0.000004
+Method: N3,  Size: 5*5,  Round: 46
+  The ans is: 1378 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 47
+  The ans is: 2183 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 48
+  The ans is: 2564 
+  The delta time is: 0.000005
+Method: N3,  Size: 5*5,  Round: 49
+  The ans is: 2564 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 0
+  The ans is: 1139 
+  The delta time is: 0.000011
+Method: N4,  Size: 5*5,  Round: 1
+  The ans is: 717 
+  The delta time is: 0.000008
+Method: N4,  Size: 5*5,  Round: 2
+  The ans is: 2475 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 3
+  The ans is: 2745 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 4
+  The ans is: 733 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 5
+  The ans is: 1576 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 6
+  The ans is: 1497 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 7
+  The ans is: 946 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 8
+  The ans is: 1711 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 9
+  The ans is: 3186 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 10
+  The ans is: 1451 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 11
+  The ans is: 2991 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 12
+  The ans is: 1013 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 13
+  The ans is: 967 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 14
+  The ans is: 947 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 15
+  The ans is: 1540 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 16
+  The ans is: 3464 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 17
+  The ans is: 3034 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 18
+  The ans is: 695 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 19
+  The ans is: 916 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 20
+  The ans is: 1869 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 21
+  The ans is: 1905 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 22
+  The ans is: 828 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 23
+  The ans is: 1634 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 24
+  The ans is: 1982 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 25
+  The ans is: 2368 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 26
+  The ans is: 1094 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 27
+  The ans is: 1037 
+  The delta time is: 0.000008
+Method: N4,  Size: 5*5,  Round: 28
+  The ans is: 1608 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 29
+  The ans is: 3119 
+  The delta time is: 0.000007
+Method: N4,  Size: 5*5,  Round: 30
+  The ans is: 2457 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 31
+  The ans is: 1399 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 32
+  The ans is: 2558 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 33
+  The ans is: 869 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 34
+  The ans is: 1013 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 35
+  The ans is: 1622 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 36
+  The ans is: 1223 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 37
+  The ans is: 1095 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 38
+  The ans is: 1325 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 39
+  The ans is: 1495 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 40
+  The ans is: 1803 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 41
+  The ans is: 1640 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 42
+  The ans is: 1362 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 43
+  The ans is: 4417 
+  The delta time is: 0.000005
+Method: N4,  Size: 5*5,  Round: 44
+  The ans is: 2681 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 45
+  The ans is: 876 
+  The delta time is: 0.000006
+Method: N4,  Size: 5*5,  Round: 46
+  The ans is: 1378 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 47
+  The ans is: 2183 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 48
+  The ans is: 2564 
+  The delta time is: 0.000004
+Method: N4,  Size: 5*5,  Round: 49
+  The ans is: 2564 
+  The delta time is: 0.000006
+Method: N6,  Size: 5*5,  Round: 0
+  The ans is: 1139 
+  The delta time is: 0.000032
+Method: N6,  Size: 5*5,  Round: 1
+  The ans is: 717 
+  The delta time is: 0.000026
+Method: N6,  Size: 5*5,  Round: 2
+  The ans is: 2475 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 3
+  The ans is: 2745 
+  The delta time is: 0.000029
+Method: N6,  Size: 5*5,  Round: 4
+  The ans is: 733 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 5
+  The ans is: 1576 
+  The delta time is: 0.000020
+Method: N6,  Size: 5*5,  Round: 6
+  The ans is: 1497 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 7
+  The ans is: 946 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 8
+  The ans is: 1711 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 9
+  The ans is: 3186 
+  The delta time is: 0.000018
+Method: N6,  Size: 5*5,  Round: 10
+  The ans is: 1451 
+  The delta time is: 0.000018
+Method: N6,  Size: 5*5,  Round: 11
+  The ans is: 2991 
+  The delta time is: 0.000019
+Method: N6,  Size: 5*5,  Round: 12
+  The ans is: 1013 
+  The delta time is: 0.000018
+Method: N6,  Size: 5*5,  Round: 13
+  The ans is: 967 
+  The delta time is: 0.000018
+Method: N6,  Size: 5*5,  Round: 14
+  The ans is: 947 
+  The delta time is: 0.000018
+Method: N6,  Size: 5*5,  Round: 15
+  The ans is: 1540 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 16
+  The ans is: 3464 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 17
+  The ans is: 3034 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 18
+  The ans is: 695 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 19
+  The ans is: 916 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 20
+  The ans is: 1869 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 21
+  The ans is: 1905 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 22
+  The ans is: 828 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 23
+  The ans is: 1634 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 24
+  The ans is: 1982 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 25
+  The ans is: 2368 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 26
+  The ans is: 1094 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 27
+  The ans is: 1037 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 28
+  The ans is: 1608 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 29
+  The ans is: 3119 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 30
+  The ans is: 2457 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 31
+  The ans is: 1399 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 32
+  The ans is: 2558 
+  The delta time is: 0.000013
+Method: N6,  Size: 5*5,  Round: 33
+  The ans is: 869 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 34
+  The ans is: 1013 
+  The delta time is: 0.000014
+Method: N6,  Size: 5*5,  Round: 35
+  The ans is: 1622 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 36
+  The ans is: 1223 
+  The delta time is: 0.000012
+Method: N6,  Size: 5*5,  Round: 37
+  The ans is: 1095 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 38
+  The ans is: 1325 
+  The delta time is: 0.000012
+Method: N6,  Size: 5*5,  Round: 39
+  The ans is: 1495 
+  The delta time is: 0.000012
+Method: N6,  Size: 5*5,  Round: 40
+  The ans is: 1803 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 41
+  The ans is: 1640 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 42
+  The ans is: 1362 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 43
+  The ans is: 4417 
+  The delta time is: 0.000010
+Method: N6,  Size: 5*5,  Round: 44
+  The ans is: 2681 
+  The delta time is: 0.000012
+Method: N6,  Size: 5*5,  Round: 45
+  The ans is: 876 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 46
+  The ans is: 1378 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 47
+  The ans is: 2183 
+  The delta time is: 0.000011
+Method: N6,  Size: 5*5,  Round: 48
+  The ans is: 2564 
+  The delta time is: 0.000012
+Method: N6,  Size: 5*5,  Round: 49
+  The ans is: 2564 
+  The delta time is: 0.000012
+Method: N3,  Size: 10*10,  Round: 0
+  The ans is: 4347 
+  The delta time is: 0.000024
+Method: N3,  Size: 10*10,  Round: 1
+  The ans is: 3752 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 2
+  The ans is: 6212 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 3
+  The ans is: 2092 
+  The delta time is: 0.000019
+Method: N3,  Size: 10*10,  Round: 4
+  The ans is: 6557 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 5
+  The ans is: 3370 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 6
+  The ans is: 3315 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 7
+  The ans is: 5065 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 8
+  The ans is: 3339 
+  The delta time is: 0.000019
+Method: N3,  Size: 10*10,  Round: 9
+  The ans is: 3017 
+  The delta time is: 0.000025
+Method: N3,  Size: 10*10,  Round: 10
+  The ans is: 6598 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 11
+  The ans is: 4193 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 12
+  The ans is: 3981 
+  The delta time is: 0.000024
+Method: N3,  Size: 10*10,  Round: 13
+  The ans is: 2591 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 14
+  The ans is: 1777 
+  The delta time is: 0.000019
+Method: N3,  Size: 10*10,  Round: 15
+  The ans is: 3086 
+  The delta time is: 0.000019
+Method: N3,  Size: 10*10,  Round: 16
+  The ans is: 4442 
+  The delta time is: 0.000020
+Method: N3,  Size: 10*10,  Round: 17
+  The ans is: 2343 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 18
+  The ans is: 5631 
+  The delta time is: 0.000019
+Method: N3,  Size: 10*10,  Round: 19
+  The ans is: 6651 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 20
+  The ans is: 1736 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 21
+  The ans is: 2996 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 22
+  The ans is: 3247 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 23
+  The ans is: 3922 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 24
+  The ans is: 2851 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 25
+  The ans is: 2252 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 26
+  The ans is: 5101 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 27
+  The ans is: 3116 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 28
+  The ans is: 2151 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 29
+  The ans is: 4861 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 30
+  The ans is: 4704 
+  The delta time is: 0.000020
+Method: N3,  Size: 10*10,  Round: 31
+  The ans is: 3501 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 32
+  The ans is: 4589 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 33
+  The ans is: 1719 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 34
+  The ans is: 6202 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 35
+  The ans is: 5748 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 36
+  The ans is: 2609 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 37
+  The ans is: 3995 
+  The delta time is: 0.000026
+Method: N3,  Size: 10*10,  Round: 38
+  The ans is: 3090 
+  The delta time is: 0.000024
+Method: N3,  Size: 10*10,  Round: 39
+  The ans is: 6015 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 40
+  The ans is: 2943 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 41
+  The ans is: 3193 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 42
+  The ans is: 4754 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 43
+  The ans is: 2479 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 44
+  The ans is: 1853 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 45
+  The ans is: 2345 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 46
+  The ans is: 2109 
+  The delta time is: 0.000022
+Method: N3,  Size: 10*10,  Round: 47
+  The ans is: 3393 
+  The delta time is: 0.000023
+Method: N3,  Size: 10*10,  Round: 48
+  The ans is: 4198 
+  The delta time is: 0.000021
+Method: N3,  Size: 10*10,  Round: 49
+  The ans is: 2995 
+  The delta time is: 0.000023
+Method: N4,  Size: 10*10,  Round: 0
+  The ans is: 4347 
+  The delta time is: 0.000047
+Method: N4,  Size: 10*10,  Round: 1
+  The ans is: 3752 
+  The delta time is: 0.000046
+Method: N4,  Size: 10*10,  Round: 2
+  The ans is: 6212 
+  The delta time is: 0.000045
+Method: N4,  Size: 10*10,  Round: 3
+  The ans is: 2092 
+  The delta time is: 0.000046
+Method: N4,  Size: 10*10,  Round: 4
+  The ans is: 6557 
+  The delta time is: 0.000045
+Method: N4,  Size: 10*10,  Round: 5
+  The ans is: 3370 
+  The delta time is: 0.000043
+Method: N4,  Size: 10*10,  Round: 6
+  The ans is: 3315 
+  The delta time is: 0.000046
+Method: N4,  Size: 10*10,  Round: 7
+  The ans is: 5065 
+  The delta time is: 0.000045
+Method: N4,  Size: 10*10,  Round: 8
+  The ans is: 3339 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 9
+  The ans is: 3017 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 10
+  The ans is: 6598 
+  The delta time is: 0.000046
+Method: N4,  Size: 10*10,  Round: 11
+  The ans is: 4193 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 12
+  The ans is: 3981 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 13
+  The ans is: 2591 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 14
+  The ans is: 1777 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 15
+  The ans is: 3086 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 16
+  The ans is: 4442 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 17
+  The ans is: 2343 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 18
+  The ans is: 5631 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 19
+  The ans is: 6651 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 20
+  The ans is: 1736 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 21
+  The ans is: 2996 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 22
+  The ans is: 3247 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 23
+  The ans is: 3922 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 24
+  The ans is: 2851 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 25
+  The ans is: 2252 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 26
+  The ans is: 5101 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 27
+  The ans is: 3116 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 28
+  The ans is: 2151 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 29
+  The ans is: 4861 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 30
+  The ans is: 4704 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 31
+  The ans is: 3501 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 32
+  The ans is: 4589 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 33
+  The ans is: 1719 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 34
+  The ans is: 6202 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 35
+  The ans is: 5748 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 36
+  The ans is: 2609 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 37
+  The ans is: 3995 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 38
+  The ans is: 3090 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 39
+  The ans is: 6015 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 40
+  The ans is: 2943 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 41
+  The ans is: 3193 
+  The delta time is: 0.000037
+Method: N4,  Size: 10*10,  Round: 42
+  The ans is: 4754 
+  The delta time is: 0.000041
+Method: N4,  Size: 10*10,  Round: 43
+  The ans is: 2479 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 44
+  The ans is: 1853 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 45
+  The ans is: 2345 
+  The delta time is: 0.000035
+Method: N4,  Size: 10*10,  Round: 46
+  The ans is: 2109 
+  The delta time is: 0.000036
+Method: N4,  Size: 10*10,  Round: 47
+  The ans is: 3393 
+  The delta time is: 0.000043
+Method: N4,  Size: 10*10,  Round: 48
+  The ans is: 4198 
+  The delta time is: 0.000038
+Method: N4,  Size: 10*10,  Round: 49
+  The ans is: 2995 
+  The delta time is: 0.000035
+Method: N6,  Size: 10*10,  Round: 0
+  The ans is: 4347 
+  The delta time is: 0.000215
+Method: N6,  Size: 10*10,  Round: 1
+  The ans is: 3752 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 2
+  The ans is: 6212 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 3
+  The ans is: 2092 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 4
+  The ans is: 6557 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 5
+  The ans is: 3370 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 6
+  The ans is: 3315 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 7
+  The ans is: 5065 
+  The delta time is: 0.000205
+Method: N6,  Size: 10*10,  Round: 8
+  The ans is: 3339 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 9
+  The ans is: 3017 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 10
+  The ans is: 6598 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 11
+  The ans is: 4193 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 12
+  The ans is: 3981 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 13
+  The ans is: 2591 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 14
+  The ans is: 1777 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 15
+  The ans is: 3086 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 16
+  The ans is: 4442 
+  The delta time is: 0.000205
+Method: N6,  Size: 10*10,  Round: 17
+  The ans is: 2343 
+  The delta time is: 0.000205
+Method: N6,  Size: 10*10,  Round: 18
+  The ans is: 5631 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 19
+  The ans is: 6651 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 20
+  The ans is: 1736 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 21
+  The ans is: 2996 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 22
+  The ans is: 3247 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 23
+  The ans is: 3922 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 24
+  The ans is: 2851 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 25
+  The ans is: 2252 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 26
+  The ans is: 5101 
+  The delta time is: 0.000206
+Method: N6,  Size: 10*10,  Round: 27
+  The ans is: 3116 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 28
+  The ans is: 2151 
+  The delta time is: 0.000207
+Method: N6,  Size: 10*10,  Round: 29
+  The ans is: 4861 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 30
+  The ans is: 4704 
+  The delta time is: 0.000209
+Method: N6,  Size: 10*10,  Round: 31
+  The ans is: 3501 
+  The delta time is: 0.000208
+Method: N6,  Size: 10*10,  Round: 32
+  The ans is: 4589 
+  The delta time is: 0.000209
+Method: N6,  Size: 10*10,  Round: 33
+  The ans is: 1719 
+  The delta time is: 0.000209
+Method: N6,  Size: 10*10,  Round: 34
+  The ans is: 6202 
+  The delta time is: 0.000202
+Method: N6,  Size: 10*10,  Round: 35
+  The ans is: 5748 
+  The delta time is: 0.000183
+Method: N6,  Size: 10*10,  Round: 36
+  The ans is: 2609 
+  The delta time is: 0.000180
+Method: N6,  Size: 10*10,  Round: 37
+  The ans is: 3995 
+  The delta time is: 0.000181
+Method: N6,  Size: 10*10,  Round: 38
+  The ans is: 3090 
+  The delta time is: 0.000181
+Method: N6,  Size: 10*10,  Round: 39
+  The ans is: 6015 
+  The delta time is: 0.000179
+Method: N6,  Size: 10*10,  Round: 40
+  The ans is: 2943 
+  The delta time is: 0.000179
+Method: N6,  Size: 10*10,  Round: 41
+  The ans is: 3193 
+  The delta time is: 0.000191
+Method: N6,  Size: 10*10,  Round: 42
+  The ans is: 4754 
+  The delta time is: 0.000183
+Method: N6,  Size: 10*10,  Round: 43
+  The ans is: 2479 
+  The delta time is: 0.000180
+Method: N6,  Size: 10*10,  Round: 44
+  The ans is: 1853 
+  The delta time is: 0.000180
+Method: N6,  Size: 10*10,  Round: 45
+  The ans is: 2345 
+  The delta time is: 0.000178
+Method: N6,  Size: 10*10,  Round: 46
+  The ans is: 2109 
+  The delta time is: 0.000180
+Method: N6,  Size: 10*10,  Round: 47
+  The ans is: 3393 
+  The delta time is: 0.000179
+Method: N6,  Size: 10*10,  Round: 48
+  The ans is: 4198 
+  The delta time is: 0.000178
+Method: N6,  Size: 10*10,  Round: 49
+  The ans is: 2995 
+  The delta time is: 0.000179
+Method: N3,  Size: 15*15,  Round: 0
+  The ans is: 5240 
+  The delta time is: 0.000040
+Method: N3,  Size: 15*15,  Round: 1
+  The ans is: 7523 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 2
+  The ans is: 4689 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 3
+  The ans is: 7313 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 4
+  The ans is: 12274 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 5
+  The ans is: 9073 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 6
+  The ans is: 3226 
+  The delta time is: 0.000038
+Method: N3,  Size: 15*15,  Round: 7
+  The ans is: 3005 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 8
+  The ans is: 7901 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 9
+  The ans is: 3678 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 10
+  The ans is: 3612 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 11
+  The ans is: 6217 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 12
+  The ans is: 3770 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 13
+  The ans is: 9452 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 14
+  The ans is: 7225 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 15
+  The ans is: 9551 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 16
+  The ans is: 5507 
+  The delta time is: 0.000032
+Method: N3,  Size: 15*15,  Round: 17
+  The ans is: 6579 
+  The delta time is: 0.000033
+Method: N3,  Size: 15*15,  Round: 18
+  The ans is: 7171 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 19
+  The ans is: 2516 
+  The delta time is: 0.000039
+Method: N3,  Size: 15*15,  Round: 20
+  The ans is: 2944 
+  The delta time is: 0.000040
+Method: N3,  Size: 15*15,  Round: 21
+  The ans is: 7867 
+  The delta time is: 0.000038
+Method: N3,  Size: 15*15,  Round: 22
+  The ans is: 3399 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 23
+  The ans is: 7079 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 24
+  The ans is: 4351 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 25
+  The ans is: 7917 
+  The delta time is: 0.000038
+Method: N3,  Size: 15*15,  Round: 26
+  The ans is: 3539 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 27
+  The ans is: 9494 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 28
+  The ans is: 7405 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 29
+  The ans is: 6752 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 30
+  The ans is: 4981 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 31
+  The ans is: 4922 
+  The delta time is: 0.000033
+Method: N3,  Size: 15*15,  Round: 32
+  The ans is: 3503 
+  The delta time is: 0.000039
+Method: N3,  Size: 15*15,  Round: 33
+  The ans is: 6124 
+  The delta time is: 0.000040
+Method: N3,  Size: 15*15,  Round: 34
+  The ans is: 10001 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 35
+  The ans is: 4525 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 36
+  The ans is: 5818 
+  The delta time is: 0.000038
+Method: N3,  Size: 15*15,  Round: 37
+  The ans is: 5759 
+  The delta time is: 0.000039
+Method: N3,  Size: 15*15,  Round: 38
+  The ans is: 4804 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 39
+  The ans is: 6389 
+  The delta time is: 0.000031
+Method: N3,  Size: 15*15,  Round: 40
+  The ans is: 7313 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 41
+  The ans is: 10242 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 42
+  The ans is: 5006 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 43
+  The ans is: 6628 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 44
+  The ans is: 3614 
+  The delta time is: 0.000034
+Method: N3,  Size: 15*15,  Round: 45
+  The ans is: 4456 
+  The delta time is: 0.000035
+Method: N3,  Size: 15*15,  Round: 46
+  The ans is: 5475 
+  The delta time is: 0.000037
+Method: N3,  Size: 15*15,  Round: 47
+  The ans is: 6996 
+  The delta time is: 0.000038
+Method: N3,  Size: 15*15,  Round: 48
+  The ans is: 6041 
+  The delta time is: 0.000036
+Method: N3,  Size: 15*15,  Round: 49
+  The ans is: 7008 
+  The delta time is: 0.000034
+Method: N4,  Size: 15*15,  Round: 0
+  The ans is: 5240 
+  The delta time is: 0.000112
+Method: N4,  Size: 15*15,  Round: 1
+  The ans is: 7523 
+  The delta time is: 0.000117
+Method: N4,  Size: 15*15,  Round: 2
+  The ans is: 4689 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 3
+  The ans is: 7313 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 4
+  The ans is: 12274 
+  The delta time is: 0.000122
+Method: N4,  Size: 15*15,  Round: 5
+  The ans is: 9073 
+  The delta time is: 0.000113
+Method: N4,  Size: 15*15,  Round: 6
+  The ans is: 3226 
+  The delta time is: 0.000113
+Method: N4,  Size: 15*15,  Round: 7
+  The ans is: 3005 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 8
+  The ans is: 7901 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 9
+  The ans is: 3678 
+  The delta time is: 0.000112
+Method: N4,  Size: 15*15,  Round: 10
+  The ans is: 3612 
+  The delta time is: 0.000111
+Method: N4,  Size: 15*15,  Round: 11
+  The ans is: 6217 
+  The delta time is: 0.000111
+Method: N4,  Size: 15*15,  Round: 12
+  The ans is: 3770 
+  The delta time is: 0.000112
+Method: N4,  Size: 15*15,  Round: 13
+  The ans is: 9452 
+  The delta time is: 0.000109
+Method: N4,  Size: 15*15,  Round: 14
+  The ans is: 7225 
+  The delta time is: 0.000111
+Method: N4,  Size: 15*15,  Round: 15
+  The ans is: 9551 
+  The delta time is: 0.000111
+Method: N4,  Size: 15*15,  Round: 16
+  The ans is: 5507 
+  The delta time is: 0.000117
+Method: N4,  Size: 15*15,  Round: 17
+  The ans is: 6579 
+  The delta time is: 0.000109
+Method: N4,  Size: 15*15,  Round: 18
+  The ans is: 7171 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 19
+  The ans is: 2516 
+  The delta time is: 0.000109
+Method: N4,  Size: 15*15,  Round: 20
+  The ans is: 2944 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 21
+  The ans is: 7867 
+  The delta time is: 0.000109
+Method: N4,  Size: 15*15,  Round: 22
+  The ans is: 3399 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 23
+  The ans is: 7079 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 24
+  The ans is: 4351 
+  The delta time is: 0.000109
+Method: N4,  Size: 15*15,  Round: 25
+  The ans is: 7917 
+  The delta time is: 0.000110
+Method: N4,  Size: 15*15,  Round: 26
+  The ans is: 3539 
+  The delta time is: 0.000110
+Method: N4,  Size: 15*15,  Round: 27
+  The ans is: 9494 
+  The delta time is: 0.000110
+Method: N4,  Size: 15*15,  Round: 28
+  The ans is: 7405 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 29
+  The ans is: 6752 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 30
+  The ans is: 4981 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 31
+  The ans is: 4922 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 32
+  The ans is: 3503 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 33
+  The ans is: 6124 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 34
+  The ans is: 10001 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 35
+  The ans is: 4525 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 36
+  The ans is: 5818 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 37
+  The ans is: 5759 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 38
+  The ans is: 4804 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 39
+  The ans is: 6389 
+  The delta time is: 0.000111
+Method: N4,  Size: 15*15,  Round: 40
+  The ans is: 7313 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 41
+  The ans is: 10242 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 42
+  The ans is: 5006 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 43
+  The ans is: 6628 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 44
+  The ans is: 3614 
+  The delta time is: 0.000108
+Method: N4,  Size: 15*15,  Round: 45
+  The ans is: 4456 
+  The delta time is: 0.000107
+Method: N4,  Size: 15*15,  Round: 46
+  The ans is: 5475 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 47
+  The ans is: 6996 
+  The delta time is: 0.000110
+Method: N4,  Size: 15*15,  Round: 48
+  The ans is: 6041 
+  The delta time is: 0.000106
+Method: N4,  Size: 15*15,  Round: 49
+  The ans is: 7008 
+  The delta time is: 0.000106
+Method: N6,  Size: 15*15,  Round: 0
+  The ans is: 5240 
+  The delta time is: 0.001146
+Method: N6,  Size: 15*15,  Round: 1
+  The ans is: 7523 
+  The delta time is: 0.001125
+Method: N6,  Size: 15*15,  Round: 2
+  The ans is: 4689 
+  The delta time is: 0.001125
+Method: N6,  Size: 15*15,  Round: 3
+  The ans is: 7313 
+  The delta time is: 0.001124
+Method: N6,  Size: 15*15,  Round: 4
+  The ans is: 12274 
+  The delta time is: 0.001126
+Method: N6,  Size: 15*15,  Round: 5
+  The ans is: 9073 
+  The delta time is: 0.001125
+Method: N6,  Size: 15*15,  Round: 6
+  The ans is: 3226 
+  The delta time is: 0.001108
+Method: N6,  Size: 15*15,  Round: 7
+  The ans is: 3005 
+  The delta time is: 0.001054
+Method: N6,  Size: 15*15,  Round: 8
+  The ans is: 7901 
+  The delta time is: 0.001053
+Method: N6,  Size: 15*15,  Round: 9
+  The ans is: 3678 
+  The delta time is: 0.001046
+Method: N6,  Size: 15*15,  Round: 10
+  The ans is: 3612 
+  The delta time is: 0.001030
+Method: N6,  Size: 15*15,  Round: 11
+  The ans is: 6217 
+  The delta time is: 0.001033
+Method: N6,  Size: 15*15,  Round: 12
+  The ans is: 3770 
+  The delta time is: 0.001056
+Method: N6,  Size: 15*15,  Round: 13
+  The ans is: 9452 
+  The delta time is: 0.001037
+Method: N6,  Size: 15*15,  Round: 14
+  The ans is: 7225 
+  The delta time is: 0.000978
+Method: N6,  Size: 15*15,  Round: 15
+  The ans is: 9551 
+  The delta time is: 0.000950
+Method: N6,  Size: 15*15,  Round: 16
+  The ans is: 5507 
+  The delta time is: 0.000967
+Method: N6,  Size: 15*15,  Round: 17
+  The ans is: 6579 
+  The delta time is: 0.000948
+Method: N6,  Size: 15*15,  Round: 18
+  The ans is: 7171 
+  The delta time is: 0.000949
+Method: N6,  Size: 15*15,  Round: 19
+  The ans is: 2516 
+  The delta time is: 0.000951
+Method: N6,  Size: 15*15,  Round: 20
+  The ans is: 2944 
+  The delta time is: 0.001020
+Method: N6,  Size: 15*15,  Round: 21
+  The ans is: 7867 
+  The delta time is: 0.000985
+Method: N6,  Size: 15*15,  Round: 22
+  The ans is: 3399 
+  The delta time is: 0.000892
+Method: N6,  Size: 15*15,  Round: 23
+  The ans is: 7079 
+  The delta time is: 0.000888
+Method: N6,  Size: 15*15,  Round: 24
+  The ans is: 4351 
+  The delta time is: 0.000886
+Method: N6,  Size: 15*15,  Round: 25
+  The ans is: 7917 
+  The delta time is: 0.000885
+Method: N6,  Size: 15*15,  Round: 26
+  The ans is: 3539 
+  The delta time is: 0.000884
+Method: N6,  Size: 15*15,  Round: 27
+  The ans is: 9494 
+  The delta time is: 0.000892
+Method: N6,  Size: 15*15,  Round: 28
+  The ans is: 7405 
+  The delta time is: 0.000887
+Method: N6,  Size: 15*15,  Round: 29
+  The ans is: 6752 
+  The delta time is: 0.000885
+Method: N6,  Size: 15*15,  Round: 30
+  The ans is: 4981 
+  The delta time is: 0.000885
+Method: N6,  Size: 15*15,  Round: 31
+  The ans is: 4922 
+  The delta time is: 0.000886
+Method: N6,  Size: 15*15,  Round: 32
+  The ans is: 3503 
+  The delta time is: 0.000866
+Method: N6,  Size: 15*15,  Round: 33
+  The ans is: 6124 
+  The delta time is: 0.000820
+Method: N6,  Size: 15*15,  Round: 34
+  The ans is: 10001 
+  The delta time is: 0.000820
+Method: N6,  Size: 15*15,  Round: 35
+  The ans is: 4525 
+  The delta time is: 0.000820
+Method: N6,  Size: 15*15,  Round: 36
+  The ans is: 5818 
+  The delta time is: 0.000820
+Method: N6,  Size: 15*15,  Round: 37
+  The ans is: 5759 
+  The delta time is: 0.000825
+Method: N6,  Size: 15*15,  Round: 38
+  The ans is: 4804 
+  The delta time is: 0.000827
+Method: N6,  Size: 15*15,  Round: 39
+  The ans is: 6389 
+  The delta time is: 0.000821
+Method: N6,  Size: 15*15,  Round: 40
+  The ans is: 7313 
+  The delta time is: 0.000824
+Method: N6,  Size: 15*15,  Round: 41
+  The ans is: 10242 
+  The delta time is: 0.000834
+Method: N6,  Size: 15*15,  Round: 42
+  The ans is: 5006 
+  The delta time is: 0.000821
+Method: N6,  Size: 15*15,  Round: 43
+  The ans is: 6628 
+  The delta time is: 0.000822
+Method: N6,  Size: 15*15,  Round: 44
+  The ans is: 3614 
+  The delta time is: 0.000821
+Method: N6,  Size: 15*15,  Round: 45
+  The ans is: 4456 
+  The delta time is: 0.000822
+Method: N6,  Size: 15*15,  Round: 46
+  The ans is: 5475 
+  The delta time is: 0.000804
+Method: N6,  Size: 15*15,  Round: 47
+  The ans is: 6996 
+  The delta time is: 0.000799
+Method: N6,  Size: 15*15,  Round: 48
+  The ans is: 6041 
+  The delta time is: 0.000797
+Method: N6,  Size: 15*15,  Round: 49
+  The ans is: 7008 
+  The delta time is: 0.000796
+Method: N3,  Size: 20*20,  Round: 0
+  The ans is: 10461 
+  The delta time is: 0.000047
+Method: N3,  Size: 20*20,  Round: 1
+  The ans is: 9214 
+  The delta time is: 0.000053
+Method: N3,  Size: 20*20,  Round: 2
+  The ans is: 13019 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 3
+  The ans is: 6800 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 4
+  The ans is: 8343 
+  The delta time is: 0.000042
+Method: N3,  Size: 20*20,  Round: 5
+  The ans is: 6090 
+  The delta time is: 0.000043
+Method: N3,  Size: 20*20,  Round: 6
+  The ans is: 9073 
+  The delta time is: 0.000043
+Method: N3,  Size: 20*20,  Round: 7
+  The ans is: 12240 
+  The delta time is: 0.000042
+Method: N3,  Size: 20*20,  Round: 8
+  The ans is: 12000 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 9
+  The ans is: 8834 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 10
+  The ans is: 9201 
+  The delta time is: 0.000039
+Method: N3,  Size: 20*20,  Round: 11
+  The ans is: 4384 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 12
+  The ans is: 6185 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 13
+  The ans is: 11425 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 14
+  The ans is: 9040 
+  The delta time is: 0.000042
+Method: N3,  Size: 20*20,  Round: 15
+  The ans is: 8819 
+  The delta time is: 0.000043
+Method: N3,  Size: 20*20,  Round: 16
+  The ans is: 9784 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 17
+  The ans is: 5916 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 18
+  The ans is: 3708 
+  The delta time is: 0.000050
+Method: N3,  Size: 20*20,  Round: 19
+  The ans is: 13905 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 20
+  The ans is: 7518 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 21
+  The ans is: 8780 
+  The delta time is: 0.000049
+Method: N3,  Size: 20*20,  Round: 22
+  The ans is: 9083 
+  The delta time is: 0.000048
+Method: N3,  Size: 20*20,  Round: 23
+  The ans is: 12225 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 24
+  The ans is: 9121 
+  The delta time is: 0.000047
+Method: N3,  Size: 20*20,  Round: 25
+  The ans is: 6405 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 26
+  The ans is: 9722 
+  The delta time is: 0.000040
+Method: N3,  Size: 20*20,  Round: 27
+  The ans is: 7651 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 28
+  The ans is: 8942 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 29
+  The ans is: 7137 
+  The delta time is: 0.000049
+Method: N3,  Size: 20*20,  Round: 30
+  The ans is: 4580 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 31
+  The ans is: 6368 
+  The delta time is: 0.000049
+Method: N3,  Size: 20*20,  Round: 32
+  The ans is: 5026 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 33
+  The ans is: 10596 
+  The delta time is: 0.000043
+Method: N3,  Size: 20*20,  Round: 34
+  The ans is: 8976 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 35
+  The ans is: 5142 
+  The delta time is: 0.000047
+Method: N3,  Size: 20*20,  Round: 36
+  The ans is: 4916 
+  The delta time is: 0.000043
+Method: N3,  Size: 20*20,  Round: 37
+  The ans is: 8259 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 38
+  The ans is: 10650 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 39
+  The ans is: 3816 
+  The delta time is: 0.000051
+Method: N3,  Size: 20*20,  Round: 40
+  The ans is: 5540 
+  The delta time is: 0.000049
+Method: N3,  Size: 20*20,  Round: 41
+  The ans is: 10385 
+  The delta time is: 0.000039
+Method: N3,  Size: 20*20,  Round: 42
+  The ans is: 7472 
+  The delta time is: 0.000047
+Method: N3,  Size: 20*20,  Round: 43
+  The ans is: 6591 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 44
+  The ans is: 7816 
+  The delta time is: 0.000045
+Method: N3,  Size: 20*20,  Round: 45
+  The ans is: 8247 
+  The delta time is: 0.000041
+Method: N3,  Size: 20*20,  Round: 46
+  The ans is: 8845 
+  The delta time is: 0.000044
+Method: N3,  Size: 20*20,  Round: 47
+  The ans is: 4832 
+  The delta time is: 0.000046
+Method: N3,  Size: 20*20,  Round: 48
+  The ans is: 8154 
+  The delta time is: 0.000042
+Method: N3,  Size: 20*20,  Round: 49
+  The ans is: 8785 
+  The delta time is: 0.000047
+Method: N4,  Size: 20*20,  Round: 0
+  The ans is: 10461 
+  The delta time is: 0.000199
+Method: N4,  Size: 20*20,  Round: 1
+  The ans is: 9214 
+  The delta time is: 0.000209
+Method: N4,  Size: 20*20,  Round: 2
+  The ans is: 13019 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 3
+  The ans is: 6800 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 4
+  The ans is: 8343 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 5
+  The ans is: 6090 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 6
+  The ans is: 9073 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 7
+  The ans is: 12240 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 8
+  The ans is: 12000 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 9
+  The ans is: 8834 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 10
+  The ans is: 9201 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 11
+  The ans is: 4384 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 12
+  The ans is: 6185 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 13
+  The ans is: 11425 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 14
+  The ans is: 9040 
+  The delta time is: 0.000203
+Method: N4,  Size: 20*20,  Round: 15
+  The ans is: 8819 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 16
+  The ans is: 9784 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 17
+  The ans is: 5916 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 18
+  The ans is: 3708 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 19
+  The ans is: 13905 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 20
+  The ans is: 7518 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 21
+  The ans is: 8780 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 22
+  The ans is: 9083 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 23
+  The ans is: 12225 
+  The delta time is: 0.000203
+Method: N4,  Size: 20*20,  Round: 24
+  The ans is: 9121 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 25
+  The ans is: 6405 
+  The delta time is: 0.000207
+Method: N4,  Size: 20*20,  Round: 26
+  The ans is: 9722 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 27
+  The ans is: 7651 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 28
+  The ans is: 8942 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 29
+  The ans is: 7137 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 30
+  The ans is: 4580 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 31
+  The ans is: 6368 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 32
+  The ans is: 5026 
+  The delta time is: 0.000199
+Method: N4,  Size: 20*20,  Round: 33
+  The ans is: 10596 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 34
+  The ans is: 8976 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 35
+  The ans is: 5142 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 36
+  The ans is: 4916 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 37
+  The ans is: 8259 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 38
+  The ans is: 10650 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 39
+  The ans is: 3816 
+  The delta time is: 0.000203
+Method: N4,  Size: 20*20,  Round: 40
+  The ans is: 5540 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 41
+  The ans is: 10385 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 42
+  The ans is: 7472 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 43
+  The ans is: 6591 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 44
+  The ans is: 7816 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 45
+  The ans is: 8247 
+  The delta time is: 0.000201
+Method: N4,  Size: 20*20,  Round: 46
+  The ans is: 8845 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 47
+  The ans is: 4832 
+  The delta time is: 0.000202
+Method: N4,  Size: 20*20,  Round: 48
+  The ans is: 8154 
+  The delta time is: 0.000200
+Method: N4,  Size: 20*20,  Round: 49
+  The ans is: 8785 
+  The delta time is: 0.000201
+Method: N6,  Size: 20*20,  Round: 0
+  The ans is: 10461 
+  The delta time is: 0.003692
+Method: N6,  Size: 20*20,  Round: 1
+  The ans is: 9214 
+  The delta time is: 0.003698
+Method: N6,  Size: 20*20,  Round: 2
+  The ans is: 13019 
+  The delta time is: 0.003706
+Method: N6,  Size: 20*20,  Round: 3
+  The ans is: 6800 
+  The delta time is: 0.003700
+Method: N6,  Size: 20*20,  Round: 4
+  The ans is: 8343 
+  The delta time is: 0.003698
+Method: N6,  Size: 20*20,  Round: 5
+  The ans is: 6090 
+  The delta time is: 0.003827
+Method: N6,  Size: 20*20,  Round: 6
+  The ans is: 9073 
+  The delta time is: 0.003839
+Method: N6,  Size: 20*20,  Round: 7
+  The ans is: 12240 
+  The delta time is: 0.003796
+Method: N6,  Size: 20*20,  Round: 8
+  The ans is: 12000 
+  The delta time is: 0.003795
+Method: N6,  Size: 20*20,  Round: 9
+  The ans is: 8834 
+  The delta time is: 0.003700
+Method: N6,  Size: 20*20,  Round: 10
+  The ans is: 9201 
+  The delta time is: 0.003731
+Method: N6,  Size: 20*20,  Round: 11
+  The ans is: 4384 
+  The delta time is: 0.003759
+Method: N6,  Size: 20*20,  Round: 12
+  The ans is: 6185 
+  The delta time is: 0.003723
+Method: N6,  Size: 20*20,  Round: 13
+  The ans is: 11425 
+  The delta time is: 0.003714
+Method: N6,  Size: 20*20,  Round: 14
+  The ans is: 9040 
+  The delta time is: 0.003668
+Method: N6,  Size: 20*20,  Round: 15
+  The ans is: 8819 
+  The delta time is: 0.003678
+Method: N6,  Size: 20*20,  Round: 16
+  The ans is: 9784 
+  The delta time is: 0.003692
+Method: N6,  Size: 20*20,  Round: 17
+  The ans is: 5916 
+  The delta time is: 0.003671
+Method: N6,  Size: 20*20,  Round: 18
+  The ans is: 3708 
+  The delta time is: 0.003684
+Method: N6,  Size: 20*20,  Round: 19
+  The ans is: 13905 
+  The delta time is: 0.003675
+Method: N6,  Size: 20*20,  Round: 20
+  The ans is: 7518 
+  The delta time is: 0.003669
+Method: N6,  Size: 20*20,  Round: 21
+  The ans is: 8780 
+  The delta time is: 0.003693
+Method: N6,  Size: 20*20,  Round: 22
+  The ans is: 9083 
+  The delta time is: 0.003677
+Method: N6,  Size: 20*20,  Round: 23
+  The ans is: 12225 
+  The delta time is: 0.003790
+Method: N6,  Size: 20*20,  Round: 24
+  The ans is: 9121 
+  The delta time is: 0.003700
+Method: N6,  Size: 20*20,  Round: 25
+  The ans is: 6405 
+  The delta time is: 0.003701
+Method: N6,  Size: 20*20,  Round: 26
+  The ans is: 9722 
+  The delta time is: 0.003710
+Method: N6,  Size: 20*20,  Round: 27
+  The ans is: 7651 
+  The delta time is: 0.003686
+Method: N6,  Size: 20*20,  Round: 28
+  The ans is: 8942 
+  The delta time is: 0.003673
+Method: N6,  Size: 20*20,  Round: 29
+  The ans is: 7137 
+  The delta time is: 0.003672
+Method: N6,  Size: 20*20,  Round: 30
+  The ans is: 4580 
+  The delta time is: 0.003671
+Method: N6,  Size: 20*20,  Round: 31
+  The ans is: 6368 
+  The delta time is: 0.003678
+Method: N6,  Size: 20*20,  Round: 32
+  The ans is: 5026 
+  The delta time is: 0.003689
+Method: N6,  Size: 20*20,  Round: 33
+  The ans is: 10596 
+  The delta time is: 0.003688
+Method: N6,  Size: 20*20,  Round: 34
+  The ans is: 8976 
+  The delta time is: 0.003679
+Method: N6,  Size: 20*20,  Round: 35
+  The ans is: 5142 
+  The delta time is: 0.003686
+Method: N6,  Size: 20*20,  Round: 36
+  The ans is: 4916 
+  The delta time is: 0.003676
+Method: N6,  Size: 20*20,  Round: 37
+  The ans is: 8259 
+  The delta time is: 0.003680
+Method: N6,  Size: 20*20,  Round: 38
+  The ans is: 10650 
+  The delta time is: 0.003706
+Method: N6,  Size: 20*20,  Round: 39
+  The ans is: 3816 
+  The delta time is: 0.003702
+Method: N6,  Size: 20*20,  Round: 40
+  The ans is: 5540 
+  The delta time is: 0.003759
+Method: N6,  Size: 20*20,  Round: 41
+  The ans is: 10385 
+  The delta time is: 0.003808
+Method: N6,  Size: 20*20,  Round: 42
+  The ans is: 7472 
+  The delta time is: 0.003681
+Method: N6,  Size: 20*20,  Round: 43
+  The ans is: 6591 
+  The delta time is: 0.003728
+Method: N6,  Size: 20*20,  Round: 44
+  The ans is: 7816 
+  The delta time is: 0.003694
+Method: N6,  Size: 20*20,  Round: 45
+  The ans is: 8247 
+  The delta time is: 0.003710
+Method: N6,  Size: 20*20,  Round: 46
+  The ans is: 8845 
+  The delta time is: 0.003668
+Method: N6,  Size: 20*20,  Round: 47
+  The ans is: 4832 
+  The delta time is: 0.003685
+Method: N6,  Size: 20*20,  Round: 48
+  The ans is: 8154 
+  The delta time is: 0.003806
+Method: N6,  Size: 20*20,  Round: 49
+  The ans is: 8785 
+  The delta time is: 0.003668
+Method: N3,  Size: 25*25,  Round: 0
+  The ans is: 10613 
+  The delta time is: 0.000079
+Method: N3,  Size: 25*25,  Round: 1
+  The ans is: 19806 
+  The delta time is: 0.000080
+Method: N3,  Size: 25*25,  Round: 2
+  The ans is: 5320 
+  The delta time is: 0.000079
+Method: N3,  Size: 25*25,  Round: 3
+  The ans is: 9494 
+  The delta time is: 0.000079
+Method: N3,  Size: 25*25,  Round: 4
+  The ans is: 17250 
+  The delta time is: 0.000077
+Method: N3,  Size: 25*25,  Round: 5
+  The ans is: 13159 
+  The delta time is: 0.000075
+Method: N3,  Size: 25*25,  Round: 6
+  The ans is: 11593 
+  The delta time is: 0.000078
+Method: N3,  Size: 25*25,  Round: 7
+  The ans is: 6610 
+  The delta time is: 0.000088
+Method: N3,  Size: 25*25,  Round: 8
+  The ans is: 10263 
+  The delta time is: 0.000081
+Method: N3,  Size: 25*25,  Round: 9
+  The ans is: 9295 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 10
+  The ans is: 15384 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 11
+  The ans is: 8448 
+  The delta time is: 0.000077
+Method: N3,  Size: 25*25,  Round: 12
+  The ans is: 16180 
+  The delta time is: 0.000084
+Method: N3,  Size: 25*25,  Round: 13
+  The ans is: 10109 
+  The delta time is: 0.000080
+Method: N3,  Size: 25*25,  Round: 14
+  The ans is: 11975 
+  The delta time is: 0.000087
+Method: N3,  Size: 25*25,  Round: 15
+  The ans is: 13894 
+  The delta time is: 0.000083
+Method: N3,  Size: 25*25,  Round: 16
+  The ans is: 6204 
+  The delta time is: 0.000079
+Method: N3,  Size: 25*25,  Round: 17
+  The ans is: 6937 
+  The delta time is: 0.000080
+Method: N3,  Size: 25*25,  Round: 18
+  The ans is: 10310 
+  The delta time is: 0.000081
+Method: N3,  Size: 25*25,  Round: 19
+  The ans is: 9614 
+  The delta time is: 0.000071
+Method: N3,  Size: 25*25,  Round: 20
+  The ans is: 9037 
+  The delta time is: 0.000083
+Method: N3,  Size: 25*25,  Round: 21
+  The ans is: 9587 
+  The delta time is: 0.000077
+Method: N3,  Size: 25*25,  Round: 22
+  The ans is: 9562 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 23
+  The ans is: 11109 
+  The delta time is: 0.000076
+Method: N3,  Size: 25*25,  Round: 24
+  The ans is: 12806 
+  The delta time is: 0.000088
+Method: N3,  Size: 25*25,  Round: 25
+  The ans is: 6052 
+  The delta time is: 0.000079
+Method: N3,  Size: 25*25,  Round: 26
+  The ans is: 14467 
+  The delta time is: 0.000074
+Method: N3,  Size: 25*25,  Round: 27
+  The ans is: 11696 
+  The delta time is: 0.000076
+Method: N3,  Size: 25*25,  Round: 28
+  The ans is: 8827 
+  The delta time is: 0.000089
+Method: N3,  Size: 25*25,  Round: 29
+  The ans is: 10049 
+  The delta time is: 0.000086
+Method: N3,  Size: 25*25,  Round: 30
+  The ans is: 10497 
+  The delta time is: 0.000074
+Method: N3,  Size: 25*25,  Round: 31
+  The ans is: 6006 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 32
+  The ans is: 5464 
+  The delta time is: 0.000085
+Method: N3,  Size: 25*25,  Round: 33
+  The ans is: 7956 
+  The delta time is: 0.000088
+Method: N3,  Size: 25*25,  Round: 34
+  The ans is: 7809 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 35
+  The ans is: 9287 
+  The delta time is: 0.000091
+Method: N3,  Size: 25*25,  Round: 36
+  The ans is: 9548 
+  The delta time is: 0.000071
+Method: N3,  Size: 25*25,  Round: 37
+  The ans is: 5658 
+  The delta time is: 0.000082
+Method: N3,  Size: 25*25,  Round: 38
+  The ans is: 9993 
+  The delta time is: 0.000072
+Method: N3,  Size: 25*25,  Round: 39
+  The ans is: 5412 
+  The delta time is: 0.000094
+Method: N3,  Size: 25*25,  Round: 40
+  The ans is: 5375 
+  The delta time is: 0.000083
+Method: N3,  Size: 25*25,  Round: 41
+  The ans is: 3496 
+  The delta time is: 0.000086
+Method: N3,  Size: 25*25,  Round: 42
+  The ans is: 9662 
+  The delta time is: 0.000081
+Method: N3,  Size: 25*25,  Round: 43
+  The ans is: 9590 
+  The delta time is: 0.000083
+Method: N3,  Size: 25*25,  Round: 44
+  The ans is: 8371 
+  The delta time is: 0.000081
+Method: N3,  Size: 25*25,  Round: 45
+  The ans is: 11680 
+  The delta time is: 0.000084
+Method: N3,  Size: 25*25,  Round: 46
+  The ans is: 12732 
+  The delta time is: 0.000080
+Method: N3,  Size: 25*25,  Round: 47
+  The ans is: 9519 
+  The delta time is: 0.000078
+Method: N3,  Size: 25*25,  Round: 48
+  The ans is: 9607 
+  The delta time is: 0.000085
+Method: N3,  Size: 25*25,  Round: 49
+  The ans is: 5428 
+  The delta time is: 0.000087
+Method: N4,  Size: 25*25,  Round: 0
+  The ans is: 10613 
+  The delta time is: 0.000459
+Method: N4,  Size: 25*25,  Round: 1
+  The ans is: 19806 
+  The delta time is: 0.000462
+Method: N4,  Size: 25*25,  Round: 2
+  The ans is: 5320 
+  The delta time is: 0.000463
+Method: N4,  Size: 25*25,  Round: 3
+  The ans is: 9494 
+  The delta time is: 0.000464
+Method: N4,  Size: 25*25,  Round: 4
+  The ans is: 17250 
+  The delta time is: 0.000468
+Method: N4,  Size: 25*25,  Round: 5
+  The ans is: 13159 
+  The delta time is: 0.000466
+Method: N4,  Size: 25*25,  Round: 6
+  The ans is: 11593 
+  The delta time is: 0.000492
+Method: N4,  Size: 25*25,  Round: 7
+  The ans is: 6610 
+  The delta time is: 0.000472
+Method: N4,  Size: 25*25,  Round: 8
+  The ans is: 10263 
+  The delta time is: 0.000489
+Method: N4,  Size: 25*25,  Round: 9
+  The ans is: 9295 
+  The delta time is: 0.000462
+Method: N4,  Size: 25*25,  Round: 10
+  The ans is: 15384 
+  The delta time is: 0.000472
+Method: N4,  Size: 25*25,  Round: 11
+  The ans is: 8448 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 12
+  The ans is: 16180 
+  The delta time is: 0.000475
+Method: N4,  Size: 25*25,  Round: 13
+  The ans is: 10109 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 14
+  The ans is: 11975 
+  The delta time is: 0.000468
+Method: N4,  Size: 25*25,  Round: 15
+  The ans is: 13894 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 16
+  The ans is: 6204 
+  The delta time is: 0.000471
+Method: N4,  Size: 25*25,  Round: 17
+  The ans is: 6937 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 18
+  The ans is: 10310 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 19
+  The ans is: 9614 
+  The delta time is: 0.000471
+Method: N4,  Size: 25*25,  Round: 20
+  The ans is: 9037 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 21
+  The ans is: 9587 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 22
+  The ans is: 9562 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 23
+  The ans is: 11109 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 24
+  The ans is: 12806 
+  The delta time is: 0.000471
+Method: N4,  Size: 25*25,  Round: 25
+  The ans is: 6052 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 26
+  The ans is: 14467 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 27
+  The ans is: 11696 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 28
+  The ans is: 8827 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 29
+  The ans is: 10049 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 30
+  The ans is: 10497 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 31
+  The ans is: 6006 
+  The delta time is: 0.000471
+Method: N4,  Size: 25*25,  Round: 32
+  The ans is: 5464 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 33
+  The ans is: 7956 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 34
+  The ans is: 7809 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 35
+  The ans is: 9287 
+  The delta time is: 0.000471
+Method: N4,  Size: 25*25,  Round: 36
+  The ans is: 9548 
+  The delta time is: 0.000470
+Method: N4,  Size: 25*25,  Round: 37
+  The ans is: 5658 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 38
+  The ans is: 9993 
+  The delta time is: 0.000469
+Method: N4,  Size: 25*25,  Round: 39
+  The ans is: 5412 
+  The delta time is: 0.000468
+Method: N4,  Size: 25*25,  Round: 40
+  The ans is: 5375 
+  The delta time is: 0.000463
+Method: N4,  Size: 25*25,  Round: 41
+  The ans is: 3496 
+  The delta time is: 0.000464
+Method: N4,  Size: 25*25,  Round: 42
+  The ans is: 9662 
+  The delta time is: 0.000463
+Method: N4,  Size: 25*25,  Round: 43
+  The ans is: 9590 
+  The delta time is: 0.000463
+Method: N4,  Size: 25*25,  Round: 44
+  The ans is: 8371 
+  The delta time is: 0.000475
+Method: N4,  Size: 25*25,  Round: 45
+  The ans is: 11680 
+  The delta time is: 0.000463
+Method: N4,  Size: 25*25,  Round: 46
+  The ans is: 12732 
+  The delta time is: 0.000462
+Method: N4,  Size: 25*25,  Round: 47
+  The ans is: 9519 
+  The delta time is: 0.000462
+Method: N4,  Size: 25*25,  Round: 48
+  The ans is: 9607 
+  The delta time is: 0.000462
+Method: N4,  Size: 25*25,  Round: 49
+  The ans is: 5428 
+  The delta time is: 0.000462
+Method: N6,  Size: 25*25,  Round: 0
+  The ans is: 10613 
+  The delta time is: 0.012897
+Method: N6,  Size: 25*25,  Round: 1
+  The ans is: 19806 
+  The delta time is: 0.013201
+Method: N6,  Size: 25*25,  Round: 2
+  The ans is: 5320 
+  The delta time is: 0.012931
+Method: N6,  Size: 25*25,  Round: 3
+  The ans is: 9494 
+  The delta time is: 0.013008
+Method: N6,  Size: 25*25,  Round: 4
+  The ans is: 17250 
+  The delta time is: 0.012923
+Method: N6,  Size: 25*25,  Round: 5
+  The ans is: 13159 
+  The delta time is: 0.012868
+Method: N6,  Size: 25*25,  Round: 6
+  The ans is: 11593 
+  The delta time is: 0.013009
+Method: N6,  Size: 25*25,  Round: 7
+  The ans is: 6610 
+  The delta time is: 0.012869
+Method: N6,  Size: 25*25,  Round: 8
+  The ans is: 10263 
+  The delta time is: 0.012828
+Method: N6,  Size: 25*25,  Round: 9
+  The ans is: 9295 
+  The delta time is: 0.012829
+Method: N6,  Size: 25*25,  Round: 10
+  The ans is: 15384 
+  The delta time is: 0.012844
+Method: N6,  Size: 25*25,  Round: 11
+  The ans is: 8448 
+  The delta time is: 0.013025
+Method: N6,  Size: 25*25,  Round: 12
+  The ans is: 16180 
+  The delta time is: 0.012873
+Method: N6,  Size: 25*25,  Round: 13
+  The ans is: 10109 
+  The delta time is: 0.013205
+Method: N6,  Size: 25*25,  Round: 14
+  The ans is: 11975 
+  The delta time is: 0.013047
+Method: N6,  Size: 25*25,  Round: 15
+  The ans is: 13894 
+  The delta time is: 0.013140
+Method: N6,  Size: 25*25,  Round: 16
+  The ans is: 6204 
+  The delta time is: 0.012987
+Method: N6,  Size: 25*25,  Round: 17
+  The ans is: 6937 
+  The delta time is: 0.012904
+Method: N6,  Size: 25*25,  Round: 18
+  The ans is: 10310 
+  The delta time is: 0.013036
+Method: N6,  Size: 25*25,  Round: 19
+  The ans is: 9614 
+  The delta time is: 0.013050
+Method: N6,  Size: 25*25,  Round: 20
+  The ans is: 9037 
+  The delta time is: 0.013072
+Method: N6,  Size: 25*25,  Round: 21
+  The ans is: 9587 
+  The delta time is: 0.013058
+Method: N6,  Size: 25*25,  Round: 22
+  The ans is: 9562 
+  The delta time is: 0.013037
+Method: N6,  Size: 25*25,  Round: 23
+  The ans is: 11109 
+  The delta time is: 0.013005
+Method: N6,  Size: 25*25,  Round: 24
+  The ans is: 12806 
+  The delta time is: 0.013006
+Method: N6,  Size: 25*25,  Round: 25
+  The ans is: 6052 
+  The delta time is: 0.013089
+Method: N6,  Size: 25*25,  Round: 26
+  The ans is: 14467 
+  The delta time is: 0.013043
+Method: N6,  Size: 25*25,  Round: 27
+  The ans is: 11696 
+  The delta time is: 0.013180
+Method: N6,  Size: 25*25,  Round: 28
+  The ans is: 8827 
+  The delta time is: 0.013143
+Method: N6,  Size: 25*25,  Round: 29
+  The ans is: 10049 
+  The delta time is: 0.013080
+Method: N6,  Size: 25*25,  Round: 30
+  The ans is: 10497 
+  The delta time is: 0.013040
+Method: N6,  Size: 25*25,  Round: 31
+  The ans is: 6006 
+  The delta time is: 0.012894
+Method: N6,  Size: 25*25,  Round: 32
+  The ans is: 5464 
+  The delta time is: 0.013029
+Method: N6,  Size: 25*25,  Round: 33
+  The ans is: 7956 
+  The delta time is: 0.013019
+Method: N6,  Size: 25*25,  Round: 34
+  The ans is: 7809 
+  The delta time is: 0.013030
+Method: N6,  Size: 25*25,  Round: 35
+  The ans is: 9287 
+  The delta time is: 0.012968
+Method: N6,  Size: 25*25,  Round: 36
+  The ans is: 9548 
+  The delta time is: 0.012914
+Method: N6,  Size: 25*25,  Round: 37
+  The ans is: 5658 
+  The delta time is: 0.013007
+Method: N6,  Size: 25*25,  Round: 38
+  The ans is: 9993 
+  The delta time is: 0.012999
+Method: N6,  Size: 25*25,  Round: 39
+  The ans is: 5412 
+  The delta time is: 0.013037
+Method: N6,  Size: 25*25,  Round: 40
+  The ans is: 5375 
+  The delta time is: 0.012987
+Method: N6,  Size: 25*25,  Round: 41
+  The ans is: 3496 
+  The delta time is: 0.012989
+Method: N6,  Size: 25*25,  Round: 42
+  The ans is: 9662 
+  The delta time is: 0.013078
+Method: N6,  Size: 25*25,  Round: 43
+  The ans is: 9590 
+  The delta time is: 0.013015
+Method: N6,  Size: 25*25,  Round: 44
+  The ans is: 8371 
+  The delta time is: 0.013019
+Method: N6,  Size: 25*25,  Round: 45
+  The ans is: 11680 
+  The delta time is: 0.012894
+Method: N6,  Size: 25*25,  Round: 46
+  The ans is: 12732 
+  The delta time is: 0.013018
+Method: N6,  Size: 25*25,  Round: 47
+  The ans is: 9519 
+  The delta time is: 0.012992
+Method: N6,  Size: 25*25,  Round: 48
+  The ans is: 9607 
+  The delta time is: 0.013027
+Method: N6,  Size: 25*25,  Round: 49
+  The ans is: 5428 
+  The delta time is: 0.012981
+Method: N3,  Size: 30*30,  Round: 0
+  The ans is: 10660 
+  The delta time is: 0.000119
+Method: N3,  Size: 30*30,  Round: 1
+  The ans is: 16908 
+  The delta time is: 0.000126
+Method: N3,  Size: 30*30,  Round: 2
+  The ans is: 13293 
+  The delta time is: 0.000127
+Method: N3,  Size: 30*30,  Round: 3
+  The ans is: 21035 
+  The delta time is: 0.000142
+Method: N3,  Size: 30*30,  Round: 4
+  The ans is: 11464 
+  The delta time is: 0.000123
+Method: N3,  Size: 30*30,  Round: 5
+  The ans is: 6885 
+  The delta time is: 0.000134
+Method: N3,  Size: 30*30,  Round: 6
+  The ans is: 9337 
+  The delta time is: 0.000143
+Method: N3,  Size: 30*30,  Round: 7
+  The ans is: 10807 
+  The delta time is: 0.000134
+Method: N3,  Size: 30*30,  Round: 8
+  The ans is: 13860 
+  The delta time is: 0.000133
+Method: N3,  Size: 30*30,  Round: 9
+  The ans is: 12665 
+  The delta time is: 0.000130
+Method: N3,  Size: 30*30,  Round: 10
+  The ans is: 18422 
+  The delta time is: 0.000123
+Method: N3,  Size: 30*30,  Round: 11
+  The ans is: 11102 
+  The delta time is: 0.000127
+Method: N3,  Size: 30*30,  Round: 12
+  The ans is: 18859 
+  The delta time is: 0.000129
+Method: N3,  Size: 30*30,  Round: 13
+  The ans is: 10311 
+  The delta time is: 0.000124
+Method: N3,  Size: 30*30,  Round: 14
+  The ans is: 14386 
+  The delta time is: 0.000117
+Method: N3,  Size: 30*30,  Round: 15
+  The ans is: 16614 
+  The delta time is: 0.000140
+Method: N3,  Size: 30*30,  Round: 16
+  The ans is: 12204 
+  The delta time is: 0.000148
+Method: N3,  Size: 30*30,  Round: 17
+  The ans is: 5745 
+  The delta time is: 0.000141
+Method: N3,  Size: 30*30,  Round: 18
+  The ans is: 15046 
+  The delta time is: 0.000123
+Method: N3,  Size: 30*30,  Round: 19
+  The ans is: 15978 
+  The delta time is: 0.000123
+Method: N3,  Size: 30*30,  Round: 20
+  The ans is: 13203 
+  The delta time is: 0.000127
+Method: N3,  Size: 30*30,  Round: 21
+  The ans is: 7394 
+  The delta time is: 0.000129
+Method: N3,  Size: 30*30,  Round: 22
+  The ans is: 5716 
+  The delta time is: 0.000137
+Method: N3,  Size: 30*30,  Round: 23
+  The ans is: 7762 
+  The delta time is: 0.000141
+Method: N3,  Size: 30*30,  Round: 24
+  The ans is: 7478 
+  The delta time is: 0.000152
+Method: N3,  Size: 30*30,  Round: 25
+  The ans is: 7558 
+  The delta time is: 0.000133
+Method: N3,  Size: 30*30,  Round: 26
+  The ans is: 10286 
+  The delta time is: 0.000136
+Method: N3,  Size: 30*30,  Round: 27
+  The ans is: 11686 
+  The delta time is: 0.000141
+Method: N3,  Size: 30*30,  Round: 28
+  The ans is: 4773 
+  The delta time is: 0.000138
+Method: N3,  Size: 30*30,  Round: 29
+  The ans is: 13711 
+  The delta time is: 0.000136
+Method: N3,  Size: 30*30,  Round: 30
+  The ans is: 12704 
+  The delta time is: 0.000136
+Method: N3,  Size: 30*30,  Round: 31
+  The ans is: 15666 
+  The delta time is: 0.000140
+Method: N3,  Size: 30*30,  Round: 32
+  The ans is: 7168 
+  The delta time is: 0.000140
+Method: N3,  Size: 30*30,  Round: 33
+  The ans is: 10525 
+  The delta time is: 0.000138
+Method: N3,  Size: 30*30,  Round: 34
+  The ans is: 7295 
+  The delta time is: 0.000145
+Method: N3,  Size: 30*30,  Round: 35
+  The ans is: 5761 
+  The delta time is: 0.000131
+Method: N3,  Size: 30*30,  Round: 36
+  The ans is: 14588 
+  The delta time is: 0.000132
+Method: N3,  Size: 30*30,  Round: 37
+  The ans is: 10188 
+  The delta time is: 0.000142
+Method: N3,  Size: 30*30,  Round: 38
+  The ans is: 13015 
+  The delta time is: 0.000139
+Method: N3,  Size: 30*30,  Round: 39
+  The ans is: 8674 
+  The delta time is: 0.000138
+Method: N3,  Size: 30*30,  Round: 40
+  The ans is: 7039 
+  The delta time is: 0.000131
+Method: N3,  Size: 30*30,  Round: 41
+  The ans is: 7444 
+  The delta time is: 0.000131
+Method: N3,  Size: 30*30,  Round: 42
+  The ans is: 11620 
+  The delta time is: 0.000129
+Method: N3,  Size: 30*30,  Round: 43
+  The ans is: 19644 
+  The delta time is: 0.000133
+Method: N3,  Size: 30*30,  Round: 44
+  The ans is: 12965 
+  The delta time is: 0.000140
+Method: N3,  Size: 30*30,  Round: 45
+  The ans is: 10173 
+  The delta time is: 0.000137
+Method: N3,  Size: 30*30,  Round: 46
+  The ans is: 8532 
+  The delta time is: 0.000131
+Method: N3,  Size: 30*30,  Round: 47
+  The ans is: 8720 
+  The delta time is: 0.000130
+Method: N3,  Size: 30*30,  Round: 48
+  The ans is: 14822 
+  The delta time is: 0.000131
+Method: N3,  Size: 30*30,  Round: 49
+  The ans is: 17410 
+  The delta time is: 0.000132
+Method: N4,  Size: 30*30,  Round: 0
+  The ans is: 10660 
+  The delta time is: 0.000949
+Method: N4,  Size: 30*30,  Round: 1
+  The ans is: 16908 
+  The delta time is: 0.000963
+Method: N4,  Size: 30*30,  Round: 2
+  The ans is: 13293 
+  The delta time is: 0.000963
+Method: N4,  Size: 30*30,  Round: 3
+  The ans is: 21035 
+  The delta time is: 0.000962
+Method: N4,  Size: 30*30,  Round: 4
+  The ans is: 11464 
+  The delta time is: 0.000980
+Method: N4,  Size: 30*30,  Round: 5
+  The ans is: 6885 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 6
+  The ans is: 9337 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 7
+  The ans is: 10807 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 8
+  The ans is: 13860 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 9
+  The ans is: 12665 
+  The delta time is: 0.000941
+Method: N4,  Size: 30*30,  Round: 10
+  The ans is: 18422 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 11
+  The ans is: 11102 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 12
+  The ans is: 18859 
+  The delta time is: 0.000940
+Method: N4,  Size: 30*30,  Round: 13
+  The ans is: 10311 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 14
+  The ans is: 14386 
+  The delta time is: 0.000944
+Method: N4,  Size: 30*30,  Round: 15
+  The ans is: 16614 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 16
+  The ans is: 12204 
+  The delta time is: 0.000948
+Method: N4,  Size: 30*30,  Round: 17
+  The ans is: 5745 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 18
+  The ans is: 15046 
+  The delta time is: 0.000946
+Method: N4,  Size: 30*30,  Round: 19
+  The ans is: 15978 
+  The delta time is: 0.000946
+Method: N4,  Size: 30*30,  Round: 20
+  The ans is: 13203 
+  The delta time is: 0.000940
+Method: N4,  Size: 30*30,  Round: 21
+  The ans is: 7394 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 22
+  The ans is: 5716 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 23
+  The ans is: 7762 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 24
+  The ans is: 7478 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 25
+  The ans is: 7558 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 26
+  The ans is: 10286 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 27
+  The ans is: 11686 
+  The delta time is: 0.000943
+Method: N4,  Size: 30*30,  Round: 28
+  The ans is: 4773 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 29
+  The ans is: 13711 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 30
+  The ans is: 12704 
+  The delta time is: 0.000946
+Method: N4,  Size: 30*30,  Round: 31
+  The ans is: 15666 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 32
+  The ans is: 7168 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 33
+  The ans is: 10525 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 34
+  The ans is: 7295 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 35
+  The ans is: 5761 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 36
+  The ans is: 14588 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 37
+  The ans is: 10188 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 38
+  The ans is: 13015 
+  The delta time is: 0.000937
+Method: N4,  Size: 30*30,  Round: 39
+  The ans is: 8674 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 40
+  The ans is: 7039 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 41
+  The ans is: 7444 
+  The delta time is: 0.000959
+Method: N4,  Size: 30*30,  Round: 42
+  The ans is: 11620 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 43
+  The ans is: 19644 
+  The delta time is: 0.000940
+Method: N4,  Size: 30*30,  Round: 44
+  The ans is: 12965 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 45
+  The ans is: 10173 
+  The delta time is: 0.000938
+Method: N4,  Size: 30*30,  Round: 46
+  The ans is: 8532 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 47
+  The ans is: 8720 
+  The delta time is: 0.000944
+Method: N4,  Size: 30*30,  Round: 48
+  The ans is: 14822 
+  The delta time is: 0.000939
+Method: N4,  Size: 30*30,  Round: 49
+  The ans is: 17410 
+  The delta time is: 0.000940
+Method: N6,  Size: 30*30,  Round: 0
+  The ans is: 10660 
+  The delta time is: 0.036355
+Method: N6,  Size: 30*30,  Round: 1
+  The ans is: 16908 
+  The delta time is: 0.035994
+Method: N6,  Size: 30*30,  Round: 2
+  The ans is: 13293 
+  The delta time is: 0.036310
+Method: N6,  Size: 30*30,  Round: 3
+  The ans is: 21035 
+  The delta time is: 0.036187
+Method: N6,  Size: 30*30,  Round: 4
+  The ans is: 11464 
+  The delta time is: 0.036232
+Method: N6,  Size: 30*30,  Round: 5
+  The ans is: 6885 
+  The delta time is: 0.036161
+Method: N6,  Size: 30*30,  Round: 6
+  The ans is: 9337 
+  The delta time is: 0.036193
+Method: N6,  Size: 30*30,  Round: 7
+  The ans is: 10807 
+  The delta time is: 0.036235
+Method: N6,  Size: 30*30,  Round: 8
+  The ans is: 13860 
+  The delta time is: 0.036205
+Method: N6,  Size: 30*30,  Round: 9
+  The ans is: 12665 
+  The delta time is: 0.036504
+Method: N6,  Size: 30*30,  Round: 10
+  The ans is: 18422 
+  The delta time is: 0.036160
+Method: N6,  Size: 30*30,  Round: 11
+  The ans is: 11102 
+  The delta time is: 0.036208
+Method: N6,  Size: 30*30,  Round: 12
+  The ans is: 18859 
+  The delta time is: 0.036223
+Method: N6,  Size: 30*30,  Round: 13
+  The ans is: 10311 
+  The delta time is: 0.036212
+Method: N6,  Size: 30*30,  Round: 14
+  The ans is: 14386 
+  The delta time is: 0.036221
+Method: N6,  Size: 30*30,  Round: 15
+  The ans is: 16614 
+  The delta time is: 0.036195
+Method: N6,  Size: 30*30,  Round: 16
+  The ans is: 12204 
+  The delta time is: 0.036187
+Method: N6,  Size: 30*30,  Round: 17
+  The ans is: 5745 
+  The delta time is: 0.036204
+Method: N6,  Size: 30*30,  Round: 18
+  The ans is: 15046 
+  The delta time is: 0.036162
+Method: N6,  Size: 30*30,  Round: 19
+  The ans is: 15978 
+  The delta time is: 0.036303
+Method: N6,  Size: 30*30,  Round: 20
+  The ans is: 13203 
+  The delta time is: 0.036148
+Method: N6,  Size: 30*30,  Round: 21
+  The ans is: 7394 
+  The delta time is: 0.036194
+Method: N6,  Size: 30*30,  Round: 22
+  The ans is: 5716 
+  The delta time is: 0.036163
+Method: N6,  Size: 30*30,  Round: 23
+  The ans is: 7762 
+  The delta time is: 0.036297
+Method: N6,  Size: 30*30,  Round: 24
+  The ans is: 7478 
+  The delta time is: 0.036249
+Method: N6,  Size: 30*30,  Round: 25
+  The ans is: 7558 
+  The delta time is: 0.036227
+Method: N6,  Size: 30*30,  Round: 26
+  The ans is: 10286 
+  The delta time is: 0.036147
+Method: N6,  Size: 30*30,  Round: 27
+  The ans is: 11686 
+  The delta time is: 0.036197
+Method: N6,  Size: 30*30,  Round: 28
+  The ans is: 4773 
+  The delta time is: 0.036167
+Method: N6,  Size: 30*30,  Round: 29
+  The ans is: 13711 
+  The delta time is: 0.036212
+Method: N6,  Size: 30*30,  Round: 30
+  The ans is: 12704 
+  The delta time is: 0.036188
+Method: N6,  Size: 30*30,  Round: 31
+  The ans is: 15666 
+  The delta time is: 0.036237
+Method: N6,  Size: 30*30,  Round: 32
+  The ans is: 7168 
+  The delta time is: 0.036423
+Method: N6,  Size: 30*30,  Round: 33
+  The ans is: 10525 
+  The delta time is: 0.038007
+Method: N6,  Size: 30*30,  Round: 34
+  The ans is: 7295 
+  The delta time is: 0.036706
+Method: N6,  Size: 30*30,  Round: 35
+  The ans is: 5761 
+  The delta time is: 0.036221
+Method: N6,  Size: 30*30,  Round: 36
+  The ans is: 14588 
+  The delta time is: 0.036621
+Method: N6,  Size: 30*30,  Round: 37
+  The ans is: 10188 
+  The delta time is: 0.036208
+Method: N6,  Size: 30*30,  Round: 38
+  The ans is: 13015 
+  The delta time is: 0.036195
+Method: N6,  Size: 30*30,  Round: 39
+  The ans is: 8674 
+  The delta time is: 0.036185
+Method: N6,  Size: 30*30,  Round: 40
+  The ans is: 7039 
+  The delta time is: 0.036225
+Method: N6,  Size: 30*30,  Round: 41
+  The ans is: 7444 
+  The delta time is: 0.036177
+Method: N6,  Size: 30*30,  Round: 42
+  The ans is: 11620 
+  The delta time is: 0.036136
+Method: N6,  Size: 30*30,  Round: 43
+  The ans is: 19644 
+  The delta time is: 0.036171
+Method: N6,  Size: 30*30,  Round: 44
+  The ans is: 12965 
+  The delta time is: 0.036199
+Method: N6,  Size: 30*30,  Round: 45
+  The ans is: 10173 
+  The delta time is: 0.036209
+Method: N6,  Size: 30*30,  Round: 46
+  The ans is: 8532 
+  The delta time is: 0.036237
+Method: N6,  Size: 30*30,  Round: 47
+  The ans is: 8720 
+  The delta time is: 0.036157
+Method: N6,  Size: 30*30,  Round: 48
+  The ans is: 14822 
+  The delta time is: 0.036323
+Method: N6,  Size: 30*30,  Round: 49
+  The ans is: 17410 
+  The delta time is: 0.036306
+Method: N3,  Size: 35*35,  Round: 0
+  The ans is: 23053 
+  The delta time is: 0.000204
+Method: N3,  Size: 35*35,  Round: 1
+  The ans is: 12166 
+  The delta time is: 0.000213
+Method: N3,  Size: 35*35,  Round: 2
+  The ans is: 23933 
+  The delta time is: 0.000202
+Method: N3,  Size: 35*35,  Round: 3
+  The ans is: 12127 
+  The delta time is: 0.000212
+Method: N3,  Size: 35*35,  Round: 4
+  The ans is: 12000 
+  The delta time is: 0.000210
+Method: N3,  Size: 35*35,  Round: 5
+  The ans is: 15005 
+  The delta time is: 0.000216
+Method: N3,  Size: 35*35,  Round: 6
+  The ans is: 19321 
+  The delta time is: 0.000223
+Method: N3,  Size: 35*35,  Round: 7
+  The ans is: 17823 
+  The delta time is: 0.000206
+Method: N3,  Size: 35*35,  Round: 8
+  The ans is: 12639 
+  The delta time is: 0.000209
+Method: N3,  Size: 35*35,  Round: 9
+  The ans is: 17469 
+  The delta time is: 0.000198
+Method: N3,  Size: 35*35,  Round: 10
+  The ans is: 15120 
+  The delta time is: 0.000206
+Method: N3,  Size: 35*35,  Round: 11
+  The ans is: 15194 
+  The delta time is: 0.000207
+Method: N3,  Size: 35*35,  Round: 12
+  The ans is: 17625 
+  The delta time is: 0.000210
+Method: N3,  Size: 35*35,  Round: 13
+  The ans is: 16626 
+  The delta time is: 0.000201
+Method: N3,  Size: 35*35,  Round: 14
+  The ans is: 12049 
+  The delta time is: 0.000197
+Method: N3,  Size: 35*35,  Round: 15
+  The ans is: 15876 
+  The delta time is: 0.000192
+Method: N3,  Size: 35*35,  Round: 16
+  The ans is: 10534 
+  The delta time is: 0.000218
+Method: N3,  Size: 35*35,  Round: 17
+  The ans is: 11851 
+  The delta time is: 0.000213
+Method: N3,  Size: 35*35,  Round: 18
+  The ans is: 8023 
+  The delta time is: 0.000207
+Method: N3,  Size: 35*35,  Round: 19
+  The ans is: 17793 
+  The delta time is: 0.000217
+Method: N4,  Size: 35*35,  Round: 0
+  The ans is: 23053 
+  The delta time is: 0.001757
+Method: N4,  Size: 35*35,  Round: 1
+  The ans is: 12166 
+  The delta time is: 0.001718
+Method: N4,  Size: 35*35,  Round: 2
+  The ans is: 23933 
+  The delta time is: 0.001743
+Method: N4,  Size: 35*35,  Round: 3
+  The ans is: 12127 
+  The delta time is: 0.001721
+Method: N4,  Size: 35*35,  Round: 4
+  The ans is: 12000 
+  The delta time is: 0.001719
+Method: N4,  Size: 35*35,  Round: 5
+  The ans is: 15005 
+  The delta time is: 0.001713
+Method: N4,  Size: 35*35,  Round: 6
+  The ans is: 19321 
+  The delta time is: 0.001704
+Method: N4,  Size: 35*35,  Round: 7
+  The ans is: 17823 
+  The delta time is: 0.001718
+Method: N4,  Size: 35*35,  Round: 8
+  The ans is: 12639 
+  The delta time is: 0.001766
+Method: N4,  Size: 35*35,  Round: 9
+  The ans is: 17469 
+  The delta time is: 0.001723
+Method: N4,  Size: 35*35,  Round: 10
+  The ans is: 15120 
+  The delta time is: 0.001709
+Method: N4,  Size: 35*35,  Round: 11
+  The ans is: 15194 
+  The delta time is: 0.001747
+Method: N4,  Size: 35*35,  Round: 12
+  The ans is: 17625 
+  The delta time is: 0.001756
+Method: N4,  Size: 35*35,  Round: 13
+  The ans is: 16626 
+  The delta time is: 0.001840
+Method: N4,  Size: 35*35,  Round: 14
+  The ans is: 12049 
+  The delta time is: 0.001765
+Method: N4,  Size: 35*35,  Round: 15
+  The ans is: 15876 
+  The delta time is: 0.001750
+Method: N4,  Size: 35*35,  Round: 16
+  The ans is: 10534 
+  The delta time is: 0.001796
+Method: N4,  Size: 35*35,  Round: 17
+  The ans is: 11851 
+  The delta time is: 0.001703
+Method: N4,  Size: 35*35,  Round: 18
+  The ans is: 8023 
+  The delta time is: 0.001720
+Method: N4,  Size: 35*35,  Round: 19
+  The ans is: 17793 
+  The delta time is: 0.001708
+Method: N6,  Size: 35*35,  Round: 0
+  The ans is: 23053 
+  The delta time is: 0.087820
+Method: N6,  Size: 35*35,  Round: 1
+  The ans is: 12166 
+  The delta time is: 0.087107
+Method: N6,  Size: 35*35,  Round: 2
+  The ans is: 23933 
+  The delta time is: 0.086764
+Method: N6,  Size: 35*35,  Round: 3
+  The ans is: 12127 
+  The delta time is: 0.086887
+Method: N6,  Size: 35*35,  Round: 4
+  The ans is: 12000 
+  The delta time is: 0.087201
+Method: N6,  Size: 35*35,  Round: 5
+  The ans is: 15005 
+  The delta time is: 0.087502
+Method: N6,  Size: 35*35,  Round: 6
+  The ans is: 19321 
+  The delta time is: 0.087029
+Method: N6,  Size: 35*35,  Round: 7
+  The ans is: 17823 
+  The delta time is: 0.086674
+Method: N6,  Size: 35*35,  Round: 8
+  The ans is: 12639 
+  The delta time is: 0.086706
+Method: N6,  Size: 35*35,  Round: 9
+  The ans is: 17469 
+  The delta time is: 0.086897
+Method: N6,  Size: 35*35,  Round: 10
+  The ans is: 15120 
+  The delta time is: 0.087204
+Method: N6,  Size: 35*35,  Round: 11
+  The ans is: 15194 
+  The delta time is: 0.086905
+Method: N6,  Size: 35*35,  Round: 12
+  The ans is: 17625 
+  The delta time is: 0.086838
+Method: N6,  Size: 35*35,  Round: 13
+  The ans is: 16626 
+  The delta time is: 0.094558
+Method: N6,  Size: 35*35,  Round: 14
+  The ans is: 12049 
+  The delta time is: 0.088252
+Method: N6,  Size: 35*35,  Round: 15
+  The ans is: 15876 
+  The delta time is: 0.087607
+Method: N6,  Size: 35*35,  Round: 16
+  The ans is: 10534 
+  The delta time is: 0.088589
+Method: N6,  Size: 35*35,  Round: 17
+  The ans is: 11851 
+  The delta time is: 0.090340
+Method: N6,  Size: 35*35,  Round: 18
+  The ans is: 8023 
+  The delta time is: 0.088904
+Method: N6,  Size: 35*35,  Round: 19
+  The ans is: 17793 
+  The delta time is: 0.087721
+Method: N3,  Size: 40*40,  Round: 0
+  The ans is: 24642 
+  The delta time is: 0.000263
+Method: N3,  Size: 40*40,  Round: 1
+  The ans is: 15988 
+  The delta time is: 0.000279
+Method: N3,  Size: 40*40,  Round: 2
+  The ans is: 20093 
+  The delta time is: 0.000275
+Method: N3,  Size: 40*40,  Round: 3
+  The ans is: 13798 
+  The delta time is: 0.000277
+Method: N3,  Size: 40*40,  Round: 4
+  The ans is: 20032 
+  The delta time is: 0.000282
+Method: N3,  Size: 40*40,  Round: 5
+  The ans is: 24044 
+  The delta time is: 0.000288
+Method: N3,  Size: 40*40,  Round: 6
+  The ans is: 14633 
+  The delta time is: 0.000290
+Method: N3,  Size: 40*40,  Round: 7
+  The ans is: 14715 
+  The delta time is: 0.000294
+Method: N3,  Size: 40*40,  Round: 8
+  The ans is: 17996 
+  The delta time is: 0.000317
+Method: N3,  Size: 40*40,  Round: 9
+  The ans is: 17279 
+  The delta time is: 0.000302
+Method: N3,  Size: 40*40,  Round: 10
+  The ans is: 23914 
+  The delta time is: 0.000295
+Method: N3,  Size: 40*40,  Round: 11
+  The ans is: 14219 
+  The delta time is: 0.000294
+Method: N3,  Size: 40*40,  Round: 12
+  The ans is: 8698 
+  The delta time is: 0.000306
+Method: N3,  Size: 40*40,  Round: 13
+  The ans is: 12253 
+  The delta time is: 0.000317
+Method: N3,  Size: 40*40,  Round: 14
+  The ans is: 11863 
+  The delta time is: 0.000300
+Method: N3,  Size: 40*40,  Round: 15
+  The ans is: 9796 
+  The delta time is: 0.000301
+Method: N3,  Size: 40*40,  Round: 16
+  The ans is: 13769 
+  The delta time is: 0.000296
+Method: N3,  Size: 40*40,  Round: 17
+  The ans is: 17657 
+  The delta time is: 0.000306
+Method: N3,  Size: 40*40,  Round: 18
+  The ans is: 8736 
+  The delta time is: 0.000313
+Method: N3,  Size: 40*40,  Round: 19
+  The ans is: 6446 
+  The delta time is: 0.000332
+Method: N4,  Size: 40*40,  Round: 0
+  The ans is: 24642 
+  The delta time is: 0.002929
+Method: N4,  Size: 40*40,  Round: 1
+  The ans is: 15988 
+  The delta time is: 0.002881
+Method: N4,  Size: 40*40,  Round: 2
+  The ans is: 20093 
+  The delta time is: 0.002878
+Method: N4,  Size: 40*40,  Round: 3
+  The ans is: 13798 
+  The delta time is: 0.002862
+Method: N4,  Size: 40*40,  Round: 4
+  The ans is: 20032 
+  The delta time is: 0.002879
+Method: N4,  Size: 40*40,  Round: 5
+  The ans is: 24044 
+  The delta time is: 0.002924
+Method: N4,  Size: 40*40,  Round: 6
+  The ans is: 14633 
+  The delta time is: 0.002945
+Method: N4,  Size: 40*40,  Round: 7
+  The ans is: 14715 
+  The delta time is: 0.002933
+Method: N4,  Size: 40*40,  Round: 8
+  The ans is: 17996 
+  The delta time is: 0.002863
+Method: N4,  Size: 40*40,  Round: 9
+  The ans is: 17279 
+  The delta time is: 0.002890
+Method: N4,  Size: 40*40,  Round: 10
+  The ans is: 23914 
+  The delta time is: 0.002914
+Method: N4,  Size: 40*40,  Round: 11
+  The ans is: 14219 
+  The delta time is: 0.002874
+Method: N4,  Size: 40*40,  Round: 12
+  The ans is: 8698 
+  The delta time is: 0.002909
+Method: N4,  Size: 40*40,  Round: 13
+  The ans is: 12253 
+  The delta time is: 0.002870
+Method: N4,  Size: 40*40,  Round: 14
+  The ans is: 11863 
+  The delta time is: 0.002888
+Method: N4,  Size: 40*40,  Round: 15
+  The ans is: 9796 
+  The delta time is: 0.002858
+Method: N4,  Size: 40*40,  Round: 16
+  The ans is: 13769 
+  The delta time is: 0.002898
+Method: N4,  Size: 40*40,  Round: 17
+  The ans is: 17657 
+  The delta time is: 0.002885
+Method: N4,  Size: 40*40,  Round: 18
+  The ans is: 8736 
+  The delta time is: 0.002856
+Method: N4,  Size: 40*40,  Round: 19
+  The ans is: 6446 
+  The delta time is: 0.002874
+Method: N6,  Size: 40*40,  Round: 0
+  The ans is: 24642 
+  The delta time is: 0.188813
+Method: N6,  Size: 40*40,  Round: 1
+  The ans is: 15988 
+  The delta time is: 0.188023
+Method: N6,  Size: 40*40,  Round: 2
+  The ans is: 20093 
+  The delta time is: 0.187369
+Method: N6,  Size: 40*40,  Round: 3
+  The ans is: 13798 
+  The delta time is: 0.187575
+Method: N6,  Size: 40*40,  Round: 4
+  The ans is: 20032 
+  The delta time is: 0.187601
+Method: N6,  Size: 40*40,  Round: 5
+  The ans is: 24044 
+  The delta time is: 0.189567
+Method: N6,  Size: 40*40,  Round: 6
+  The ans is: 14633 
+  The delta time is: 0.194304
+Method: N6,  Size: 40*40,  Round: 7
+  The ans is: 14715 
+  The delta time is: 0.193075
+Method: N6,  Size: 40*40,  Round: 8
+  The ans is: 17996 
+  The delta time is: 0.189085
+Method: N6,  Size: 40*40,  Round: 9
+  The ans is: 17279 
+  The delta time is: 0.191065
+Method: N6,  Size: 40*40,  Round: 10
+  The ans is: 23914 
+  The delta time is: 0.192797
+Method: N6,  Size: 40*40,  Round: 11
+  The ans is: 14219 
+  The delta time is: 0.191398
+Method: N6,  Size: 40*40,  Round: 12
+  The ans is: 8698 
+  The delta time is: 0.190141
+Method: N6,  Size: 40*40,  Round: 13
+  The ans is: 12253 
+  The delta time is: 0.191049
+Method: N6,  Size: 40*40,  Round: 14
+  The ans is: 11863 
+  The delta time is: 0.190847
+Method: N6,  Size: 40*40,  Round: 15
+  The ans is: 9796 
+  The delta time is: 0.193889
+Method: N6,  Size: 40*40,  Round: 16
+  The ans is: 13769 
+  The delta time is: 0.190984
+Method: N6,  Size: 40*40,  Round: 17
+  The ans is: 17657 
+  The delta time is: 0.189541
+Method: N6,  Size: 40*40,  Round: 18
+  The ans is: 8736 
+  The delta time is: 0.188365
+Method: N6,  Size: 40*40,  Round: 19
+  The ans is: 6446 
+  The delta time is: 0.186689
+Method: N3,  Size: 50*50,  Round: 0
+  The ans is: 24656 
+  The delta time is: 0.000523
+Method: N3,  Size: 50*50,  Round: 1
+  The ans is: 31480 
+  The delta time is: 0.000529
+Method: N3,  Size: 50*50,  Round: 2
+  The ans is: 19684 
+  The delta time is: 0.000530
+Method: N3,  Size: 50*50,  Round: 3
+  The ans is: 32842 
+  The delta time is: 0.000505
+Method: N3,  Size: 50*50,  Round: 4
+  The ans is: 21589 
+  The delta time is: 0.000490
+Method: N3,  Size: 50*50,  Round: 5
+  The ans is: 26995 
+  The delta time is: 0.000509
+Method: N3,  Size: 50*50,  Round: 6
+  The ans is: 19092 
+  The delta time is: 0.000521
+Method: N3,  Size: 50*50,  Round: 7
+  The ans is: 16016 
+  The delta time is: 0.000516
+Method: N3,  Size: 50*50,  Round: 8
+  The ans is: 9202 
+  The delta time is: 0.000531
+Method: N3,  Size: 50*50,  Round: 9
+  The ans is: 15602 
+  The delta time is: 0.000533
+Method: N3,  Size: 50*50,  Round: 10
+  The ans is: 15918 
+  The delta time is: 0.000556
+Method: N3,  Size: 50*50,  Round: 11
+  The ans is: 22532 
+  The delta time is: 0.000521
+Method: N3,  Size: 50*50,  Round: 12
+  The ans is: 11736 
+  The delta time is: 0.000561
+Method: N3,  Size: 50*50,  Round: 13
+  The ans is: 13140 
+  The delta time is: 0.000577
+Method: N3,  Size: 50*50,  Round: 14
+  The ans is: 15725 
+  The delta time is: 0.000558
+Method: N3,  Size: 50*50,  Round: 15
+  The ans is: 25746 
+  The delta time is: 0.000525
+Method: N3,  Size: 50*50,  Round: 16
+  The ans is: 20458 
+  The delta time is: 0.000539
+Method: N3,  Size: 50*50,  Round: 17
+  The ans is: 21998 
+  The delta time is: 0.000487
+Method: N3,  Size: 50*50,  Round: 18
+  The ans is: 11459 
+  The delta time is: 0.000534
+Method: N3,  Size: 50*50,  Round: 19
+  The ans is: 25082 
+  The delta time is: 0.000469
+Method: N4,  Size: 50*50,  Round: 0
+  The ans is: 24656 
+  The delta time is: 0.006936
+Method: N4,  Size: 50*50,  Round: 1
+  The ans is: 31480 
+  The delta time is: 0.006786
+Method: N4,  Size: 50*50,  Round: 2
+  The ans is: 19684 
+  The delta time is: 0.006773
+Method: N4,  Size: 50*50,  Round: 3
+  The ans is: 32842 
+  The delta time is: 0.006768
+Method: N4,  Size: 50*50,  Round: 4
+  The ans is: 21589 
+  The delta time is: 0.006769
+Method: N4,  Size: 50*50,  Round: 5
+  The ans is: 26995 
+  The delta time is: 0.006801
+Method: N4,  Size: 50*50,  Round: 6
+  The ans is: 19092 
+  The delta time is: 0.006771
+Method: N4,  Size: 50*50,  Round: 7
+  The ans is: 16016 
+  The delta time is: 0.006772
+Method: N4,  Size: 50*50,  Round: 8
+  The ans is: 9202 
+  The delta time is: 0.006775
+Method: N4,  Size: 50*50,  Round: 9
+  The ans is: 15602 
+  The delta time is: 0.006827
+Method: N4,  Size: 50*50,  Round: 10
+  The ans is: 15918 
+  The delta time is: 0.006880
+Method: N4,  Size: 50*50,  Round: 11
+  The ans is: 22532 
+  The delta time is: 0.006785
+Method: N4,  Size: 50*50,  Round: 12
+  The ans is: 11736 
+  The delta time is: 0.006852
+Method: N4,  Size: 50*50,  Round: 13
+  The ans is: 13140 
+  The delta time is: 0.006778
+Method: N4,  Size: 50*50,  Round: 14
+  The ans is: 15725 
+  The delta time is: 0.006779
+Method: N4,  Size: 50*50,  Round: 15
+  The ans is: 25746 
+  The delta time is: 0.006769
+Method: N4,  Size: 50*50,  Round: 16
+  The ans is: 20458 
+  The delta time is: 0.006794
+Method: N4,  Size: 50*50,  Round: 17
+  The ans is: 21998 
+  The delta time is: 0.006796
+Method: N4,  Size: 50*50,  Round: 18
+  The ans is: 11459 
+  The delta time is: 0.006803
+Method: N4,  Size: 50*50,  Round: 19
+  The ans is: 25082 
+  The delta time is: 0.006939
+Method: N6,  Size: 50*50,  Round: 0
+  The ans is: 24656 
+  The delta time is: 0.686600
+Method: N6,  Size: 50*50,  Round: 1
+  The ans is: 31480 
+  The delta time is: 0.682342
+Method: N6,  Size: 50*50,  Round: 2
+  The ans is: 19684 
+  The delta time is: 0.685219
+Method: N6,  Size: 50*50,  Round: 3
+  The ans is: 32842 
+  The delta time is: 0.679111
+Method: N6,  Size: 50*50,  Round: 4
+  The ans is: 21589 
+  The delta time is: 0.679071
+Method: N6,  Size: 50*50,  Round: 5
+  The ans is: 26995 
+  The delta time is: 0.688066
+Method: N6,  Size: 50*50,  Round: 6
+  The ans is: 19092 
+  The delta time is: 0.683616
+Method: N6,  Size: 50*50,  Round: 7
+  The ans is: 16016 
+  The delta time is: 0.681148
+Method: N6,  Size: 50*50,  Round: 8
+  The ans is: 9202 
+  The delta time is: 0.680481
+Method: N6,  Size: 50*50,  Round: 9
+  The ans is: 15602 
+  The delta time is: 0.677683
+Method: N6,  Size: 50*50,  Round: 10
+  The ans is: 15918 
+  The delta time is: 0.686876
+Method: N6,  Size: 50*50,  Round: 11
+  The ans is: 22532 
+  The delta time is: 0.683535
+Method: N6,  Size: 50*50,  Round: 12
+  The ans is: 11736 
+  The delta time is: 0.678158
+Method: N6,  Size: 50*50,  Round: 13
+  The ans is: 13140 
+  The delta time is: 0.685699
+Method: N6,  Size: 50*50,  Round: 14
+  The ans is: 15725 
+  The delta time is: 0.684112
+Method: N6,  Size: 50*50,  Round: 15
+  The ans is: 25746 
+  The delta time is: 0.685817
+Method: N6,  Size: 50*50,  Round: 16
+  The ans is: 20458 
+  The delta time is: 0.689011
+Method: N6,  Size: 50*50,  Round: 17
+  The ans is: 21998 
+  The delta time is: 0.689878
+Method: N6,  Size: 50*50,  Round: 18
+  The ans is: 11459 
+  The delta time is: 0.682514
+Method: N6,  Size: 50*50,  Round: 19
+  The ans is: 25082 
+  The delta time is: 0.691397
+Method: N3,  Size: 60*60,  Round: 0
+  The ans is: 36810 
+  The delta time is: 0.000840
+Method: N3,  Size: 60*60,  Round: 1
+  The ans is: 20322 
+  The delta time is: 0.000913
+Method: N3,  Size: 60*60,  Round: 2
+  The ans is: 30648 
+  The delta time is: 0.000790
+Method: N3,  Size: 60*60,  Round: 3
+  The ans is: 23583 
+  The delta time is: 0.000858
+Method: N3,  Size: 60*60,  Round: 4
+  The ans is: 23627 
+  The delta time is: 0.000928
+Method: N3,  Size: 60*60,  Round: 5
+  The ans is: 17012 
+  The delta time is: 0.000841
+Method: N3,  Size: 60*60,  Round: 6
+  The ans is: 18424 
+  The delta time is: 0.000920
+Method: N3,  Size: 60*60,  Round: 7
+  The ans is: 22254 
+  The delta time is: 0.000901
+Method: N3,  Size: 60*60,  Round: 8
+  The ans is: 14713 
+  The delta time is: 0.000911
+Method: N3,  Size: 60*60,  Round: 9
+  The ans is: 19518 
+  The delta time is: 0.000900
+Method: N4,  Size: 60*60,  Round: 0
+  The ans is: 36810 
+  The delta time is: 0.014233
+Method: N4,  Size: 60*60,  Round: 1
+  The ans is: 20322 
+  The delta time is: 0.013902
+Method: N4,  Size: 60*60,  Round: 2
+  The ans is: 30648 
+  The delta time is: 0.013903
+Method: N4,  Size: 60*60,  Round: 3
+  The ans is: 23583 
+  The delta time is: 0.014034
+Method: N4,  Size: 60*60,  Round: 4
+  The ans is: 23627 
+  The delta time is: 0.014025
+Method: N4,  Size: 60*60,  Round: 5
+  The ans is: 17012 
+  The delta time is: 0.014002
+Method: N4,  Size: 60*60,  Round: 6
+  The ans is: 18424 
+  The delta time is: 0.014020
+Method: N4,  Size: 60*60,  Round: 7
+  The ans is: 22254 
+  The delta time is: 0.014035
+Method: N4,  Size: 60*60,  Round: 8
+  The ans is: 14713 
+  The delta time is: 0.014171
+Method: N4,  Size: 60*60,  Round: 9
+  The ans is: 19518 
+  The delta time is: 0.014174
+Method: N6,  Size: 60*60,  Round: 0
+  The ans is: 36810 
+  The delta time is: 1.976718
+Method: N6,  Size: 60*60,  Round: 1
+  The ans is: 20322 
+  The delta time is: 1.992369
+Method: N6,  Size: 60*60,  Round: 2
+  The ans is: 30648 
+  The delta time is: 1.988852
+Method: N6,  Size: 60*60,  Round: 3
+  The ans is: 23583 
+  The delta time is: 2.010607
+Method: N6,  Size: 60*60,  Round: 4
+  The ans is: 23627 
+  The delta time is: 1.989396
+Method: N6,  Size: 60*60,  Round: 5
+  The ans is: 17012 
+  The delta time is: 1.993728
+Method: N6,  Size: 60*60,  Round: 6
+  The ans is: 18424 
+  The delta time is: 1.977934
+Method: N6,  Size: 60*60,  Round: 7
+  The ans is: 22254 
+  The delta time is: 1.980921
+Method: N6,  Size: 60*60,  Round: 8
+  The ans is: 14713 
+  The delta time is: 1.986858
+Method: N6,  Size: 60*60,  Round: 9
+  The ans is: 19518 
+  The delta time is: 2.000235
+Method: N3,  Size: 80*80,  Round: 0
+  The ans is: 44083 
+  The delta time is: 0.001965
+Method: N4,  Size: 80*80,  Round: 0
+  The ans is: 44083 
+  The delta time is: 0.043794
+Method: N6,  Size: 80*80,  Round: 0
+  The ans is: 44083 
+  The delta time is: 10.724760
+Method: N3,  Size: 100*100,  Round: 0
+  The ans is: 62466 
+  The delta time is: 0.003637
+Method: N4,  Size: 100*100,  Round: 0
+  The ans is: 62466 
+  The delta time is: 0.105496
+Method: N6,  Size: 100*100,  Round: 0
+  The ans is: 62466 
+  The delta time is: 39.807294

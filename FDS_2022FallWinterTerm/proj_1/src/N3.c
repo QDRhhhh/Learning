@@ -1,6 +1,5 @@
 #include "N3.h"
 
-
 // This function will preprocess the sumM and make it to
 // a matrix that has the following feature:
 // sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
@@ -27,7 +26,7 @@ void calFoldMatrix(Matrix * foldM, Matrix * sumM, int l1, int l2){
     int j;
     // Using the feature of prefix sum algorithm.
     for(j = 1; j <= sumM->m; ++j){
-        M_ELE(foldM, 1, j) = M_ELE(sumM, l2, j) - M_ELE(sumM, l1-1, j);
+        M_ELE(foldM, 1, j) = M_ELE(sumM, l2-1, j) - M_ELE(sumM, l1-1, j);
     }
     return;
 }
@@ -51,7 +50,7 @@ int calMaxSubMatrixSum(Matrix * mat){
     // SET_CNH_SHOW(0);
     // SET_CNH_BRIEF_MODE(1);
 
-    int ret = -0x3F3F3F3F;
+    int ret = -0x3FFFFFFF;
 
     // This matrix is to store the 2d-prefix sum on the n-axis.
     // That is, sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
@@ -80,3 +79,6 @@ int calMaxSubMatrixSum(Matrix * mat){
     return ret;
 }
 
+int getMethod(){
+    return 3;
+}

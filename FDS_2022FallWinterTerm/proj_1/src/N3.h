@@ -5,6 +5,7 @@
 #include "matrix_utils.h"
 // #include "helper/CNewbieHelper.h"
 
+int getMethod();
 int calMaxSubMatrixSum(Matrix * mat);
 
 #endif
