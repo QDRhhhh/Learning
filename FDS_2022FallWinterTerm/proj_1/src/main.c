@@ -18,7 +18,7 @@ double foo(int round){
     clock_t timerF = clock();
     double delTime = (double)(timerF-timerI)/CLOCKS_PER_SEC;
 
-    printf("(N%d)[%d*%d]<%d>The ans is: %d \n", getMethod(),  mat->n, mat->m, round, ans);
+    printf("%d\n", ans);
     // printf("Program Finished in %.4lf seconds!", (double)(timerF-timerI)/CLK_TCK);
     
     FILE * fp = fopen("output_details.txt", "a");
@@ -42,7 +42,6 @@ int main(){
     int i;
     for(i = 0;i < cnt;++i){
         double delTime = foo(i);
-        printf("Program Finished in %.4lf seconds!\n", delTime);
         tot += delTime;
     }
     
