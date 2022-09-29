@@ -38,13 +38,18 @@ int main(){
     int cnt;
     scanf("%d", &cnt);
 
+    clock_t timerI = clock();
+
     double tot = 0;
     int i;
     for(i = 0;i < cnt;++i){
         double delTime = foo(i);
-        tot += delTime;
+        // tot += delTime;
     }
     
+    clock_t timerF = clock();
+    
+    tot = (double)(timerF-timerI)/CLOCKS_PER_SEC;
     FILE * fp = fopen("output.txt", "a");
     fprintf(fp, "%.6lf %.6lf \n", tot, tot/cnt);
     fclose(fp);

@@ -1,1 +1,0 @@
-rm ./data_maker/*.in ./data_maker/*.out ./*.exe ./src/*.o || true

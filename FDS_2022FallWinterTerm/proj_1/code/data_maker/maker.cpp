@@ -17,7 +17,7 @@ int main(int argc, char * argv[]){
     }
     ofstream of;
     of.open("test_data.txt",ios::out | ios::trunc);
-    int cnt = 10;
+    int cnt = n <= 50 ? 100 : 10;
     of << cnt << "\n";
     for(int cc = 0; cc < cnt; ++cc){
         of << n << " " << m << "\n"; 

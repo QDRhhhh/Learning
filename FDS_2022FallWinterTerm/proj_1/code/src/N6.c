@@ -3,7 +3,7 @@
 // This function will calculate the max sum of the sub-Matrix
 // in mat.
 int calMaxSubMatrixSum(Matrix * mat){
-    int i, j, k, l, x, y, ans = -0x3F3F3F3F;
+    int i, j, k, l, x, y, ans = 0;
     // Iterate the left-top key point.
     for(i = 0; i < mat->n; ++i){
         for(j = 0; j < mat->m; ++j){

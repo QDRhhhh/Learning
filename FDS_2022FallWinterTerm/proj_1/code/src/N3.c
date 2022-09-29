@@ -50,7 +50,7 @@ int calMaxSubMatrixSum(Matrix * mat){
     // SET_CNH_SHOW(0);
     // SET_CNH_BRIEF_MODE(1);
 
-    int ret = -0x3FFFFFFF;
+    int ret = 0;
 
     // This matrix is to store the 2d-prefix sum on the n-axis.
     // That is, sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
