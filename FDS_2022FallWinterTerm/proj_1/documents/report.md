@@ -24,6 +24,9 @@
 
 <center><font size = 6> Performance Measurement (MSS)</font></center> 
 <center><font size = 5> Date: 2022-9.23</font></center> 
+<center><font size = 5> Author: 夏彦</font></center> 
+
+
 
 
 
@@ -177,7 +180,7 @@ func calFoldMatrix(foldM, sumM, l1, l2){
 // a matrix that has the following feature:
 // sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
 func initSumMatrix(sumM, mat){
-    for(j = 1; j <= mat->m; ++j){
+    for(j){
         sumM[0][j] = 0;
     }
     // sumM[I][J] = ${ \sum^{I}_{i} mat[i][J] }$
@@ -370,36 +373,49 @@ Start drawing figure!
 ## Analysis
 
 - N^6^: The time complexity should be O(N^6^) and the space complexity should be O(N^2^).
+  - For N^6^ version, I just use 6 for loop to iterate the left-top key point (N^2^), the right-bottom key point (N^2^), and calculate the sum of the sub matrix chosen by the two key points  (N^2^).
+
+  - Only one matrix with N^2^ size is used to store the input data.
 
 - N^4^: The time complexity should be O(N^4^) and the space complexity should be O(N^2^).
+  - N^4^ version has something improved based on the N^6^ one. We can calculate the sum of any sub matrix indexed by $(i_{lt},j_{lt}),(i_{rb},j_{rb})$ in O(1) by $M^{sub}_{i_{lt},j_{lt},i_{rb},j_{rb}} = M'_{i_{rb},j_{rb}}+M'_{i_{lt}-1,j_{lt}-1}-M'_{i_{rb},j_{lt}-1}-M'_{i_{lt}-1,j_{rb}}$ according to the Inclusion and Exclusion Principle.
 
 - N^3^: The time complexity should be O(N^3^) and the space complexity should be O(N^2^).
+  - This method has very difference between the previous two. It's more like the O(N) approach of the largest sub segment sum. Our idea is to change the matrix into a vector, which means we can directly use the method of the largest sub-terminal sum, which contributes to the complexity of O(N). 
+
+### Comparison
+
+- N^6^'s is quite plain and simple, and has very poor performance when size of inputs became larger. N^4^'s appears as an improvement on N^6^'s, which actually uses the same idea but reduces the complexity of dynamic summation through the prefix-sum algorithm.
+- As for N^3^'s, we could see that we only enumerated only one dimension, and another dimension is only scanned linearly. The option of linear scan cause the advantage of N^3^'s.
+- More specificly, I both use prefix-sum algorithm in N^4^'s and N^3^'s, but I use the 2d version in N^4^'s and 1d version in N^3^'s, that's because in N^4^'s, I need to randomly get any sum of a sub matrix, but in N^3^'s, I just need to calculate the sum of folded elements, which you may think a lot like vector operations.
+
+
 
 ### Table
 
 - Data following is gotten on Mac(M1).
 - In order to make the data more reasonable and observable, I will generate 10 **different** input data. All the methods will run with the same 10 different input.
 
-| O()     | opt             | 5            | 10           | 30           | 50           | 80           | 100          |
-| ------- | --------------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| O(N^6^) | Iterations(K)   | 10           | 10           | 10           | 10           | 10           | 10           |
-|         | Ticks           | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 |
-|         | Total Time(sec) | 0.000126     | 0.002742     | 0.367200     | 6.892734     | 108.260617   | 400.305024   |
-|         | Duration(sec)   | 0.000013     | 0.000022     | 0.036720     | 0.689273     | 10.826062    | 40.030502    |
-| O(N^4^) | Iterations(K)   | 10           | 10           | 10           | 10           | 10           | 10           |
-|         | Ticks           | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 |
-|         | Total Time(sec) | 0.000065     | 0.000439     | 0.009535     | 0.069383     | 0.436988     | 1.055402     |
-|         | Duration(sec)   | 0.000006     | 0.000044     | 0.000954     | 0.006938     | 0.043699     | 0.105540     |
-| O(N^3^) | Iterations(K)   | 10           | 10           | 10           | 10           | 10           | 10           |
-|         | Ticks           | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 | totTime*1000 |
-|         | Total Time(sec) | 0.000039     | 0.000218     | 0.001245     | 0.005501     | 0.019971     | 0.037084     |
-|         | Duration(sec)   | 0.000004     | 0.000022     | 0.000124     | 0.000550     | 0.001997     | 0.003708     |
+| O()     | opt             | 5        | 10       | 30       | 50        | 80          | 100         |
+| ------- | --------------- | -------- | -------- | -------- | --------- | ----------- | ----------- |
+| O(N^6^) | Iterations(K)   | 10       | 10       | 10       | 10        | 10          | 10          |
+|         | Ticks           | 125      | 2,742    | 367,200  | 6,892,734 | 108,260,617 | 400,305,024 |
+|         | Total Time(sec) | 0.000126 | 0.002742 | 0.367200 | 6.892734  | 108.260617  | 400.305024  |
+|         | Duration(sec)   | 0.000013 | 0.000022 | 0.036720 | 0.689273  | 10.826062   | 40.030502   |
+| O(N^4^) | Iterations(K)   | 10       | 10       | 10       | 10        | 10          | 10          |
+|         | Ticks           | 65       | 439      | 9,535    | 69,383    | 436,988     | 1,055,402   |
+|         | Total Time(sec) | 0.000065 | 0.000439 | 0.009535 | 0.069383  | 0.436988    | 1.055402    |
+|         | Duration(sec)   | 0.000006 | 0.000044 | 0.000954 | 0.006938  | 0.043699    | 0.105540    |
+| O(N^3^) | Iterations(K)   | 10       | 10       | 10       | 10        | 10          | 10          |
+|         | Ticks           | 39       | 218      | 1,245    | 5,501     | 19,971      | 37,084      |
+|         | Total Time(sec) | 0.000039 | 0.000218 | 0.001245 | 0.005501  | 0.019971    | 0.037084    |
+|         | Duration(sec)   | 0.000004 | 0.000022 | 0.000124 | 0.000550  | 0.001997    | 0.003708    |
 
 ### Figure
 
 - $O(N^3)$  vs $O(N^4)$    and    $O(N^3)$  vs $O(N^4)$  vs $O(N^6)$
 
-<img src="C:\Users\25115\Desktop\proj_1\N3vsN4_.jpg"  /><img src="C:\Users\25115\Desktop\proj_1\N3vsN4vsN6_.jpg" style="zoom: 67%;" />
+- Check `./N3vsN4_.jpg` and `./N3vsN4vsN6_.jpg`
 
 ## Comments
 
