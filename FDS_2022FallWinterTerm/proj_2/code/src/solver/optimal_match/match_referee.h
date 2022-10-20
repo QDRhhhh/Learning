@@ -2,32 +2,30 @@
 #define __MATCH_REFEREE__
 
 // Head files.
+#include <set>
 #include <cmath>
-#include "../utils/CNewbieHelper.h"
+#include <iostream>
 #include "meta_data.h"
 
 /* 
  * <[ Class Defination ]>
- * [ Class Name ]:
+ * [ Class Name ]
  * - MatchReferee
  * [ Description ]: 
  * - The class defines a judement system for optimal match.
  * [ Usage ]:
  * - You should first set the relevant params before use. Then pass in the 
  * - "Point2D" objects, the relevant function will return the match result.
- * [ Index ]:
- * - C'tor & D'tor
- * - isMatch()
- * [ Remarks ]:
- * - You are not supposed to use the default C'tor and I had made it private. 
  */
 class MatchReferee{
 private:
-    double AngleTolerance;
-    double EdgeRatioTolerance;
+
+    double angleTolerance;
+    double edgeRatioTolerance;
+    double weight;
 
 public:
-    MatchReferee() = delete; // Hiden.
+
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
@@ -37,11 +35,10 @@ public:
      * [ Description ]:
      * - To initialize the points object.
      * [ Usage ]:
-     * - "MatchReferee p(0.1, 0.2);" initialize the referee with
-     * - AngleTolerance = 0.1 and EdgeRatioTolerance = 0.2.
+     * - "MatchReferee p(0.1, 0.2, 1.0);" initialize the referee with
+     * - angleTolerance = 0.1 and edgeRatioTolerance = 0.2 and weight = 1.0.
      */
-    MatchReferee(double, double);
-    ~MatchReferee() = default;
+    MatchReferee(double, double, double);
 
     // Functional Methods
 
@@ -52,41 +49,35 @@ public:
      * [ Belonging Class ]:
      * - MatchReferee
      * [ Description ]:
+     * - Get the weight of the juder.
+     * - [ Params Description ]:
+     * - No params.
+     * - [ Return Description ]:
+     * - - (double) // The weight of the judger.
+     * [ Usage ]:
+     * - "mr.getWeight();" gets the weight of the judger.
+     */
+    double getWeight();
+
+    /* 
+     * <[ Class Methods Defination ]>
+     * [ Method Name ]:
+     * - MatchReferee::isMatch()
+     * [ Belonging Class ]:
+     * - MatchReferee
+     * [ Description ]:
      * - To judge whether the angle with edge can match.
+     * - [ Params Description ]:
+     * - - [1-3] (Point2D &) // The points form the first corner.
+     * - - [4-6] (Point2D &) // The points form the second corner.
+     * - [ Return Description ]:
+     * - - (bool) // Whether the two corner can be matched.
      * [ Usage ]:
      * - "mr.isMatch(U, V, W, X, Y, Z);" gets a boolen value 
      * - represents whether the △UVW are approximately similar 
      * - with △XYZ.
      */
     bool isMatch(Point2D &, Point2D &, Point2D &, Point2D &, Point2D &, Point2D &);
-
-    /* 
-     * <[ Class Methods Defination ]>
-     * [ Method Name ]:
-     * - MatchReferee::setUsed()
-     * [ Belonging Class ]:
-     * - MatchReferee
-     * [ Description ]:
-     * - To mark the Point2D is used.
-     * [ Usage ]:
-     * - "mr.setUsed(p);" marks that p is used.
-     */
-    void setUsed(Point2D &);
-
-    /* 
-     * <[ Class Methods Defination ]>
-     * [ Method Name ]:
-     * - MatchReferee::isUsed()
-     * [ Belonging Class ]:
-     * - MatchReferee
-     * [ Description ]:
-     * - To judge whether the Point2D is used.
-     * [ Usage ]:
-     * - "mr.isUsed(p);" gets a boolen value represents whether
-     * - the point is used.
-     */
-    bool isUsed(Point2D &);
-
 };
 
 #endif
