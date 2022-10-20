@@ -47,7 +47,7 @@ public:
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
-     * - CurStage::store()
+     * - CurStage::storeStage()
      * [ Belonging Class ]:
      * - CurStage
      * [ Description ]:
@@ -58,14 +58,14 @@ public:
      * - [ Return Description ]:
      * - - No params.
      * [ Usage ]:
-     * - "cur.store(1, 2)" will store the pA[1] and pB[2] to the stage.
+     * - "cur.storeStage(1, 2)" will store the pA[1] and pB[2] to the stage.
      */
-    void store(VotingTree *, int, int);
+    void storeStage(VotingTree *, int, int);
 
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
-     * - CurStage::recover()
+     * - CurStage::recoverStage()
      * [ Belonging Class ]:
      * - CurStage
      * [ Description ]:
@@ -75,9 +75,9 @@ public:
      * - [ Return Description ]:
      * - - No params.
      * [ Usage ]:
-     * - "cur.recover()" will do the things above.
+     * - "cur.recoverStage()" will do the things above.
      */
-    void recover();
+    void recoverStage();
 
 };
 
@@ -102,6 +102,7 @@ private:
     MatchReferee &judger2;
     std::vector< std::pair<int,int> > optimalMatch;
     CurStage cur;
+    int credibleLowerLimit;
 
     /* 
      * <[ Class Methods Defination ]>
@@ -114,11 +115,13 @@ private:
      * - [ Params Description ]:
      * - - No params.
      * - [ Return Description ]:
-     * - - (double) // The vote of the current match.
+     * - - std::pair<double, double> // The vote of the current match and the success weight of the path.
+     * - - That means, if the path is impossible, the second value will be "0", otherwise, it will be an
+     * - - positive number represents the success rates.
      * [ Usage ]:
      * - "vt.getVoteByDfs()" will dfs and get the vote of current match (also the son of the match).
      */
-    double getVoteByDfs();
+    std::pair<double, double> getVoteByDfs();
 
 public:
     
@@ -130,11 +133,34 @@ public:
      * - VotingTree
      * [ Description ]:
      * - To get the input data from istream.
+     * - [ Params Description ]:
+     * - - [1] (std::istream) // The input stream where we get input from.
+     * - [ Return Description ]:
+     * - - (std::vector<Point2D>) // The points.
      * [ Usage ]:
      * - "VotingTree::readPts(cin)" returns a vector of Points2D read from
      * - cin stream.
      */
     static std::vector<Point2D> readPts(std::istream &);
+    
+    /* 
+     * <[ Class Methods Defination ]>
+     * [ Method Name ]:
+     * - VotingTree::calSuccessRate()
+     * [ Belonging Class ]:
+     * - VotingTree
+     * [ Description ]:
+     * - To calculate the success rate according to the 
+     * - [ Params Description ]:
+     * - - [1] (int) // The actual matched size of points.
+     * - - [2] (int) // The credibleLowerLimit.
+     * - [ Return Description ]:
+     * - - (double) // The success rate.
+     * [ Usage ]:
+     * - "VotingTree::calSuccessRate(3, 4)" returns 0 because it doesn't 
+     * - succeed.
+     */
+    static double calSuccessRate(int size, int lim);
     
     /* 
      * <[ Class Methods Defination ]>
@@ -145,10 +171,12 @@ public:
      * [ Description ]:
      * - To initialize the polygon object.
      * [ Usage ]:
-     * - "VotingTree vt(A, B);" defines a voting tree solve the situation with 
-     * - graph with the corner points stored in (vector<Point2D>)pts.
+     * - "VotingTree vt(A, B, j1, j2, 5);" defines a voting tree solve the situation with 
+     * - graph with the corner points stored in (vector<Point2D>)pts A and B, and the match
+     * - judgement will be done by j1 and j2. The number of points in polygon shouldn't be 
+     * - less than 5.
      */
-    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &);
+    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &, int);
 
     /* 
      * <[ Class Methods Defination ]>
