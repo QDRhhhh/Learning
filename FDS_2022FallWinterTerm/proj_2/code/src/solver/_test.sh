@@ -9,7 +9,6 @@ curDir=`pwd`
 workDir=$(cd "$(dirname "$0")";pwd)
 
 cd $workDir
-bash _setup.sh
-bash _test.sh
+./run.exe < .test.in
 
 cd $curDir

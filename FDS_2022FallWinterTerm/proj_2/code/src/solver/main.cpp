@@ -34,6 +34,10 @@ void solve(){
 
 int main(){
     std::ios::sync_with_stdio(false);
-    solve();
+    int _;
+    std::cin >> _;
+    while (_--){
+        solve();
+    }
     return 0;
 }
