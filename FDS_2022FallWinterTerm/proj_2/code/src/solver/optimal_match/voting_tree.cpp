@@ -50,32 +50,29 @@ std::vector<Point2D> VotingTree::readPts(std::istream & input){
 }
 
 // Detail comments are in `.h` file!
-double VotingTree::calSuccessRate(int size, int lim){
-    if(size < lim) return 0;
-    //TODO: make it more reliable.
-    return 1;
-}
-
-// Detail comments are in `.h` file!
 VotingTree::VotingTree(std::vector<Point2D> & A, std::vector<Point2D> & B, MatchReferee & judger1, MatchReferee & judger2, int cll)
     :   pgA(A), 
         pgB(B), 
         votingTable(A.size(), B.size(), 0),
         judger1(judger1),
         judger2(judger2),
-        credibleLowerLimit(cll){}
+        credibleLowerLimit(cll > 3 ? cll : 3){}
 
 // Detail comments are in `.h` file!
-std::pair<double, double> VotingTree::getVoteByDfs(){
+std::pair<double, bool> VotingTree::voteByDfs(CurStage & cur){
     double retVote = 0;
-    bool retSuccess = 0, isMatched1, isMatched2;
+    bool retSuccess = false;
+    auto curMatch = *(cur.curPath.end()-1);
+    int iaCur = curMatch.first, ibCur = curMatch.second;
+    // That is, if we want the current match to be the leaf node, we will check this.
+    bool enoughPoints = ( cur.curPath.size() >= this->credibleLowerLimit );
     
-    if(this->cur.curPath.size() >= 3){
+    if(cur.curPath.size() >= 3){
          // The pgA and the newest point of pgA in current path.
-        auto & curA = this->cur.curA;
+        auto & curA = cur.curA;
         auto & pA = curA.getPointByIdx( cur.curA.getSize() - 1 );
         // The pgB and the newest point of pgB in current path.
-        auto & curB = this->cur.curB;
+        auto & curB = cur.curB;
         auto & pB = curB.getPointByIdx( cur.curB.getSize() - 1 );
 
         // Log.
@@ -93,7 +90,7 @@ std::pair<double, double> VotingTree::getVoteByDfs(){
         Bm = &curB.getPreByIdx( Bn->getMark() ),
         Bp = &curB.getPreByIdx( Bm->getMark() );
 
-        isMatched1 = judger1.isMatch(
+        bool isMatched1 = judger1.isMatch(
             *Ap, *Am, *An,
             *Bp, *Bm, *Bn
         );
@@ -107,22 +104,33 @@ std::pair<double, double> VotingTree::getVoteByDfs(){
         Bn = &curB.getNextByIdx( Bn->getMark() ),
         Bp = &curB.getPreByIdx( Bm->getMark() );
 
-        isMatched2 = judger2.isMatch(
+        bool isMatched2 = judger2.isMatch(
             *Ap, *Am, *An,
             *Bp, *Bm, *Bn
         );
         
-        if( !(isMatched1 && isMatched2) ){
-            // Not match, but may get vote from the success of one judger.
+        if( isMatched1 && isMatched2 ){
+            // Totally match, that means the current match is ok. That means we 
+            // should add the vote to the table. But we still want to find deeper
+            // match, so we should go on.
+            retVote = judger1.getWeight() + judger2.getWeight();
+            
+            // Update the votes.
+            votingTable[iaCur][ibCur] += retVote * retSuccess;
+        } else if( isMatched1 || isMatched2 ){
+            // Not totally match, so we won't let it go on. But it do has some good 
+            // feature, so return but with vote.
             retVote = judger1.getWeight() * isMatched1 + judger2.getWeight() * isMatched2;
-            retSuccess = VotingTree::calSuccessRate( this->cur.curPath.size()-1, this->credibleLowerLimit );
-            return std::make_pair(retVote, retSuccess);
+            retSuccess = enoughPoints;
+            // Update the votes.
+            votingTable[iaCur][ibCur] += retVote * retSuccess;
+            return std::pair<double,bool>(retVote, enoughPoints);
+        } else {
+            // Not match.
+            return std::pair<double,bool>(0, false);
         }
-    } else {
-        // Although it matchs, but that's because the points are two few. It shouldn't count.
-        retVote = 0;
     }
-    
+
     // The point is leagal, means we should search more deeper.
     // Here I iterate the following point, be carefull that the boundary of A and B
     // is different. We should iterate all the possible points in B but only points
@@ -132,54 +140,65 @@ std::pair<double, double> VotingTree::getVoteByDfs(){
     // the index in curPolygon system, but we want to get the index in origin polygon
     // system.
 
-    // ia_last is the index of the point got from cur path history. That is, the last
-    // selected point in A.
-    int ia_last = (this->cur.curPath.end()-1)->first;
-    // ia_start is just the index of point after ia_last in a ring sequence (which means
+    // iaLast is the index of the point got from cur path history. That is, the last
+    // selected point in A. "last" is for the next point. "cur" is for the current 
+    // stage.
+    int & iaLast = iaCur;
+    // iaStart is just the index of point after iaLast in a ring sequence (which means
     // the previous point of the head is the end).
-    int ia_start = this->pgA.getNextByIdx(ia_last).getMark();
-    // ib_last is the index of the point got from cur path history. That is, the last
+    int iaStart = this->pgA.getNextByIdx(iaLast).getMark();
+    // ibLast is the index of the point got from cur path history. That is, the last
+    // selected point in B. "last" is for the next point. "cur" is for the current 
+    // stage.
+    int & ibLast = ibCur;
+    // ibEldest is the index of the point got from cur path history. That is, the first
     // selected point in B.
-    int ib_last = (this->cur.curPath.end()-1)->second;
-    // ib_start is just the index of point after ia_last in a ring sequence (which means
+    int ibEldest = cur.curPath.begin()->second;
+    // ibStart is just the index of point after iaLast in a ring sequence (which means
     // the previous point of the head is the end).
-    int ib_start = this->pgB.getNextByIdx(ib_last).getMark();
+    int ibStart = this->pgB.getNextByIdx(ibLast).getMark();
     // Now we should iterate all the possible situation.
-    for(int ia = ia_start; ia > ia_last; ia = pgA.getNextByIdx(ia).getMark()){
-        for(int ib = ib_start; ib != ib_last; ib = pgB.getNextByIdx(ib).getMark()){
+    // Iterate all the possible ia, that is from the next of iaCur to the bigges index.
+    for(int ia = iaStart; ia > iaLast; ia = pgA.getNextByIdx(ia).getMark()){
+        // Iterate all the possible ib, that is from the next of ibCur to the previous
+        // of the first ib.
+        for(int ib = ibStart; ib != ibEldest; ib = pgB.getNextByIdx(ib).getMark()){
             cur.storeStage(this, ia, ib);
-            auto response = this->getVoteByDfs();
+            auto response = this->voteByDfs(cur);
             double vote = response.first;
             double success = response.second;
-            // Chose the maximum. TODO: make it more reliable.
-            retSuccess = retSuccess < success ? success : retSuccess;
-            // The current match(ia, ib) gain the vote.
-            votingTable[ia][ib] += vote * success;
-            // The vote of (ia, ib) contribute to the vote of its father match.
+            // The vote of (ia, ib) contribute to the vote of its father match, i.e. 
+            // the current point.
             retVote += vote * success;
+            // If one way succeed, that means the path will contribute.
+            retSuccess = retSuccess || success;
             cur.recoverStage();
         }
     }
 
     if(retSuccess == 0){
-        retVote = judger1.getWeight() * isMatched1 + judger2.getWeight() * isMatched2;
-        retSuccess = VotingTree::calSuccessRate( this->cur.curPath.size(), this->credibleLowerLimit );
+        // No legal son node, so check if cur is legal leaf node or not.
+        // Note that reVote will be overloaded because no leagl son node exsits.
+        retVote = judger1.getWeight() + judger2.getWeight();
+        retSuccess = enoughPoints;
     }
-    return std::make_pair(retVote, retSuccess);
+
+    votingTable[iaCur][ibCur] += retVote * retSuccess;
+    return std::pair<double,bool>(retVote, retSuccess);
 }
 
 // Detail comments are in `.h` file!
 void VotingTree::searchAndVote(){
     // Initialize the variable to be used.
-    cur.reset();
     for(int ia = 0; ia < pgA.getSize(); ++ia){
         for(int ib = 0; ib < pgB.getSize(); ++ib){
+            // Create a new current stage.
+            CurStage cur;
             cur.storeStage(this, ia, ib);
-            auto response = this->getVoteByDfs();
-            double vote = response.first;
-            double success = response.second;
-            votingTable[ia][ib] += vote * success;
-            cur.recoverStage();
+            // Go deeper.
+            this->voteByDfs(cur);
+            // The CurStage object will be destructed so we needn't recover stage.
+            // cur.recoverStage();
         }
     }
 }
@@ -191,7 +210,7 @@ Table2D VotingTree::getVotingTable(){
 
 // Detail comments are in `.h` file!
 void VotingTree::matchAccordingTalbe(){
-    optimalMatch.resize(0);
+
 
 }
 

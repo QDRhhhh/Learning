@@ -4,7 +4,7 @@
 // Head file.
 #include <vector>
 #include <iostream>
-#include "meta_data.h"
+#include "../../lib/meta_data.h"
 #include "match_referee.h"
 
 // Pre declaration. 
@@ -101,27 +101,25 @@ private:
     MatchReferee &judger1;
     MatchReferee &judger2;
     std::vector< std::pair<int,int> > optimalMatch;
-    CurStage cur;
-    int credibleLowerLimit;
+    int credibleLowerLimit; // At least 3. Because any 2points-2points pair will match.
 
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
-     * - VotingTree::getVoteByDfs()
+     * - VotingTree::voteByDfs()
      * [ Belonging Class ]:
      * - VotingTree
      * [ Description ]:
      * - It will dfs the possible matching and get the sum of vote of each match.
      * - [ Params Description ]:
-     * - - No params.
+     * - - (CurStage) // The current stage.
      * - [ Return Description ]:
-     * - - std::pair<double, double> // The vote of the current match and the success weight of the path.
-     * - - That means, if the path is impossible, the second value will be "0", otherwise, it will be an
-     * - - positive number represents the success rates.
+     * - - std::pair<double, bool> // The vote of the current match and the success sign of the path.
+     * - - That means, if the path is impossible, the second value will be false, vice versa.
      * [ Usage ]:
-     * - "vt.getVoteByDfs()" will dfs and get the vote of current match (also the son of the match).
+     * - "vt.voteByDfs()" will dfs and get the vote of current match (also the son of the match).
      */
-    std::pair<double, double> getVoteByDfs();
+    std::pair<double, bool> voteByDfs(CurStage &);
 
 public:
     
@@ -142,25 +140,6 @@ public:
      * - cin stream.
      */
     static std::vector<Point2D> readPts(std::istream &);
-    
-    /* 
-     * <[ Class Methods Defination ]>
-     * [ Method Name ]:
-     * - VotingTree::calSuccessRate()
-     * [ Belonging Class ]:
-     * - VotingTree
-     * [ Description ]:
-     * - To calculate the success rate according to the 
-     * - [ Params Description ]:
-     * - - [1] (int) // The actual matched size of points.
-     * - - [2] (int) // The credibleLowerLimit.
-     * - [ Return Description ]:
-     * - - (double) // The success rate.
-     * [ Usage ]:
-     * - "VotingTree::calSuccessRate(3, 4)" returns 0 because it doesn't 
-     * - succeed.
-     */
-    static double calSuccessRate(int size, int lim);
     
     /* 
      * <[ Class Methods Defination ]>

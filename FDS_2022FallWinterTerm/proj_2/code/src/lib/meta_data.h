@@ -169,6 +169,7 @@ private:
     std::vector<Point2D> cornerPoints;
 
 public:
+    
     Polygon2D() = default;
 
     /* 
@@ -315,6 +316,8 @@ public:
      */
     void removePointBack();
 };
+
+
 
 // Change it if the elements is not this.
 using TableEleType = double;

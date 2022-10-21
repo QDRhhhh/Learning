@@ -9,6 +9,7 @@
 // Detail comments are in `.h` file!
 Point2D::Point2D(double x, double y): x(x), y(y), isMarked(false){}
 
+// Detail comments are in `.h` file!
 double Point2D::getX(){
     return this->x;
 }
