@@ -113,6 +113,10 @@ Polygon2D randPg(int size){
 
 
 Polygon2D rigidTransPg(Polygon2D & base, int offset){
+    Polygon2D ret;
+
+    // TODO: realize this
+    
     return base;
 }
 
