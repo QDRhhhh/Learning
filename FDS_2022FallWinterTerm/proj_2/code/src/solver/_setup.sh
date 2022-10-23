@@ -7,6 +7,6 @@ workDir=$(cd "$(dirname "$0")";pwd)
 
 cd $workDir
 
-g++ ./main.cpp ./optimal_match/*.cpp ./../lib/meta_data.cpp -o run.exe --std=c++11
+g++ ./main.cpp ./optimal_match/*.cpp ./../lib/meta_data.cpp --std=c++11 -O3 -o run.exe
 
 cd $curDir

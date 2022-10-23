@@ -35,6 +35,11 @@ void CurStage::recoverStage(){
  */
 
 // Detail comments are in `.h` file!
+bool VotingTree::MatchPair::operator<( const MatchPair & rhs) const { 
+    return this->ele > rhs.ele; 
+}
+
+// Detail comments are in `.h` file!
 std::vector<Point2D> VotingTree::readPts(std::istream & input){
     // Initialize the variable to be used.
     int size;
@@ -50,13 +55,14 @@ std::vector<Point2D> VotingTree::readPts(std::istream & input){
 }
 
 // Detail comments are in `.h` file!
-VotingTree::VotingTree(std::vector<Point2D> & A, std::vector<Point2D> & B, MatchReferee & judger1, MatchReferee & judger2, int cll)
+VotingTree::VotingTree(std::vector<Point2D> & A, std::vector<Point2D> & B, MatchReferee & judger1, MatchReferee & judger2, int cll, double mr)
     :   pgA(A), 
         pgB(B), 
         votingTable(A.size(), B.size(), 0),
         judger1(judger1),
         judger2(judger2),
-        credibleLowerLimit(cll > 3 ? cll : 3){}
+        credibleLowerLimit(cll > 3 ? cll : 3),
+        mutationRatio(mr){}
 
 // Detail comments are in `.h` file!
 std::pair<double, bool> VotingTree::voteByDfs(CurStage & cur){
@@ -210,8 +216,48 @@ Table2D VotingTree::getVotingTable(){
 
 // Detail comments are in `.h` file!
 void VotingTree::matchAccordingTalbe(){
-
-
+    // Reset the result space.
+    this->optimalMatch.clear();
+    // The vector to store the elements in talbe.
+    std::vector<MatchPair> vec;
+    // The set data structure to note whether the point is visited.
+    std::set<int> visA, visB;
+    // Set alias to make code briefly.
+    auto & vt = this->votingTable; 
+    auto shape = vt.getShape();
+    // Extract elements from the table.
+    for(int i = 0; i < shape.first; ++i){
+        for(int j = 0; j < shape.second; ++j){
+            MatchPair te = {i, j, vt[i][j]};
+            vec.push_back(te);
+        }
+    }
+    // The comparation rule is defined in the struct defination.
+    std::sort(vec.begin(), vec.end());
+    // First we should deal with the points we don't want to count. We will try
+    // to find the smallest crow of point and note them useless.
+    // We use cutPoint to note from where we won't use. If it is -1, that means
+    // we don't find a obvious cutPoint.
+    int cutPoint = -1;
+    for(int i = vec.size()-1-1; i >= 0+1; --i){
+        auto cur = vec[i].ele, smaller = vec[i+1].ele, bigger = vec[i-1].ele;
+        // (bigger - cur) / (cur - smaller) > this->mutationRatio, but without Div 0.
+        if((bigger - cur) > this->mutationRatio * (cur - smaller) ){
+            cutPoint = i;
+            break;
+        }
+    }
+    // Add point.
+    for(int i = 0; i < cutPoint; ++i){
+        auto cur = vec[i];
+        if(visA.find(cur.x) == visA.end() && visB.find(cur.y) == visB.end()){
+            visA.insert(cur.x), visB.insert(cur.y);
+            this->optimalMatch.push_back(std::pair<int,int>(cur.x+1, cur.y+1));
+        }
+    }
+    // Sort it in accressment order.
+    std::sort(optimalMatch.begin(), optimalMatch.end());
+    return;
 }
 
 // Detail comments are in `.h` file!

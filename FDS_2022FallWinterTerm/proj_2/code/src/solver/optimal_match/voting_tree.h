@@ -94,6 +94,16 @@ public:
 class VotingTree{
 // Private elements can be accessed by TableSlice.
 friend class CurStage;
+public:
+    // Define a memeber struct.
+    struct MatchPair{
+        int x, y;
+        double ele;
+        // Actually, it DON'T means '<', I actually define the comparation function 
+        // for std::sort(), it act just like the custom cmp() you usually defined.
+        // After this, the elements will be sorted in monotonically decreasing order.
+        bool operator<( const MatchPair & rhs) const;
+    };
 private: 
 
     Polygon2D pgA, pgB;
@@ -102,6 +112,7 @@ private:
     MatchReferee &judger2;
     std::vector< std::pair<int,int> > optimalMatch;
     int credibleLowerLimit; // At least 3. Because any 2points-2points pair will match.
+    double mutationRatio; // The ratio of the mutation in 'matchAccordingTalbe' progress.
 
     /* 
      * <[ Class Methods Defination ]>
@@ -155,7 +166,7 @@ public:
      * - judgement will be done by j1 and j2. The number of points in polygon shouldn't be 
      * - less than 5.
      */
-    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &, int);
+    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &, int, double);
 
     /* 
      * <[ Class Methods Defination ]>

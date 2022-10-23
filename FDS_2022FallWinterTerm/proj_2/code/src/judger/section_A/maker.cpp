@@ -20,7 +20,7 @@ default_random_engine e(time(NULL));
 
 // Get a random number in -1 ~ 1 according to normal distribution.
 double getNormalFactor(){
-    static normal_distribution<double> distr(0.0, 0.5);
+    static normal_distribution<double> distr(0.0, 0.6);
     double factor;
     do {
         factor = distr(e);
@@ -72,7 +72,7 @@ Point2D randomTendentMove(Point2D & base, Point2D & preBase, double offsetAngle,
 }
 
 Polygon2D randPg(int size){
-    double offsetAngle = 2 * PI / ( size * 1.05 ); 
+    double offsetAngle = 2 * PI / ( size * PI / 2 ); 
     std::vector<Point2D> pts;
     
     pts.clear();
@@ -85,14 +85,14 @@ Polygon2D randPg(int size){
         auto base = pts[ pts.size()-1 ];
         auto preBase = pts[ pts.size()-2 ];
         
-        double backRate = pow((double)pts.size() / size, 16) 
+        double backRate = pow(max(0.0, sin((double)pts.size() / size * PI / 2 - PI / 16)), pow(size, 0.5)) 
             * weakenRate 
             * min(
                 1.0,
                 pow( max(
                     base.getDis(pts[0]) / STEP_LEN / 8,
                     0.0
-                ), 0.1)
+                ), 0.2)
             );
 
         int repeatCnt = 0;
@@ -113,11 +113,25 @@ Polygon2D randPg(int size){
 
 
 Polygon2D rigidTransPg(Polygon2D & base, int offset){
-    Polygon2D ret;
 
-    // TODO: realize this
-    
-    return base;
+    double scaleRate = 1 + getNormalFactor();
+    double rotateAng = 2 * PI * getAbsUniformFactor();
+    double cosAng = cos(rotateAng), sinAng = sin(rotateAng);
+    double dx = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
+    double dy = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
+
+    vector<Point2D> tmp(base.getSize());
+
+    for(int i = 0; i < base.getSize(); ++i){
+        auto & pt = base.getPointByIdx(i);
+        double x = pt.getX() * cosAng - pt.getY() * sinAng;
+        double y = pt.getY() * cosAng + pt.getX() * sinAng;
+        x *= scaleRate, y *= scaleRate;
+        x += dx, y += dy;
+        tmp[ (i+offset) % (base.getSize()) ] = Point2D(x, y);
+    }
+
+    return Polygon2D(tmp);
 }
 
 int main(int argc, char * argv[]){
@@ -131,12 +145,9 @@ int main(int argc, char * argv[]){
     sizeSeq.push_back(3);
     sizeSeq.push_back(5);
     sizeSeq.push_back(10);
-    sizeSeq.push_back(25);
-    sizeSeq.push_back(50);
-    sizeSeq.push_back(100);
+    sizeSeq.push_back(15);
 
     ofIn << sizeSeq.size() << endl;
-    ofInfo << sizeSeq.size() << endl;
     
     for(auto it = sizeSeq.begin(); it != sizeSeq.end(); ++it){
         auto pgA = randPg(*it);
@@ -156,7 +167,7 @@ int main(int argc, char * argv[]){
 
         ofInfo << *it << endl;
         for(int i = 0; i < *it; ++i){
-            ofInfo << i << " " << (i+offset) % (*it) << endl;
+            ofInfo << i + 1 << " " << (i+offset) % (*it) + 1 << endl;
         }
     }
 

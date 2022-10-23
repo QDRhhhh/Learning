@@ -177,6 +177,11 @@ std::pair<int,int> Table2D::getShape(){
 }
 
 // Detail comments are in `.h` file!
+std::vector<TableEleType> Table2D::getElements(){
+    return table;
+}
+
+// Detail comments are in `.h` file!
 TableSlice Table2D::operator[](int idx){
     return TableSlice(this, idx);
 }

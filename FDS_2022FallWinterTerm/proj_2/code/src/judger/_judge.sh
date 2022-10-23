@@ -31,14 +31,12 @@ for section in `cat .section_list`
 do
     echo "   = Section [ $section ]..."
     ./solver.exe < ./test_data/$section.in > ./test_data/$section.out
-    
-    if test `./judger.exe < $section` = "pass" then
-        echo "   = Accept! OwO"
-    else
-        echo "   = Unaccept! QAQ"
-        exit 0
-    fi
+    echo ./test_data/$section > cache
+    python3  ./painter/painter.py < cache
+
 done
+
+rm cache
 
 echo "  <<< Finish! >>>"
 

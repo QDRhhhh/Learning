@@ -27,6 +27,8 @@ private:
 
 public:
 
+    Point2D() = default;
+
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
@@ -201,8 +203,8 @@ public:
      * - You are not supposed to pass in an invalid point and I will panic
      * - if this happen.
      * [ Usage ]:
-     * - "pg.getPointByIdx(idxP)" return the target point of p whose index 
-     * - is idxP.
+     * - "pg.getPointByIdx(idxP)" return the reference of target point of p 
+     * - whose index is idxP.
      */
     Point2D &getPointByIdx(int);
 
@@ -376,6 +378,7 @@ public:
 
 
 
+
 /* 
  * <[ Class Defination ]>
  * [ Class Name ]
@@ -425,6 +428,23 @@ public:
      * - "tb.getShape();" returns the shape of the 2d-table.
      */
     std::pair<int,int> getShape();
+
+    /* 
+     * <[ Class Methods Defination ]>
+     * [ Method Name ]:
+     * - Table2D::getElements()
+     * [ Belonging Class ]:
+     * - Table2D
+     * [ Description ]:
+     * - To get all the elements of the table.
+     * - [ Params Description ]:
+     * - - No params.
+     * - [ Return Description ]:
+     * - - (std::vector<TableEleType>) // All the elements of the table.
+     * [ Usage ]:
+     * - "tb.getElements();" returns all the elements of the table.
+     */
+    std::vector<TableEleType> getElements();
 
     /* 
      * <[ Class Overload Defination ]>
