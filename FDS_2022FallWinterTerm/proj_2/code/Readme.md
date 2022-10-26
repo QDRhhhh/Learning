@@ -1,4 +1,6 @@
 > I had already prepared files compiled for Mac and Windows. They are in `./execute_file`.
+> In documents directory, the origin version of this file is provied. Check it if you can't run.
+
 
 # Requirements
 
