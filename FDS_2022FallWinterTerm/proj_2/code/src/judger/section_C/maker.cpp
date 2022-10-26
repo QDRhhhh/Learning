@@ -12,6 +12,7 @@ using namespace std;
 #define STEP_LEN 4
 #define STEP_LEN_LOWER_LIM 0.1
 #define PI 3.1415926536
+#define DISTURBANCE_LIM STEP_LEN/4
 
 // Hyperparameter
 const double weakenRate = 0.2;
@@ -111,13 +112,13 @@ Polygon2D randPg(int size){
 }
 
 
-Polygon2D rigidTransPg(Polygon2D & base, int offset){
+Polygon2D rigidAndDisturbTransPg(Polygon2D & base, int offset){
 
     double scaleRate = 1 + getNormalFactor();
     double rotateAng = 2 * PI * getAbsUniformFactor();
     double cosAng = cos(rotateAng), sinAng = sin(rotateAng);
-    double dx = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
-    double dy = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
+    double dx = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize());
+    double dy = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize());
 
     vector<Point2D> tmp(base.getSize());
 
@@ -127,31 +128,55 @@ Polygon2D rigidTransPg(Polygon2D & base, int offset){
         double y = pt.getY() * cosAng + pt.getX() * sinAng;
         x *= scaleRate, y *= scaleRate;
         x += dx, y += dy;
+
+        double distAng = PI * getUniformFactor();
+        double distStep = DISTURBANCE_LIM * getAbsNormalFactor() * (getAbsNormalFactor() < 0.05 ? 16 : 1);
+        x += distStep * cos(distAng);
+        y += distStep * sin(distAng);
         tmp[ (i+offset) % (base.getSize()) ] = Point2D(x, y);
     }
 
     return Polygon2D(tmp);
 }
 
+Polygon2D addNoisePg(Polygon2D base, int num){
+    for(int i = 0; i < num; ++i){
+        int pos = base.getSize() * getAbsUniformFactor(); // Hidden cast.
+        auto pre = base.getPreByIdx(pos);
+        auto next = base.getNextByIdx(pos);
+        double ang = PI * getUniformFactor();
+        double step = STEP_LEN * (1 - getAbsNormalFactor());
+        double dx = 2 * step * cos(ang) + 0.5*(pre.getX() + next.getX());
+        double dy = 2 * step * sin(ang) + 0.5*(pre.getY() + next.getY());
+        base.insertPoint(Point2D(dx, dy), pos);
+    }
+    return base;
+}
+
 int main(int argc, char * argv[]){
     srand((unsigned)time(NULL));
 
-    ofstream ofIn;
+    ofstream ofIn, ofInfo;
     ofIn.open("test_data.in",ios::out | ios::trunc);
+    ofInfo.open("test_data.info",ios::out | ios::trunc);
     
     vector<int> sizeSeq;
-    // sizeSeq.push_back(5);
-    sizeSeq.push_back(15);
-    sizeSeq.push_back(15);
+    sizeSeq.push_back(10);
+    sizeSeq.push_back(10);
     sizeSeq.push_back(20);
     sizeSeq.push_back(20);
+    sizeSeq.push_back(25);
+    sizeSeq.push_back(25);
 
     ofIn << sizeSeq.size() << endl;
     
     for(auto it = sizeSeq.begin(); it != sizeSeq.end(); ++it){
+        // int oriN = *it * getAbsNormalFactor();
         auto pgA = randPg(*it);
         int offset = rand() % pgA.getSize();
-        auto pgB = rigidTransPg(pgA, offset);
+        auto pgB = rigidAndDisturbTransPg(pgA, offset);
+        pgA = addNoisePg(pgA, 4 * *it * getAbsNormalFactor());
+        pgB = addNoisePg(pgB, 4 * *it * getAbsNormalFactor());
 
         ofIn << pgA.getSize() << endl;
         for(int i = 0; i < pgA.getSize(); ++i){
@@ -163,6 +188,12 @@ int main(int argc, char * argv[]){
             auto & pt = pgB.getPointByIdx(i);
             ofIn << pt.getX() << " " << pt.getY() << endl;
         }
+
+        ofInfo << *it << endl;
+        for(int i = 0; i < *it; ++i){
+            ofInfo << i + 1 << " " << (i+offset) % (*it) + 1 << endl;
+        }
     }
+
 
 }

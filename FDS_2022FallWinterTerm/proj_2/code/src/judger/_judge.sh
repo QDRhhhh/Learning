@@ -19,7 +19,6 @@ do
     ./$section.exe
     # Move data.
     mv test_data.in ./test_data/$section.in
-    mv test_data.info ./test_data/$section.info
     echo "   = Done."
 done
 

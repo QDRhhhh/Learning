@@ -214,49 +214,128 @@ Table2D VotingTree::getVotingTable(){
     return this->votingTable;
 }
 
+// // Detail comments are in `.h` file!
+// void VotingTree::matchAccordingTalbe(){
+//     // Reset the result space.
+//     this->optimalMatch.clear();
+//     // The vector to store the elements in talbe.
+//     std::vector<MatchPair> vec;
+//     // The set data structure to note whether the point is visited.
+//     std::set<int> visA, visB;
+//     // Set alias to make code briefly.
+//     auto & vt = this->votingTable; 
+//     auto shape = vt.getShape();
+//     // Extract elements from the table.
+//     for(int i = 0; i < shape.first; ++i){
+//         for(int j = 0; j < shape.second; ++j){
+//             MatchPair te = {i, j, vt[i][j]};
+//             vec.push_back(te);
+//         }
+//     }
+//     // The comparation rule is defined in the struct defination.
+//     std::sort(vec.begin(), vec.end());
+//     double ave = vec[0].ele + vec[ vec.size()-1 ].ele;
+//     ave /= 2;
+//     for(int i = 0; i < vec.size(); ++i){
+//         if(vec[i].ele < ave) break;
+//         auto cur = vec[i];
+//         if(visA.find(cur.x) == visA.end() && visB.find(cur.y) == visB.end()){
+//             visA.insert(cur.x), visB.insert(cur.y);
+//             this->optimalMatch.push_back(std::pair<int,int>(cur.x+1, cur.y+1));
+//         }
+//     }
+//     // Sort it in accressment order.
+//     std::sort(optimalMatch.begin(), optimalMatch.end());
+//     // this->checkOrderUsingLIS();
+//     if(optimalMatch.size() < this->credibleLowerLimit) optimalMatch.clear();
+//     return;
+// }
+
 // Detail comments are in `.h` file!
 void VotingTree::matchAccordingTalbe(){
     // Reset the result space.
     this->optimalMatch.clear();
-    // The vector to store the elements in talbe.
-    std::vector<MatchPair> vec;
-    // The set data structure to note whether the point is visited.
-    std::set<int> visA, visB;
-    // Set alias to make code briefly.
     auto & vt = this->votingTable; 
     auto shape = vt.getShape();
+    double maxEle = -1e9+9, minEle = 1e9+9;
     // Extract elements from the table.
     for(int i = 0; i < shape.first; ++i){
         for(int j = 0; j < shape.second; ++j){
-            MatchPair te = {i, j, vt[i][j]};
-            vec.push_back(te);
+            maxEle = std::max(maxEle, vt[i][j]);
+            minEle = std::min(minEle, vt[i][j]);
         }
     }
-    // The comparation rule is defined in the struct defination.
-    std::sort(vec.begin(), vec.end());
-    // First we should deal with the points we don't want to count. We will try
-    // to find the smallest crow of point and note them useless.
-    // We use cutPoint to note from where we won't use. If it is -1, that means
-    // we don't find a obvious cutPoint.
-    int cutPoint = -1;
-    for(int i = vec.size()-1-1; i >= 0+1; --i){
-        auto cur = vec[i].ele, smaller = vec[i+1].ele, bigger = vec[i-1].ele;
-        // (bigger - cur) / (cur - smaller) > this->mutationRatio, but without Div 0.
-        if((bigger - cur) > this->mutationRatio * (cur - smaller) ){
-            cutPoint = i;
-            break;
+    // Find the optimal match.
+    double ave = (maxEle + minEle) * 0.5;
+    bool oneRound = false;
+
+    std::vector< std::pair<int,int> > tmp;
+    int tmpN = -1;
+    // Iterate the bound, that is, where the second index will from n-1 to 0.
+    // But actually, bound is the dividing line of the first index.
+        // 'j' is not mutated yet.
+    for(int bound = 0; bound < shape.first; ++bound){
+        // J ~ last chosen j.
+        // fJ ~ first chosen j, fI ~ first chosen i.
+        int J = 0, fJ = -1, fI = -1;
+        // Iterate i before the boud.
+        // 'j' is not mutated yet.
+        for(int i = bound; i < shape.first; ++i){
+            for(int j = J; j < shape.second; ++j){
+                if(vt[i][j] > ave){
+                    J = j;
+                    if(fJ == -1) fJ = j;
+                    if(fI == -1) fI = i;
+                    optimalMatch.push_back(std::pair<int,int>(i+1,j+1));
+                    break;
+                }
+            }
         }
-    }
-    // Add point.
-    for(int i = 0; i < cutPoint; ++i){
-        auto cur = vec[i];
-        if(visA.find(cur.x) == visA.end() && visB.find(cur.y) == visB.end()){
-            visA.insert(cur.x), visB.insert(cur.y);
-            this->optimalMatch.push_back(std::pair<int,int>(cur.x+1, cur.y+1));
+        // Iterate i after the boud.
+        // 'j' is not mutated yet.
+        for(int i = 0; i < bound; ++i){
+            for(int j = J; j < shape.second; ++j){
+                if(vt[i][j] > ave){
+                    J = j;
+                    if(fJ == -1) fJ = j;
+                    if(fI == -1) fI = i;
+                    optimalMatch.push_back(std::pair<int,int>(i+1,j+1));
+                    break;
+                }
+            }
         }
+        // Iterate i before the boud.
+        // 'j' is not mutated already.
+        for(int i = bound; i < std::min(shape.first, fI); ++i){
+            for(int j = 0; j < fJ; ++j){
+                if(vt[i][j] > ave){
+                    J = j;
+                    optimalMatch.push_back(std::pair<int,int>(i+1,j+1));
+                    break;
+                }
+            }
+        }
+        // Iterate i after the boud.
+        // 'j' is not mutated already.
+        for(int i = 0; i < std::min(bound, fI); ++i){
+            for(int j = 0; j < fJ; ++j){
+                if(vt[i][j] > ave){
+                    J = j;
+                    optimalMatch.push_back(std::pair<int,int>(i+1,j+1));
+                    break;
+                }
+            }
+        }
+        // Memorize the better match.
+        if(int(optimalMatch.size()) > tmpN){
+            tmpN = optimalMatch.size();
+            tmp = optimalMatch;
+        }
+        optimalMatch.clear();
     }
-    // Sort it in accressment order.
-    std::sort(optimalMatch.begin(), optimalMatch.end());
+    if(tmpN > 0){
+        optimalMatch = tmp;
+    }
     return;
 }
 

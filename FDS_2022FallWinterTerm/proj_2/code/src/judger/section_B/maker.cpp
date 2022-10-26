@@ -12,6 +12,7 @@ using namespace std;
 #define STEP_LEN 4
 #define STEP_LEN_LOWER_LIM 0.1
 #define PI 3.1415926536
+#define DISTURBANCE_LIM STEP_LEN/4
 
 // Hyperparameter
 const double weakenRate = 0.2;
@@ -111,7 +112,7 @@ Polygon2D randPg(int size){
 }
 
 
-Polygon2D rigidTransPg(Polygon2D & base, int offset){
+Polygon2D rigidAndDisturbTransPg(Polygon2D & base, int offset){
 
     double scaleRate = 1 + getNormalFactor();
     double rotateAng = 2 * PI * getAbsUniformFactor();
@@ -127,6 +128,11 @@ Polygon2D rigidTransPg(Polygon2D & base, int offset){
         double y = pt.getY() * cosAng + pt.getX() * sinAng;
         x *= scaleRate, y *= scaleRate;
         x += dx, y += dy;
+
+        double distAng = PI * getUniformFactor();
+        double distStep = DISTURBANCE_LIM * getAbsNormalFactor() * (getAbsNormalFactor() < 0.05 ? 16 : 1);
+        x += distStep * cos(distAng);
+        y += distStep * sin(distAng);
         tmp[ (i+offset) % (base.getSize()) ] = Point2D(x, y);
     }
 
@@ -140,7 +146,7 @@ int main(int argc, char * argv[]){
     ofIn.open("test_data.in",ios::out | ios::trunc);
     
     vector<int> sizeSeq;
-    // sizeSeq.push_back(5);
+    sizeSeq.push_back(5);
     sizeSeq.push_back(15);
     sizeSeq.push_back(15);
     sizeSeq.push_back(20);
@@ -151,7 +157,7 @@ int main(int argc, char * argv[]){
     for(auto it = sizeSeq.begin(); it != sizeSeq.end(); ++it){
         auto pgA = randPg(*it);
         int offset = rand() % pgA.getSize();
-        auto pgB = rigidTransPg(pgA, offset);
+        auto pgB = rigidAndDisturbTransPg(pgA, offset);
 
         ofIn << pgA.getSize() << endl;
         for(int i = 0; i < pgA.getSize(); ++i){
@@ -163,6 +169,8 @@ int main(int argc, char * argv[]){
             auto & pt = pgB.getPointByIdx(i);
             ofIn << pt.getX() << " " << pt.getY() << endl;
         }
+
     }
+
 
 }

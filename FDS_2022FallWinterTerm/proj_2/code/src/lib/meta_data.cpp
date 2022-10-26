@@ -123,6 +123,19 @@ int Polygon2D::getSize(){
 }
 
 // Detail comments are in `.h` file!
+void Polygon2D::insertPoint(Point2D p, int idx){
+    // Panic if the param is invalid.
+    if(idx >= this->getSize()){
+        std::cerr << __FILE__ << "/" << __LINE__ << 
+            " [FATAL] Invalid idxP! idxP = [ " << idx << " ] while pgSize = [ " << this->getSize() << " ]\n";
+        exit(0);
+    }
+    auto & vec = this->cornerPoints;
+    vec.insert( vec.begin() + idx, p );
+    return;
+}
+
+// Detail comments are in `.h` file!
 void Polygon2D::insertPointBack(Point2D p){
     this->cornerPoints.push_back(p);
     ( this->cornerPoints.end()-1 )->setMark( this->cornerPoints.size()-1 );

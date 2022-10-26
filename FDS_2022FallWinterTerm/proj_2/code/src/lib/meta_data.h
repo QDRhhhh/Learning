@@ -285,6 +285,25 @@ public:
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
+     * - Polygon2D::insertPoint()
+     * [ Belonging Class ]:
+     * - Polygon2D
+     * [ Description ]:
+     * - Insert the point after the end of points, which should be the "previous"
+     * - point of the points[0].
+     * - [ Params Description ]:
+     * - - [1] (Point2D) // The Point to be insert.
+     * - - [2] (int) // The index of the point where will new point where put behind.
+     * - [ Return Description ]:
+     * - - No params.
+     * [ Usage ]:
+     * - "pg.insertPoint(p, 0)" will insert the point behind the point of index 0.
+     */
+    void insertPoint(Point2D, int);
+
+    /* 
+     * <[ Class Methods Defination ]>
+     * [ Method Name ]:
      * - Polygon2D::insertPointBack()
      * [ Belonging Class ]:
      * - Polygon2D

@@ -10,5 +10,6 @@ cd $workDir
 
 find . -name "*.o"  | xargs rm -f
 find . -name "*.exe"  | xargs rm -f
+echo "Clear solver!"
 
 cd $curDir

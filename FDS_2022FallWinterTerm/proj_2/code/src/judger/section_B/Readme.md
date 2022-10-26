@@ -3,8 +3,8 @@
 ## 描述
 
 - 本部分数据将满足以下条件：
-    1. B 中的“图形”由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
-    2. 不存在噪点；
+    1. B 中的“图形”首先由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
+    2. 然后对其中的点进行一定程度的扰动，即每个点都会被加上一个随机向量；
     3. 以上条件意味着，在此部分数据中，A 和 B 中点的数量应当是相同的。
 
 ## 数据范式
@@ -18,13 +18,17 @@
   - 每组第 m+2 行为一个整数 n，表示 B 中有 n 个点；
   - 每组第 m+3 ~ m+n+2 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
 
+---
+
+
 # English Version
 
 ## Description
 
 - Data made here will have following features:
-    1. Polygon in B is rigid transformed(i.e. scale, rotate and flip) from that in A.
-    2. There will be no noise.
+    1. Polygon in B is first rigid transformed(i.e. scale, rotate and flip) from that in A.
+    2. Then each points in B will be randomly added by a random vector.
+    3. There will be no noise.
 
 ## Data Form
 
