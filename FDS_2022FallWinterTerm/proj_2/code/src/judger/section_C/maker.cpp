@@ -156,9 +156,8 @@ Polygon2D addNoisePg(Polygon2D base, int num){
 int main(int argc, char * argv[]){
     srand((unsigned)time(NULL));
 
-    ofstream ofIn, ofInfo;
+    ofstream ofIn;
     ofIn.open("test_data.in",ios::out | ios::trunc);
-    ofInfo.open("test_data.info",ios::out | ios::trunc);
     
     vector<int> sizeSeq;
     sizeSeq.push_back(10);
@@ -189,10 +188,6 @@ int main(int argc, char * argv[]){
             ofIn << pt.getX() << " " << pt.getY() << endl;
         }
 
-        ofInfo << *it << endl;
-        for(int i = 0; i < *it; ++i){
-            ofInfo << i + 1 << " " << (i+offset) % (*it) + 1 << endl;
-        }
     }
 
 

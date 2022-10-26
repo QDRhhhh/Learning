@@ -318,7 +318,7 @@ void VotingTree::matchAccordingTalbe(){
         // Iterate i after the boud.
         // 'j' is not mutated already.
         for(int i = 0; i < std::min(bound, fI); ++i){
-            for(int j = 0; j < fJ; ++j){
+            for(int j = J; j < fJ; ++j){
                 if(vt[i][j] > ave){
                     J = j;
                     optimalMatch.push_back(std::pair<int,int>(i+1,j+1));

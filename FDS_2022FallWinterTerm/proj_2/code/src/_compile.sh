@@ -7,13 +7,14 @@ workDir=$(cd "$(dirname "$0")";pwd)
 
 cd $workDir
 
-# Judgement
+# Setup
 
-echo "<<< Judging... >>>"
+echo "<<< Compiling solver... >>>"
+bash ./solver/_setup.sh
+echo "<<< Finish! >>>"
 
-mv ./solver/run.exe ./judger/solver.exe
-bash ./judger/_judge.sh
-
+echo "<<< Compiling judger... >>>"
+bash ./judger/_setup.sh
 echo "<<< Finish! >>>"
 
 cd $curDir

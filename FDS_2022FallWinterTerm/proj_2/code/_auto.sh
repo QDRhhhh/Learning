@@ -7,6 +7,7 @@ workDir=$(cd "$(dirname "$0")";pwd)
 
 cd $workDir
 
-bash ./src/_clear.sh
+bash ./src/_compile.sh
+bash ./src/_run.sh
 
 cd $curDir
