@@ -82,15 +82,19 @@
 
 > FYA:    **If you want to run my codes, please check `Readme.md` first!**
 
+
+
+
+
 # Chapter 1: Introduction
 
-## 摘要 | Abstract
+## 课题摘要 | Project Abstract
 
-> 在这道题中，输入中将给出两组 **<u>有序点集¹</u>**。我们需要使用 Voting Tree 在点集中找到满足 **<u>单调约束条件³</u>** 的 **<u>公共子图形²</u>**。
+> 在这道题中，输入中将给出两组 **<u>有序点集¹</u>**，每个集合中的元素将被依次给出——在每个集合中第 $i$ 个被给出的点将被命名为 $i$ 。我们需要在点集中找到满足 **<u>单调约束条件³</u>** 的 **<u>公共子图形²</u>**。
 
 ---
 
-> In this problem, the input will contain two groups of **<u>Ordered Point Set¹</u>**. What we should do is to use Voting Tree to find out the **<u>Common Subgraph²</u>** that fits **<u>Monotone Constraint³<u>**
+> In this problem, the input will contain two groups of **<u>Ordered Point Set¹</u>**. Each element of each set will be given one by one, and the $i^\text{th}$ point will be named $i$ . What we should do is to find out the **<u>Common Subgraph²</u>** that fits **<u>Monotone Constraint³</u>**
 
 ## 概念定义 | Concept Defination
 
@@ -234,6 +238,10 @@ $$
 $$
 
 
+
+
+
+# Chapter 2: Algorithm Specification
 
 
 
