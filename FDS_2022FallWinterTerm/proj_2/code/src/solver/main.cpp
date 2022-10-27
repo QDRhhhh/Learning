@@ -18,7 +18,7 @@ void solve(){
     MatchReferee judger2(0.1, 0.1, 1.0);
     auto inA = VotingTree::readPts(std::cin);
     auto inB = VotingTree::readPts(std::cin);
-    VotingTree vTree(inA, inB, judger1, judger2, 5, inA.size()*10);
+    VotingTree vTree(inA, inB, judger1, judger2, 5);
 
     vTree.dealOptimalMatch();
 

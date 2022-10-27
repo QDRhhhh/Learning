@@ -55,14 +55,13 @@ std::vector<Point2D> VotingTree::readPts(std::istream & input){
 }
 
 // Detail comments are in `.h` file!
-VotingTree::VotingTree(std::vector<Point2D> & A, std::vector<Point2D> & B, MatchReferee & judger1, MatchReferee & judger2, int cll, double mr)
+VotingTree::VotingTree(std::vector<Point2D> & A, std::vector<Point2D> & B, MatchReferee & judger1, MatchReferee & judger2, int cll)
     :   pgA(A), 
         pgB(B), 
         votingTable(A.size(), B.size(), 0),
         judger1(judger1),
         judger2(judger2),
-        credibleLowerLimit(cll > 3 ? cll : 3),
-        mutationRatio(mr){}
+        credibleLowerLimit(cll > 3 ? cll : 3){}
 
 // Detail comments are in `.h` file!
 std::pair<double, bool> VotingTree::voteByDfs(CurStage & cur){

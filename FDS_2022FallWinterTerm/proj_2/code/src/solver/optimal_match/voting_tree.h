@@ -161,12 +161,12 @@ public:
      * [ Description ]:
      * - To initialize the polygon object.
      * [ Usage ]:
-     * - "VotingTree vt(A, B, j1, j2, 5, 1.0);" defines a voting tree solve the situation with 
+     * - "VotingTree vt(A, B, j1, j2, 5);" defines a voting tree solve the situation with 
      * - graph with the corner points stored in (vector<Point2D>)pts A and B, and the match
      * - judgement will be done by j1 and j2. The number of points in polygon shouldn't be 
-     * - less than 5. What's more, the mutationRatio is 1.0
+     * - less than 5.
      */
-    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &, int, double);
+    VotingTree(std::vector<Point2D> &, std::vector<Point2D> &, MatchReferee &, MatchReferee &, int);
 
     /* 
      * <[ Class Methods Defination ]>
