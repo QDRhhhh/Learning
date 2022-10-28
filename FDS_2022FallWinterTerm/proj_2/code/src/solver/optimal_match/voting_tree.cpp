@@ -197,7 +197,7 @@ void VotingTree::searchAndVote(){
     // Initialize the variable to be used.
     for(int ia = 0; ia < pgA.getSize(); ++ia){
         for(int ib = 0; ib < pgB.getSize(); ++ib){
-            std::cerr <<  ia << " " << ib << "\n";
+            // std::cerr <<  ia << " " << ib << "\n";
             // Create a new current stage.
             CurStage cur;
             cur.storeStage(this, ia, ib);
