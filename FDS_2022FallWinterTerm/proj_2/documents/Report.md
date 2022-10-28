@@ -93,7 +93,14 @@
   - 具体来说，从 `main()` 开始阅读，看到我们创建了一个 `VotingTree` 对象，其中涉及了五个参数，追踪进去可以发现 `.h` 文件中`VotingTree` 类的原型，查看其构造器的注释以了解内容。
     - 发现我们之后使用了 `vt.xxx()`，这是调用了对象的方法，这时候追踪 `.xxx()` 可以看到 `.h` 中 `VotingTree::xxx()` 的原型，查看其注释以了解用法。如果想了解内容，请打开同名的 `.cpp` 文件，并搜索 `VotingTree::xxx()` 以查看方法的具体实现。其他类的方法也可以用这样的方法来查看内容。
 - 此外，我必须要声明，写成这样一个“庞然大物”并非是我想“卷”，而是单纯的自我赋予作业一个意义。如果您认为我的项目完成的并不好，请放心打低分；但相对应的，我不希望因为觉得“我在摁卷”而影响您的心情或是影响您的判断。
-- Moreover, if you are a native English speaker, I'm sorry that I can't write all the parts into English. Because the logic of "circulation" makes the description of the whole part vague and complex, my English ability cannot support me to translate these convoluted logic. I'm quite sorry for that.
+---
+- I apologize that you may find this project a bit intimidating and difficult when you open it, and I have done my best to make the report less difficult to read. To make sense of what seems like a big time-wasting assignment, I chose to use it to practice some engineering skills. For this project, I forced myself to use relatively standardized object-oriented semantics to complete the assignment, even though it didn't look very elegant.
+- But please don't feel intimidated by reading an OOP code, it is actually very readable, but I will give you some reading suggestions.
+  - Instead of trying to understand the syntactic details of the code, focus on the core logic; OOP can be thought of as a wrapper style, and I've tried to make each layer of logic as simple as possible. (If you have taken Introduction to Computing, recall the concept of "abstraction".)
+  - In general, code editors support prototype tracing, using `Ctrl + left click`/`cmd + left click` to see exactly what a function does. Using this technique, you can greatly reduce the stress of reading code.
+  - Specifically, starting with `main()`, we see that we have created a `VotingTree` object, which involves five parameters. Tracing in reveals the prototype of the `VotingTree` class in the `.h` file, and looking at the comments of its constructor to understand the contents.
+    - We found that we later used `vt.xxx()`, which is a call to the object's method, at this point trace `.xxx()` to see the prototype of `VotingTree::xxx()` in `.h`, check its comments to understand the usage. To see the contents, open the `.cpp` file of the same name and search for `VotingTree::xxx()` to see the specific implementation of the method. Methods of other classes can also be used in this way to see the content.
+- Also, I have to state that I did not write this "behemoth" because I wanted to "roll it up", but simply to give a meaning to the assignment by myself. If you think my project is not well done, please feel free to give it a low grade; however, I do not want to affect your mood or influence your judgment by thinking that "I'm competing blindly".
 
 
 
@@ -253,6 +260,22 @@ $$
 \end{aligned}
 $$
 
+## 输入数据规约 | Input Data Statute
+
+> 本文中我设置了若干测试集，他们都有一定的特征，这些将在 Chap 3. 详细介绍，但是他们有一些共同的约束，在此说明。
+>
+> 除却点过少点情况，我们期望输入的数据存在肉眼可见的匹配趋势，即我们不喜欢得到一片杂乱的点集，然后从中匹配出意料之外的结果；我的数据生成工具将生成接近单不一定相同的数据，并从中能够找到受到扰动后依然能匹配上的部分。
+>
+> 此外，考虑到此算法的应用场景，例如几何图形形变过程中的特征追踪、物体识别定位过程中的特征识别等，我们并不定义输入杂乱的数据时的异常行为。
+
+---
+
+> In this paper I set up several test sets, all of them with certain characteristics that will be described in detail in Chap 3. but they have some common constraints that are described here.
+>
+> Except for the case of too few points, we expect the input data to have a naked-eye matching trend, i.e., we do not like to get a jumbled set of points and then match unexpected results from it; my data generation tool will generate data that are not necessarily identical close to a single and from which we can find parts that still match after being perturbed.
+>
+> In addition, considering the application scenarios of this algorithm, such as feature tracking during geometry deformation, feature identification during object recognition and localization, we do not define the abnormal behavior when inputting cluttered data.
+
 
 
 
@@ -399,10 +422,14 @@ classDiagram
 > |-|-|-|
 > |Credible Lower Limit(CLL)| The minimum number of points that can be considered legitimate. |5|
 
-
 ### 使用递归搜索进行投票 | Vote Through DFS
 
-> 首先我们介绍最朴素的思路，即枚举所有可能的匹配策略，并判断他们是否可行。
+> - 这一部分逻辑的位置为 `src/solver/optimal_match/voting_tree.cpp` / `VotingTree::voteByDfs()` 
+> - The location of this part of the logic is `src/solver/optimal_match/voting_tree.cpp` / `VotingTree::voteByDfs()` 
+
+#### 解释 | Explaination
+
+> 首先我们介绍最朴素的思路，即枚举所有可能的匹配策略，并判断他们是否可行。最终将按照一定规则，对所有可行策略涉及的点进行“Vote”，也就是加上加权赋分。
 >
 > 那么何为“匹配策略”呢？
 >
@@ -414,23 +441,21 @@ classDiagram
 >
 > 很显然，如果$A$ 图有 $n$ 个点，$B$ 图有 $m$ 个点，则一共有 $\sum_{i=CLL}^{min(n,m)}i\cdot C_{n}^{i}C_{m}^{i}$，可以发现这是个非常恐怖的数，所以我们需要做一些优化，优化后的流程大致如下。
 >
-> 
->
 > - 枚举策略：
 >
 >     - 我们从 $A$ 的可枚举范围内枚举一个点，从 $B$ 的可枚举范围内枚举一个点，将他们作为路径中的一个配对，即创建了当前策略的一个子可能树；
->     - 接下来将这个点当作当前路径，去枚举生成下一个子可能树；
->
+>    - 接下来将这个点当作当前路径，去枚举生成下一个子可能树；
+> 
 > - 枚举范围：
 >
 >     - 对于 $A$ 和 $B$ 采取不同的范围界定策略，目的是减少枚举可能同时保证结果对称、非重、完备。
->     - 对于 $A$，如果某个点做过且做完了可能树的根节点，那么不再参与后续的枚举（也就是说，例如在枚举过所有以 $(A_1,B_i),i\in\{1,2,...,m\}$ 为根的可能树后，点 $A_i$ 就不再参与后续枚举）；此外，如果 $A_p$ 已经在枚举路径中出现过，它理所当然的也不能参与这条路径接下来的枚举；
+>    - 对于 $A$，如果某个点做过且做完了可能树的根节点，那么不再参与后续的枚举（也就是说，例如在枚举过所有以 $(A_1,B_i),i\in\{1,2,...,m\}$ 为根的可能树后，点 $A_i$ 就不再参与后续枚举）；此外，如果 $A_p$ 已经在枚举路径中出现过，它理所当然的也不能参与这条路径接下来的枚举；
 >     - 对于 $B$，我们只判断它是否在已经选中的当前路径中，如果已经被选中，则不参与，反之可以参与枚举；
 >     - 如果用图标来描述，那大致如下，从图中可以发现对 $A$ 和 $B$ 处理的区别：
 >       - 绿色表示接下来可以选中的部分，红色表示无论如何之后都不会再选中的部分，深灰表示当前枚举路径中的部分，浅灰表示枚举过了，被跳过的部分；
->
+> 
 > <center>
->     <img style="border-radius: 0.3125em;
+>    <img style="border-radius: 0.3125em;
 >     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
 >     src="img/Figure_2.png">
 >         <br>
@@ -449,15 +474,69 @@ classDiagram
 >     color: #999;
 >     padding: 2px;">figure 2.2</div>
 > </center>
->
+> 
 > -  计数（投票）策略：
 >
 >    -  朴素的思路是将每一条路径都单独搜索计数，但是现在我们显然可以在搜索过程中，进行一个“滞后返回”的操作。即，如果当前路径是合法的，我们先存储这个结果，并先统计它能够派生出来的可能性的分数，得到和分数以后再返回。
 >
+
+---
+
+> First, we introduce the most simple idea, which is to enumerate all possible matching strategies and determine whether they are feasible or not. Finally, all the points involved in the feasible strategies are "Vote" according to certain rules, i.e., a weighted score is added.
 >
+> So what is a "matching strategy"?
+>
+> - First we define the "matching strategy", we are looking for a point-to-point relationship, for example $\{(A_{i_1},B_{j_1}), (A_{i_2},B_{j_2}),... ,(A_{i_k},B_{j_k})\}$ is a matching strategy, which means that these $k$ points in the $A$ graph are matched with these $k$ points in the $B$ graph in turn.
+>
+> So what kind of "matching strategy" will be adopted?
+>
+> - We call the set of $\{A_{i_1}, A_{i_2}, ... , A_{i_k}\}$ consisting of **<u>Ordered Point Set²</u>** and $\{B_{i_1}, B_{i_2}, . .B_{i_k}\}$ constitutes an **<u>Ordered Point Set²</u>** **<u>Matching⁴</u>** and $offset = 0$, the strategy $\{(A_{i_1},B_{j_1}), (A_{i_2},B_{j_2}),... ,(A_{i_k},B_{j_k})\}$ is admissible.
+>
+> Obviously, if the $A$ graph has $n$ points and the $B$ graph has $m$ points, then there is a total of $\sum_{i=CLL}^{min(n,m)}i\cdot C_{n}^{i}C_{m}^{i}$, which can be found to be a very scary number, so we need to do some optimization, and the optimized process is roughly as follows.
+>
+> - Enumeration strategy.
+>
+>   - We enumerate a point from the enumerable range of $A$ and a point from the enumerable range of $B$ and treat them as a pair in the path, i.e. a subpossibility tree of the current strategy is created.
+>   - next enumerate this point as the current path to generate the next subpossibility tree.
+>
+> - Enumeration range.
+>
+>   - Different scoping strategies are adopted for $A$ and $B$, with the aim of reducing the enumeration possibilities while ensuring symmetric, non-duplicative, and complete results.
+>   - For $A$, if a point has done and finished the root of the possible tree, then it will not participate in the subsequent enumeration (i.e., for example, after enumerating all nodes with $(A_1,B_i),i\in\{1,2,...,m\}$ as root, the point $A_i$ does not participate in subsequent enumeration); moreover, if $A_p$ has already appeared in the enumeration path, it is logical that it cannot participate in the next enumeration of this path either.
+>   - For $B$, we only determine whether it is in the current path that has already been selected, and if it has already been selected, then it does not participate, and if not, it can participate in the enumeration.
+>   - If we describe it with icons, it is roughly as follows, from which we can find the difference between the treatment of $A$ and $B$.
+>     - green indicates the part that can be selected next, red indicates the part that will not be selected again afterwards anyway, dark gray indicates the part in the current enumeration path, and light gray indicates the part that has been enumerated and skipped.
+>   
+
+> <center>
+> <img style="border-radius: 0.3125em;
+>  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+>  src="img/Figure_2.png">
+>      <br>
+>  <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+>  display: inline-block;
+>  color: #999;
+>  padding: 2px;">figure 2.1</div>
+> </center>
+> <center>
+>  <img style="border-radius: 0.3125em;
+>  box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+>  src="img/Figure_3.png">
+>  <br>
+>  <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+>  display: inline-block;
+>  color: #999;
+>  padding: 2px;">figure 2.2</div>
+> </center>
+> Counting (voting) strategy.
+>
+> - The plain idea is to search for each path individually and count it, but now we can obviously do a "lag return" operation during the search. That is, if the current path is legal, we first store the result and count the number of possibilities it can derive, and then return it after getting the sum score.
+
+---
+
+#### 伪代码 | Pseudocode
 
 ```cpp
-// Pseudocode
 // The real code will be more complex, because there are many boundary details
 // to deal with.
 deepFirstSearchForNextMatchPair(){
@@ -483,15 +562,25 @@ deepFirstSearchForNextMatchPair(){
 }
 ```
 
+---
+
+#### 样例解释 | Example
 
 > 为了更好的说明，我将举一个例子。
 >
 > - 如下为一个 $A$  和 $B$ 中各自有 4 个点的所有可能树（省略了一部分形状相同的），由于点数过少，在此样例中，我们使用的 Credible Lower Limit(CLL) 为 3。
 >
+
+---
+
+> To better illustrate, I will give an example.
+>
+> - Here are all possible trees with 4 points each in $A$ and $B$ (omitting some of the ones with the same shape), and in this example we use a Credible Lower Limit (CLL) of 3 because of the small number of points.
+
 > ```mermaid
-> graph TD;
+>graph TD;
 > 
-> A("(1,1)")
+>A("(1,1)")
 > A --- B("(2,2)")
 > A --- C("(2,3)")
 > A --- D("(2,4)")
@@ -519,11 +608,11 @@ deepFirstSearchForNextMatchPair(){
 > 
 > AA("(1,3)") --- BB("...")
 > ```
->
+> 
 >    ```mermaid
 > graph TB;
 > A("(1,2)")
-> A --- B("(2,3)")
+>A --- B("(2,3)")
 > A --- C("(2,4)")
 > A --- D("(2,1)")
 > A --- E("(3,3)")
@@ -550,11 +639,11 @@ deepFirstSearchForNextMatchPair(){
 > 
 > AA("(1,4)") --- BB("...")
 >    ```
->
+> 
 >    ```mermaid
 > graph TD;
 > 
-> A("(2,1)")
+>A("(2,1)")
 > A --- B("(3,2)")
 >    A --- C("(3,3)")
 > A --- D("(3,4)")
@@ -569,11 +658,11 @@ deepFirstSearchForNextMatchPair(){
 > 
 > AA("(2,3)") --- BB("...")
 >    ```
->
+> 
 >    ```mermaid
 > graph TD;
 > A("(2,2)")
-> A --- B("(3,3)")
+>A --- B("(3,3)")
 > A --- C("(3,4)")
 > A --- D("(3,1)")
 > A --- E("(4,3)")
@@ -587,11 +676,11 @@ deepFirstSearchForNextMatchPair(){
 > 
 > AA("(2,4)") --- BB("...")
 >    ```
->
+> 
 > ```mermaid
 > graph TD;
 > A("(3,1)")
-> A --- B("(4,2)")
+>A --- B("(4,2)")
 > A --- C("(4,3)")
 > A --- D("(4,4)")
 > 
@@ -610,11 +699,11 @@ deepFirstSearchForNextMatchPair(){
 > aa --- cc("(4,2)")
 > aa --- dd("(4,3)")
 > ```
->
+> 
 > - 可以发现，这片可能性森林中，有非常多的路径，即使在 $CCL = 4$ 的约束下，也仍然还有很多路径是能被保留下来的。但是他们中的很多会在“匹配”的条件上失败，一旦失败，其派生都不会存在。
 > - 现在借助这张图，我们在流程上对其进行一个模拟，就以 $\{(1,1)\rightarrow(2,2)\rightarrow(3,3)\rightarrow(4,4)\}$ 为例，我们假设他们都是匹配的，那么这条路线的模拟如下：
 >   - 枚举根，以 $(1,1)$ 为根；
->      - 点数不足三个点，无条件匹配；
+>     - 点数不足三个点，无条件匹配；
 >      - 点数不足，匹配成功得分为 $0$；
 >      - 派生，进入子节点；
 >      - 枚举第二个点 $(2,2)$ ；
@@ -645,17 +734,163 @@ deepFirstSearchForNextMatchPair(){
 >      - `votingTable[1][1] += p+q;`
 >      - 返回得分 $p+q$；
 >   - 结束；
->
+> 
+---
+
+> - It can be seen that there are so many paths in this forest of possibilities that even under the $CCL = 4$ constraint, there are still many paths that can be preserved. But many of them will fail in the "matching" condition, and once they fail, none of their derivations will exist.
+> - Now, with the help of this graph, let's make a simulation of it in terms of the flow. Let's take $\{(1,1)\rightarrow(2,2)\rightarrow(3,3)\rightarrow(4,4)\}$ as an example, and let's assume that they all match, then the simulation of this route is as follows.
+>   - Enumerating the root, with $(1,1)$ as the root.
+>     - less than three points, unconditional matching.
+>     - insufficient number of points, with a successful match score of $0$.
+>     - Derivation, into child nodes.
+>     - Enumerate the second point $(2,2)$.
+>       - unconditional match for less than three points.
+>       - insufficient points, successful match scores $0$.
+>       - derive, into the child node.
+>       - enumerate the third point $(3,3)$.
+>         - Matching starts when the number of points meets three, and $\triangle A_1A_2A_3$ is found to match with $\triangle B_1B_2B_3$.
+>         - Match is successful, staging score is $p$.
+>         - Derivation, into child nodes.
+>         - Enumerate the fourth point $(4,4)$.
+>           - The number of points satisfies three, start matching, find $\triangle A_2A_3A_4$ matching with $\triangle B_2B_3B_4$.
+>           - Match is successful and the staging score is $q$.
+>           - Derivation, into child nodes.
+>           - Enumerate the fifth point.
+>             - no derivation, match fails.
+>             - return score $0$.
+>           - calculate cumulative score $q+0=q$.
+>           - `votingTable[4][4] += q;`
+>           - return score $q$.
+>         - Calculate the cumulative score $p+q=p+q$.
+>         - `votingTable[3][3] += p+q;`
+>         - return score $p+q$.
+>       - Calculate the cumulative score $p+q+0=p+q$.
+>       - `votingTable[2][2] += p+q;`
+>       - return score $p+q$.
+>     - Calculate the cumulative score $p+q+0=p+q$.
+>     - `votingTable[1][1] += p+q;`
+>     - return the score $p+q$.
+>   - Ending.
 
 ### 从表中得到匹配关系 | Get Match Relationship From Table
 
+> - 这一部分逻辑的位置为 `src/solver/optimal_match/voting_tree.cpp` / `VotingTree::matchAccordingTalbe()`
+> - The location of this part of the logic is `src/solver/optimal_match/voting_tree.cpp` / `VotingTree::matchAccordingTalbe()`
+
+#### 解释 | Explaination
+
+> 在上一个步骤中，我们已经得到了一张二维表，其两个维度分别对应两个**<u>有序点集¹</u>**的每个点。其值表示在匹配过程中得到的累计得分。
+>
+> 我们首先分析一下这个得分的大小意味着什么。
+>
+> 假设每一次被搜到，我们都会让路径上的值 `+1`，即权重都是相等的，那么不难发现，表中每一格的值正比于**<u>存在这个点的匹配路径数</u>**。更近一步的，对于一条长度大于 $CLL$ 的可行路径，其每一条长度大于 $CLL$ 的连续子路径都可以被视为一个可行路径。(而实际上这一步也在上一步通过“滞后”处理被优化为回溯处理，降低了时间复杂度) 因此我们能得到这样一个结论，在数据规模足够大的情况下，“匹配上”的节点在表中的数值一定占有很高的优势，亦即数值上会存在明显的突变，明显到你一眼就能区分出来哪些是匹配的，哪些是不匹配的。当然，这个结论非常的不严谨，因为我们有一些措施可以让这种突变的优势变得不那么明显，但是这种界定难度和通过视觉途径在点集中进行识别的难度是对等的。所以我们并不考虑这种情况。
+>
+> 那么，我们就可以设置一个阈值，高于这个阈值的点被认为是可以匹配上的，而低于这个阈值的则被认为是失配的。
+>
+> 而在我的代码中，我选择的是表中两个最值的中值。由于在我们能够接受的情况下，能够匹配上的点具有相当的优势，且实际上这种界定方法在特征数据下表现良好。
+>
+> >  事实上，有更合理的做法，但是由于时间关系和体量关系，我只给出一个简单的描述但并不计划实现：通过绘制排序后的表格值的邻域方差函数，通过突变点可以找到表中数据的若干“团”，或者说台阶，再通过这些台阶来处理。
+>
+> 在得到这个界定规则后，我们就可以开始来寻找这些点了。
+>
+> 这里需要注意的一点就是需要让找出来的点满足**<u>单调约束条件³</u>**，这要求我们体感上从一张循环到表的左上找到右下。
+>
+> 假设如 `figure 2.3` 为我们得到的一张 4*4 的 VotingTable，那么我们能找到的就是这张“循环”表中的蓝色部分。可以发现，他们在循环表示中满足“总左上到右下”的结果。而在实际搜索过程中，它是按照红框的方式被找到的。
+>
+> 那么实际上，我们在处理过程中也要模仿这个表格的扩展，通过将一个表格通过四个循环，来实现循环意义下的“从左上到右下”的搜索。详细内容可以查看伪代码。
+>
+> 此外，由于在复杂情况下，表单的情况可能很复杂，所以我们需要“枚举”起点，并从中找到最长的一条结果。
+
+----
+
+> In the previous step, we have obtained a two-dimensional table whose two dimensions correspond to each point of the two **<u>Ordered Point Sets¹</u>**. Its value represents the cumulative score obtained during the matching process.
+>
+> We first analyze what the magnitude of this score implies.
+>
+> Assuming that each time we are searched, we let the values on the paths `+1`, i.e., the weights are all equal, it is easy to see that the value of each cell in the table is proportional to the number of matching paths where this point exists**<u></u>**. Closer to home, for a feasible path of length greater than $CLL$, each of its consecutive subpaths of length greater than $CLL$ can be considered as a feasible path. (In fact, this step is also optimized in the previous step by "hysteresis" processing, which reduces the time complexity). In other words, there will be obvious mutations in the values, so obvious that you can distinguish at a glance which ones are matches and which ones are not. Of course, this conclusion is very uncritical, because we have some measures to make this mutation advantage less obvious, but the difficulty of defining this is equivalent to the difficulty of identifying it in the point set by visual means. So we do not consider this case.
+>
+> Then, we can set a threshold above which points are considered to be matchable, and below which they are considered to be mismatched.
+>
+> And in my code, I choose the median of the two most values in the table. Since the points that can match up have a considerable advantage in the case we can accept, and actually this definition method performs well with the feature data.
+>
+> >  In fact, there is a more reasonable approach, but due to time and volume, I will only give a simple description but do not plan to implement it: by plotting the neighborhood variance function of the sorted table values, a number of "clusters", or steps, of data in the table can be found by mutation points, and then processed by these steps.
+>
+> After getting this definition rule, we can start to find these points.
+>
+> One thing to keep in mind here is that the found points need to satisfy the **<u>Monotonicity Constraint³</u>**, which requires us to physically go from a loop to the top left of the table to the bottom right.
+>
+> Assuming that `figure 2.3` is a 4*4 VotingTable, then all we can find is the blue part of this "loop" table. You can see that they satisfy the "total top-left to bottom-right" result in the loop representation. And in the actual search process, it is found according to the red box.
+>
+> In fact, we have to mimic the extension of this table in the process, by passing a table through four loops to achieve the "top left to bottom right" search in the sense of a loop. Details can be seen in the pseudo-code.
+>
+> In addition, since the form can be very complex in complex cases, we need to "enumerate" the starting point and find the longest result from it.
+
+---
+
+<center>
+<img style="border-radius: 0.3125em;
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+src="img/Figure_4.png">
+  <br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 2px;">figure 2.3</div>
+</center>
 
 
 
+#### 伪代码 | Pseudocode
 
-
-
-
+```cpp
+matchAccordingTalbe{
+		average = (min_elements + max_elements) / 2;
+    // Iterate the bound of the first Ai, in order to search the best answer.
+    for(bound in Ai){
+      	// Left-Top part in extended table.
+      	for(Ai in [bound, n], Bj in (last_j, m]){
+          	if(vt[Ai][Bj] > average){
+              	if(Ai is first_i) first_i = Ai;
+              	if(Bj is first_j) first_j = Bj;
+              	last_j = Bj;
+              	push (Ai, Bj) into current strategy;
+            }
+        }
+      	// Left-Bottom part in extended table.
+        for(Ai in [0, bound), Bj in (last_j, m]){
+          	if(vt[Ai][Bj] > average){
+              	if(Ai is first_i) first_i = Ai;
+              	if(Bj is first_j) first_j = Bj;
+              	last_j = Bj;
+              	push (Ai, Bj) into current strategy;
+            }
+        }
+      	// Right-Top part in extended table.
+        for(Ai in [bound, min(first_i, n)], Bj in [0, first_j]){
+          	if(vt[Ai][Bj] > average){
+              	last_j = Bj;
+              	push (Ai, Bj) into current strategy;
+            }
+        }
+      	// Right-Bottom part in extended table.
+        for(Ai in [0, min(bound, first_i)], Bj in (last_j, first_j]){
+          	if(vt[Ai][Bj] > average){
+              	last_j = Bj;
+              	push (Ai, Bj) into current strategy;
+            }
+        }
+				// Judge and store.
+        if(current_strategy meets requirement 
+           and
+           is better than current_optimal_solution){
+          	current_optimal_solution = current_strategy;
+        }
+    }
+  	if(has solution){
+      	return current_optimal_solution;
+    }
+}
+```
 
 
 

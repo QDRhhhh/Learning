@@ -280,7 +280,7 @@ void VotingTree::matchAccordingTalbe(){
         // Iterate i before the boud.
         // 'j' is not mutated yet.
         for(int i = bound; i < shape.first; ++i){
-            for(int j = J; j < shape.second; ++j){
+            for(int j = J+1; j < shape.second; ++j){
                 if(vt[i][j] > ave){
                     J = j;
                     if(fJ == -1) fJ = j;
@@ -293,7 +293,7 @@ void VotingTree::matchAccordingTalbe(){
         // Iterate i after the boud.
         // 'j' is not mutated yet.
         for(int i = 0; i < bound; ++i){
-            for(int j = J; j < shape.second; ++j){
+            for(int j = J+1; j < shape.second; ++j){
                 if(vt[i][j] > ave){
                     J = j;
                     if(fJ == -1) fJ = j;
@@ -317,7 +317,7 @@ void VotingTree::matchAccordingTalbe(){
         // Iterate i after the boud.
         // 'j' is not mutated already.
         for(int i = 0; i < std::min(bound, fI); ++i){
-            for(int j = J; j < fJ; ++j){
+            for(int j = J+1; j < fJ; ++j){
                 if(vt[i][j] > ave){
                     J = j;
                     optimalMatch.push_back(std::pair<int,int>(i+1,j+1));
