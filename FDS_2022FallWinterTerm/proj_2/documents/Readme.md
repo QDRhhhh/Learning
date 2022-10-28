@@ -1,4 +1,4 @@
-> I had already prepared files compiled for Mac and Windows. They are in `./execute_file`.
+> I had already prepared files compiled for Mac. They are in `./execute_file`.
 
 # Requirements
 
