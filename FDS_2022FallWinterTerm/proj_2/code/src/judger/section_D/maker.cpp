@@ -12,7 +12,6 @@ using namespace std;
 #define STEP_LEN 4
 #define STEP_LEN_LOWER_LIM 0.1
 #define PI 3.1415926536
-#define DISTURBANCE_LIM STEP_LEN/4
 
 // Hyperparameter
 const double weakenRate = 0.2;
@@ -112,13 +111,12 @@ Polygon2D randPg(int size){
 }
 
 
-Polygon2D rigidAndDisturbTransPg(Polygon2D & base, int offset){
+Polygon2D rigidTransPg(Polygon2D & base, double rotateAng){
 
     double scaleRate = 1 + getNormalFactor();
-    double rotateAng = 2 * PI * getAbsUniformFactor();
     double cosAng = cos(rotateAng), sinAng = sin(rotateAng);
-    double dx = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
-    double dy = (1 - getAbsNormalFactor()) * STEP_LEN * (base.getSize()) / PI;
+    double dx = STEP_LEN * base.getSize();
+    double dy = STEP_LEN * base.getSize();
 
     vector<Point2D> tmp(base.getSize());
 
@@ -128,15 +126,26 @@ Polygon2D rigidAndDisturbTransPg(Polygon2D & base, int offset){
         double y = pt.getY() * cosAng + pt.getX() * sinAng;
         x *= scaleRate, y *= scaleRate;
         x += dx, y += dy;
-
-        double distAng = PI * getUniformFactor();
-        double distStep = DISTURBANCE_LIM * getAbsNormalFactor() * (getAbsNormalFactor() < 0.05 ? 16 : 1);
-        x += distStep * cos(distAng);
-        y += distStep * sin(distAng);
-        tmp[ (i+offset) % (base.getSize()) ] = Point2D(x, y);
+        tmp[ i ] = Point2D(x, y);
     }
 
     return Polygon2D(tmp);
+}
+
+Polygon2D mergePg(Polygon2D & x, Polygon2D & y){
+    int len = x.getSize();
+    vector<Point2D> t;
+    for(int i = 0; i < len; ++i){
+        t.push_back(x.getPointByIdx(i));
+    }
+    for(int i = 0; i < len; ++i){
+        auto yp = y.getPointByIdx(i);
+        t.push_back(Point2D(
+            yp.getX() + STEP_LEN,
+            yp.getY() + STEP_LEN
+        ));
+    }
+    return Polygon2D(t);
 }
 
 int main(int argc, char * argv[]){
@@ -146,17 +155,23 @@ int main(int argc, char * argv[]){
     ofIn.open("test_data.in",ios::out | ios::trunc);
     
     vector<int> sizeSeq;
-    sizeSeq.push_back(15);
-    sizeSeq.push_back(15);
-    sizeSeq.push_back(20);
-    sizeSeq.push_back(20);
+    // sizeSeq.push_back(5);
+    sizeSeq.push_back(7);
+    sizeSeq.push_back(7);
+    sizeSeq.push_back(10);
+    sizeSeq.push_back(10);
 
     ofIn << sizeSeq.size() << endl;
     
     for(auto it = sizeSeq.begin(); it != sizeSeq.end(); ++it){
-        auto pgA = randPg(*it);
+        auto pgA1 = randPg(*it);
+        auto pgA2 = randPg(*it);
+        auto pgA = mergePg(pgA1, pgA2);
         int offset = rand() % pgA.getSize();
-        auto pgB = rigidAndDisturbTransPg(pgA, offset);
+        double rotateAng = PI / 2;
+        auto pgB1 = rigidTransPg(pgA1,rotateAng);
+        auto pgB2 = rigidTransPg(pgA2,rotateAng + PI/6);
+        auto pgB = mergePg(pgB1, pgB2);
 
         ofIn << pgA.getSize() << endl;
         for(int i = 0; i < pgA.getSize(); ++i){
@@ -168,8 +183,6 @@ int main(int argc, char * argv[]){
             auto & pt = pgB.getPointByIdx(i);
             ofIn << pt.getX() << " " << pt.getY() << endl;
         }
-
     }
-
 
 }

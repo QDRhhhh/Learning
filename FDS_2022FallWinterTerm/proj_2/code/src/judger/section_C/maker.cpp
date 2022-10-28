@@ -160,12 +160,12 @@ int main(int argc, char * argv[]){
     ofIn.open("test_data.in",ios::out | ios::trunc);
     
     vector<int> sizeSeq;
-    sizeSeq.push_back(10);
-    sizeSeq.push_back(10);
+    // sizeSeq.push_back(10);
+    // sizeSeq.push_back(10);
+    // sizeSeq.push_back(20);
+    // sizeSeq.push_back(20);
+    // sizeSeq.push_back(25);
     sizeSeq.push_back(20);
-    sizeSeq.push_back(20);
-    sizeSeq.push_back(25);
-    sizeSeq.push_back(25);
 
     ofIn << sizeSeq.size() << endl;
     

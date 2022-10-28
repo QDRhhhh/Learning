@@ -197,6 +197,7 @@ void VotingTree::searchAndVote(){
     // Initialize the variable to be used.
     for(int ia = 0; ia < pgA.getSize(); ++ia){
         for(int ib = 0; ib < pgB.getSize(); ++ib){
+            std::cerr <<  ia << " " << ib << "\n";
             // Create a new current stage.
             CurStage cur;
             cur.storeStage(this, ia, ib);
@@ -265,7 +266,7 @@ void VotingTree::matchAccordingTalbe(){
         }
     }
     // Find the optimal match.
-    double ave = (maxEle + minEle) * 0.5;
+    double ave = (maxEle + minEle) * 0.3;
     bool oneRound = false;
 
     std::vector< std::pair<int,int> > tmp;

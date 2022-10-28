@@ -769,15 +769,19 @@ void printResult( std::vector< std::pair<int,int> > & res){
 }
 
 void solve(){
-    MatchReferee judger1(0.1, 0.1, 1.0);
-    MatchReferee judger2(0.1, 0.1, 1.0);
+    MatchReferee judger1(0.05, 0.05, 1.0);
+    MatchReferee judger2(0.05, 0.05, 1.0);
     auto inA = VotingTree::readPts(std::cin);
     auto inB = VotingTree::readPts(std::cin);
-    VotingTree vTree(inA, inB, judger1, judger2, 5, inA.size()*10);
+    VotingTree vTree(inA, inB, judger1, judger2, 5);
 
+    clock_t timerI = clock();
     vTree.dealOptimalMatch();
+    clock_t timerF = clock();
+    double delTime = (double)(timerF-timerI)/CLOCKS_PER_SEC;
+    std::cerr << "It takes : [ " << delTime << " ] Seconds!\n";
 
-    // // Debug::
+    // // Debug::Print table.
     // auto vTable = vTree.getVotingTable();
     // std::cerr << "\n\n";
     // for(auto i = 0; i < vTable.getShape().first; ++i){
@@ -1519,7 +1523,7 @@ void VotingTree::matchAccordingTalbe(){
         }
     }
     // Find the optimal match.
-    double ave = (maxEle + minEle) * 0.5;
+    double ave = (maxEle + minEle) * 0.3;
     bool oneRound = false;
 
     std::vector< std::pair<int,int> > tmp;

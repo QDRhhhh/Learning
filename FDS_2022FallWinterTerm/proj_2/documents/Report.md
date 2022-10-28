@@ -18,28 +18,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <center><font size = 6> Voting Tree</font></center>
 <center><font size = 5> Date: 2022-10.27</font></center>
 <center><font size = 5> Author: **</font></center>
@@ -70,17 +48,11 @@
 
 
 
+> FYA:    **If you want to run my codes, please check `Readme.md` first! You can test my code with one command only!**
 
 
 
 
-
-
-
-
-
-
-> FYA:    **If you want to run my codes, please check `Readme.md` first!**
 
 
 
@@ -114,10 +86,14 @@
 ## 课题摘要 | Project Abstract
 
 > 在这道题中，输入中将给出两组 **<u>有序点集¹</u>**，每个集合中的元素将被依次给出——在每个集合中第 $i$ 个被给出的点将被命名为 $i$ 。我们需要在点集中找到满足 **<u>单调约束条件³</u>** 的 **<u>公共子图形²</u>**。
+>
+> 值得一提的是，在我看来 Voting Tree 真正的奥妙之处在于它能够处理**<u>局部特征保留的形变物体</u>**，这一点我会在 Test Case Section D 做一些尝试。但是就这个目的而言，这个项目还不是个完整的项目，它存在一些缺陷，我会在 Section D 详细阐述这个缺陷。
 
 ---
 
 > In this problem, the input will contain two groups of **<u>Ordered Point Set¹</u>**. Each element of each set will be given one by one, and the $i^\text{th}$ point will be named $i$ . What we should do is to find out the **<u>Common Subgraph²</u>** that fits **<u>Monotone Constraint³</u>**
+>
+> It is worth mentioning that the real beauty of the Voting Tree, in my opinion, is its ability to handle **<u>locally feature-preserving deformed objects</u>**, which I will try out in Test Case Section D. However, for this purpose, this project is not a complete project, and it has some flaws, which I will elaborate in Section D.
 
 ## 概念定义 | Concept Defination
 
@@ -287,7 +263,7 @@ $$
 ### 流程图 | Flowchart
 
 ```mermaid
-flowchart TD;
+flowchart TB;
 	input(["输入 / Input"]) ==> origInput
 	origInput ==> solve
 	solve ==> origOutput
@@ -318,10 +294,8 @@ flowchart TD;
 ### 类图 | Class Diagram
 
 ```mermaid
-
-
 classDiagram
-	diraction RL
+	diraction TB
 	
 	Polygon2D --o Point2D : has many
 	Table2D --o TableSlice : has many
@@ -787,7 +761,7 @@ deepFirstSearchForNextMatchPair(){
 >
 > 那么，我们就可以设置一个阈值，高于这个阈值的点被认为是可以匹配上的，而低于这个阈值的则被认为是失配的。
 >
-> 而在我的代码中，我选择的是表中两个最值的中值。由于在我们能够接受的情况下，能够匹配上的点具有相当的优势，且实际上这种界定方法在特征数据下表现良好。
+> 而在我的代码中，我选择的是表中两个最值的和的 0.3 倍。由于在我们能够接受的情况下，能够匹配上的点具有相当的优势，且实际上这种界定方法在特征数据下表现良好。
 >
 > >  事实上，有更合理的做法，但是由于时间关系和体量关系，我只给出一个简单的描述但并不计划实现：通过绘制排序后的表格值的邻域方差函数，通过突变点可以找到表中数据的若干“团”，或者说台阶，再通过这些台阶来处理。
 >
@@ -807,7 +781,7 @@ deepFirstSearchForNextMatchPair(){
 >
 > We first analyze what the magnitude of this score implies.
 >
-> Assuming that each time we are searched, we let the values on the paths `+1`, i.e., the weights are all equal, it is easy to see that the value of each cell in the table is proportional to the number of matching paths where this point exists**<u></u>**. Closer to home, for a feasible path of length greater than $CLL$, each of its consecutive subpaths of length greater than $CLL$ can be considered as a feasible path. (In fact, this step is also optimized in the previous step by "hysteresis" processing, which reduces the time complexity). In other words, there will be obvious mutations in the values, so obvious that you can distinguish at a glance which ones are matches and which ones are not. Of course, this conclusion is very uncritical, because we have some measures to make this mutation advantage less obvious, but the difficulty of defining this is equivalent to the difficulty of identifying it in the point set by visual means. So we do not consider this case.
+> Assuming that each time we are searched, we let the values on the paths `+1`, i.e., the weights are all equal, it is easy to see that the value of each cell in the table is proportional to the number of **<u>matching⁴</u>** paths where this point exists. Closer to home, for a feasible path of length greater than $CLL$, each of its consecutive subpaths of length greater than $CLL$ can be considered as a feasible path. (In fact, this step is also optimized in the previous step by "hysteresis" processing, which reduces the time complexity). In other words, there will be obvious mutations in the values, so obvious that you can distinguish at a glance which ones are matches and which ones are not. Of course, this conclusion is very uncritical, because we have some measures to make this mutation advantage less obvious, but the difficulty of defining this is equivalent to the difficulty of identifying it in the point set by visual means. So we do not consider this case.
 >
 > Then, we can set a threshold above which points are considered to be matchable, and below which they are considered to be mismatched.
 >
@@ -839,17 +813,24 @@ padding: 2px;">figure 2.3</div>
 </center>
 
 
+#### Bonus
+
+> 另一个做法是，首先排序表中的所有元素，然后从大到小挑选出在表格中不在同一行且不在同一列，亦即不冲突的匹配。再将这些挑选出来的策略按照第一个元素进行排序，再求出第二个元素不下降的子序列即可，这里使用带路径存储的 LIS 算法来实现。
+
+---
+
+> Another approach is to first sort all the elements in the table, and then pick from largest to smallest matches that are not in the same row and not in the same column in the table, i.e. non-conflicting matches. Then sort these selected strategies according to the first element, and then find the subsequence whose second element does not descend. Here, the LIS algorithm with path storage is used to realize it.
 
 #### 伪代码 | Pseudocode
 
 ```cpp
 matchAccordingTalbe{
-		average = (min_elements + max_elements) / 2;
+		threshold = (min_elements + max_elements) * 0.3;
     // Iterate the bound of the first Ai, in order to search the best answer.
     for(bound in Ai){
       	// Left-Top part in extended table.
       	for(Ai in [bound, n], Bj in (last_j, m]){
-          	if(vt[Ai][Bj] > average){
+          	if(vt[Ai][Bj] > threshold){
               	if(Ai is first_i) first_i = Ai;
               	if(Bj is first_j) first_j = Bj;
               	last_j = Bj;
@@ -858,7 +839,7 @@ matchAccordingTalbe{
         }
       	// Left-Bottom part in extended table.
         for(Ai in [0, bound), Bj in (last_j, m]){
-          	if(vt[Ai][Bj] > average){
+          	if(vt[Ai][Bj] > threshold){
               	if(Ai is first_i) first_i = Ai;
               	if(Bj is first_j) first_j = Bj;
               	last_j = Bj;
@@ -867,27 +848,60 @@ matchAccordingTalbe{
         }
       	// Right-Top part in extended table.
         for(Ai in [bound, min(first_i, n)], Bj in [0, first_j]){
-          	if(vt[Ai][Bj] > average){
+          	if(vt[Ai][Bj] > threshold){
               	last_j = Bj;
               	push (Ai, Bj) into current strategy;
             }
         }
       	// Right-Bottom part in extended table.
         for(Ai in [0, min(bound, first_i)], Bj in (last_j, first_j]){
-          	if(vt[Ai][Bj] > average){
+          	if(vt[Ai][Bj] > threshold){
               	last_j = Bj;
               	push (Ai, Bj) into current strategy;
             }
         }
 				// Judge and store.
-        if(current_strategy meets requirement 
-           and
-           is better than current_optimal_solution){
+        if(current_strategy meets requirement and is better than current_optimal_solution){
           	current_optimal_solution = current_strategy;
         }
     }
   	if(has solution){
       	return current_optimal_solution;
+    }
+}
+```
+
+- Bounus
+
+```cpp
+// Detail comments are in `.h` file!
+matchAccordingTalbe(){
+    sort the elements in table;
+    average = (min_element + max_element)/2;
+    for(i){
+        if(elements[i] < ave) break;
+        auto cur = vec[i];
+        if(x[i] and y[i] is not used){
+            set x[i] and y[i] used;
+            store x[i] and y[i] to the current solution;
+        }
+    }
+    // Sort it in accressment order.
+    sort_the_elements_in_current_solution;
+    check_order_using_LIS();
+    if(current_solution is not big enough)
+        clear current_solution;
+    return;
+}
+
+LIS(){
+    d[1] = a[1];
+    for(i){
+        if(a[i] > d[len]) d[++len] = a[i];
+        else if(a[i] <= d[len]){
+            int pos = lower_bound(d+1,d+len+1,a[i]) - (d+1) + 1;
+            d[pos] = a[i];
+        }
     }
 }
 ```
@@ -900,12 +914,594 @@ matchAccordingTalbe{
 
 # Chapter 3: Testing Results
 
-> I prepare 3 sections of test cases, their discription is in `seciont_?/Readme.md`
+> I prepare 4 sections of test cases, their discription is also in `seciont_?/Readme.md`.
+>
+> Also, if you want to test my code your self, just follow the instruction in `./Readme.md`.
+>
+> If you want to change the size of test cases, check the `main()` in each seciton's `maker.cpp`.
+
+## Section A (Pass)
+
+> ### 描述
+>
+> - 本部分数据将满足以下条件：
+>     1. B 中的“图形”由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
+>     2. 不存在噪点；
+>     3. 以上条件意味着，在此部分数据中，A 和 B 中点的数量应当是相同的。
+>
+> ### 数据范式
+>
+> `.in` 文件中
+>
+> - 第一行为一个整数 T，表示有 T 组测试数据；
+> - 接下来为 T 组数据：
+>   - 每组第 1 行为一个整数 m，表示 A 中有 m 个点；
+>   - 每组第 2 ~ m+1 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+>   - 每组第 m+2 行为一个整数 n，表示 B 中有 n 个点；
+>   - 每组第 m+3 ~ m+n+2 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+---
+> ### Description
+>
+> - Data made here will have following features:
+>     1. Polygon in B is rigid transformed(i.e. scale, rotate and flip) from that in A.
+>     2. There will be no noise.
+>
+> ### Data Form
+>
+> In `.in` file,
+>
+> - The first line is an integer *T*, which means there will be *T* groups of test data.
+> - Then comes *T* groups of data. In each group:
+>   - Line *1* contains an integer *m*, which means there are *m* points in *A*.
+>   - Line *2* to line *m+1*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+>   - Line *m+2* contains an integer *n*, which means there are *n* points in *B*.
+>   - Line *m+3* to line *m+n+2*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+
+### Example Test Case
+
+#### Input
+
+```
+1
+15
+0 0
+-2.1619 3.23308
+-4.65883 6.18222
+-6.87333 9.50584
+-9.38755 12.3754
+-13.1374 12.8433
+-15.8337 10.9651
+-15.4128 7.21887
+-14.9022 3.47599
+-13.6072 -0.289489
+-12.1229 -2.80169
+-7.12099 -3.35494
+-2.74382 -2.81734
+1.39092 -2.85288
+4.06026 -0.521197
+15
+6.89554 1.04331
+10.8328 0.722518
+14.9696 1.19757
+17.8691 2.14803
+19.5597 7.13152
+19.9958 11.7225
+20.9626 15.937
+19.1821 19.1877
+17.7362 15.1586
+13.948 13.6784
+10.3743 11.7922
+6.48182 10.2787
+2.98554 8.35691
+1.66391 4.6328
+2.97508 1.45657
+```
+
+#### Output
+
+- Time: 0.130955s
+
+```
+15
+   9   2
+  10   3
+  11   4
+  12   5
+  13   6
+  14   7
+  15   8
+   1   9
+   2  10
+   3  11
+   4  12
+   5  13
+   6  14
+   7  15
+   8   1
+```
+
+#### Visualize
+
+<center>
+<img style="border-radius: 0.3125em;
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+src="img/Figure_5.png">
+  <br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 2px;">figure 3.1</div>
+</center>
+
+
+
+## Section B (Pass)
+
+>
+> ### 描述
+>
+> - 本部分数据将满足以下条件：
+>     1. B 中的“图形”首先由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
+>     2. 然后对其中的点进行一定程度的扰动，即每个点都会被加上一个随机向量；
+>     3. 以上条件意味着，在此部分数据中，A 和 B 中点的数量应当是相同的。
+>
+> ### 数据范式
+>
+> `.in` 文件中
+>
+> - 第一行为一个整数 T，表示有 T 组测试数据；
+> - 接下来为 T 组数据：
+>   - 每组第 1 行为一个整数 m，表示 A 中有 m 个点；
+>   - 每组第 2 ~ m+1 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+>   - 每组第 m+2 行为一个整数 n，表示 B 中有 n 个点；
+>   - 每组第 m+3 ~ m+n+2 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+>
+
+---
+
+> ### Description
+>
+> - Data made here will have following features:
+>     1. Polygon in B is first rigid transformed(i.e. scale, rotate and flip) from that in A.
+>     2. Then each points in B will be randomly added by a random vector.
+>     3. There will be no noise.
+>
+> ### Data Form
+>
+> In `.in` file,
+>
+> - The first line is an integer *T*, which means there will be *T* groups of test data.
+> - Then comes *T* groups of data. In each group:
+>   - Line *1* contains an integer *m*, which means there are *m* points in *A*.
+>   - Line *2* to line *m+1*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+>   - Line *m+2* contains an integer *n*, which means there are *n* points in *B*.
+>   - Line *m+3* to line *m+n+2*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+
+### Example Test Case
+
+#### Input
+
+```
+1
+20
+0 0
+3.8735 -0.971065
+7.59663 -1.75691
+11.4904 -1.96307
+14.7119 -2.28918
+18.5088 -2.15542
+20.7412 0.924801
+21.3623 4.4359
+21.3414 8.11702
+18.1527 10.0807
+14.793 11.958
+12.465 14.7969
+10.5136 17.4053
+7.67017 19.3482
+3.49652 18.5845
+-0.311619 16.1545
+-1.95097 10.7796
+-3.46592 5.58175
+-2.53579 0.933665
+-0.407317 -2.24249
+20
+8.45632 15.6901
+5.07948 12.7483
+5.22174 8.10308
+7.31208 4.34954
+9.13546 0.895116
+14.5875 1.47252
+19.1236 2.20823
+23.3988 1.27209
+27.2999 0.442044
+31.4646 0.78198
+34.8514 4.71564
+36.5399 9.88869
+34.1987 16.1971
+31.0235 21.4511
+27.1307 25.8949
+22.6251 27.1819
+24.2782 24.7246
+19.5973 22.6422
+15.491 20.6093
+11.738 17.8954
+```
+
+#### Output
+
+- Time: 0.450951s
+
+```
+18
+   6   2
+   7   3
+   8   4
+  10   6
+  11   7
+  12   8
+  13   9
+  14  10
+  15  11
+  16  12
+  17  13
+  19  15
+  20  16
+   1  17
+   2  18
+   3  19
+   4  20
+   5   1
+```
+
+#### Visualize
+
+<center>
+<img style="border-radius: 0.3125em;
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+src="img/Figure_6.png">
+  <br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 2px;">figure 3.2</div>
+</center>
 
 
 
 
 
+## Section C (Pass)
+
+> ### 描述
+>
+> - 本部分数据将满足以下条件：
+>     1. B 中的“图形”首先由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
+>     2. 然后对其中的点进行一定程度的扰动，即每个点都会被加上一个随机向量；
+>     3. 除此之外，我还会添加若干噪点，噪点的数量在原图点数的 4 倍以内；
+>     4. 以上条件意味着，在此部分数据中，A 和 B 中点的数量应当是相同的；
+>
+> ### 数据范式
+>
+> `.in` 文件中
+>
+> - 第一行为一个整数 T，表示有 T 组测试数据；
+> - 接下来为 T 组数据：
+>   - 每组第 1 行为一个整数 m，表示 A 中有 m 个点；
+>   - 每组第 2 ~ m+1 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+>   - 每组第 m+2 行为一个整数 n，表示 B 中有 n 个点；
+>   - 每组第 m+3 ~ m+n+2 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+
+---
+
+> ### Description
+>
+> - Data made here will have following features:
+>     1. Polygon in B is first rigid transformed(i.e. scale, rotate and flip) from that in A.
+>     2. Then each points in B will be randomly added by a random vector.
+>     3. What's more, I will also add some noise points, whose number will no bigger than 4 times of that of the origin points.
+>     4. There will be no noise.
+>
+> ### Data Form
+>
+> In `.in` file,
+>
+> - The first line is an integer *T*, which means there will be *T* groups of test data.
+> - Then comes *T* groups of data. In each group:
+>   - Line *1* contains an integer *m*, which means there are *m* points in *A*.
+>   - Line *2* to line *m+1*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+>   - Line *m+2* contains an integer *n*, which means there are *n* points in *B*.
+>   - Line *m+3* to line *m+n+2*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+
+### Example Test Case
+
+#### Input
+
+```
+1
+30
+-4.78813 -9.23897
+-10.1184 -1.39777
+0 0
+-2.76055 -2.22995
+-2.89584 -6.25702
+-0.618929 -9.19162
+3.12962 -8.99266
+6.66361 -7.29531
+6.61818 0.913114
+9.39695 -4.80688
+3.8814 -3.57843
+10.9271 -2.13634
+14.0582 -0.740435
+17.6601 1.00135
+21.3784 -0.289846
+25.3405 -0.626236
+29.0519 -0.824408
+31.7178 1.57485
+32.9298 4.00806
+32.2919 6.94522
+31.6774 10.4213
+31.1188 13.0164
+27.6091 15.368
+21.5593 12.8357
+15.5189 10.8409
+11.7699 5.68452
+7.56068 1.9777
+4.15638 -1.2014
+-1.90954 -12.8046
+2.2187 -4.3574
+27
+114.688 111.738
+110.138 108.269
+108.123 99.8493
+105.359 96.2894
+103.325 91.9661
+102.64 88.4883
+98.9481 91.6267
+97.1282 88.5368
+98.4111 84.6632
+101.675 82.7073
+106.935 85.727
+103.356 94.0503
+107.958 87.0343
+109.64 90.516
+109.978 93.6798
+112.519 96.0167
+116.275 98.8825
+119.442 99.1374
+123.293 100.268
+126.529 99.7896
+128.622 104.616
+135.536 109.34
+128.737 107.647
+127.167 109.967
+125.368 113.132
+123.866 115.414
+115.836 117.962
+```
+
+#### Output
+
+- Time: 3.0127s
+
+```
+18
+  27   4
+  28   5
+  30   6
+   3   7
+   4   8
+   5   9
+   6  10
+   8  13
+  10  14
+  12  15
+  13  16
+  15  18
+  16  19
+  18  21
+  20  24
+  21  25
+  22  26
+  24   1
+```
+
+#### Visualize
+
+<center>
+<img style="border-radius: 0.3125em;
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+src="img/Figure_7.png">
+  <br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 2px;">figure 3.3</div>
+</center>
+
+
+
+
+
+## Extra: Section D (Specific Cases Pass)
+
+> ### 描述
+>
+> - 本部分数据将满足以下条件：
+>     1. B 中的“图形”由 A 中的“图形”通过刚性变化得到，即只有整体缩放、旋转、翻转；
+>     2. B 中的图形会存在“弯折”；
+>     3. 不存在噪点；
+>     4. 以上条件意味着，在此部分数据中，A 和 B 中点的数量应当是相同的。
+>
+> - 比较遗憾的是，这里的数据测试表现并不十分理想，因为当生成的图形相当接近，可能少数几个点就会导致他们的得分产生突变，而我只有时间处理两阶的情况。如果采用我在报告中使用的“邻域方差突变检测”来找到突变点，效果会好很多，甚至能够找到有多少个特征是能够被匹配的。
+>
+> ### 数据范式
+>
+> `.in` 文件中
+>
+> - 第一行为一个整数 T，表示有 T 组测试数据；
+> - 接下来为 T 组数据：
+>   - 每组第 1 行为一个整数 m，表示 A 中有 m 个点；
+>   - 每组第 2 ~ m+1 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+>   - 每组第 m+2 行为一个整数 n，表示 B 中有 n 个点；
+>   - 每组第 m+3 ~ m+n+2 行，每行有两个浮点数 x 和 y，表示每个点的坐标；
+
+---
+
+> ### Description
+>
+> - Data made here will have following features:
+>     1. Polygon in B is rigid transformed(i.e. scale, rotate and flip) from that in A.
+>     2. Polygon in B will have a "bend".
+>     3. There will be no noise.
+>
+> - Unfortunately, the performance of the data test here is not very good, because when the generated graphs are quite close, there may be a few points that cause their scores to mutate, and I only had time to deal with the two-order case. It would have been much better to use the "neighborhood variance mutation detection" I used in the report to find the mutation points, and even to find how many features could be matched.
+>
+> ### Data Form
+>
+> In `.in` file,
+>
+> - The first line is an integer *T*, which means there will be *T* groups of test data.
+> - Then comes *T* groups of data. In each group:
+>   - Line *1* contains an integer *m*, which means there are *m* points in *A*.
+>   - Line *2* to line *m+1*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+>   - Line *m+2* contains an integer *n*, which means there are *n* points in *B*.
+>   - Line *m+3* to line *m+n+2*, contains two float number *x* and *y* each line, which represents the coordinate of the point.
+
+### Example Test Case
+
+#### Input
+
+```
+1
+20
+0 0
+-0.880566 -3.44347
+0.123597 -6.60164
+2.05956 -9.71649
+4.63558 -11.7865
+8.04324 -11.8832
+10.067 -8.4219
+10.0814 -4.12038
+7.57 -0.107728
+4.48974 2.85109
+4 4
+5.52782 7.47802
+6.57926 10.8842
+6.3526 14.6654
+5.39961 18.3349
+4.97481 21.7489
+2.08398 22.6057
+-1.14156 20.6301
+-2.83159 15.1666
+-2.58393 9.64338
+20
+40 40
+43.5269 39.0981
+46.7616 40.1266
+49.9519 42.1095
+52.072 44.7479
+52.1711 48.2381
+48.6259 50.3109
+44.2202 50.3256
+40.1103 47.7534
+37.0798 44.5985
+44 44
+39.5406 43.5089
+35.4361 42.5729
+31.7026 40.1083
+28.5123 36.9668
+25.2715 34.5164
+26.1022 31.0538
+30.0274 28.9214
+36.6132 30.4191
+42.1159 33.9338
+```
+
+#### Output
+
+- Time: 0.509085s
+
+```
+20
+   2   2
+   3   3
+   4   4
+   5   5
+   6   6
+   7   7
+   8   8
+   9   9
+  10  10
+  11  11
+  12  12
+  13  13
+  14  14
+  15  15
+  16  16
+  17  17
+  18  18
+  19  19
+  20  20
+   1   1
+```
+
+#### Visualize
+
+<center>
+<img style="border-radius: 0.3125em;
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+src="img/Figure_8.png">
+  <br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 2px;">figure 3.4</div>
+</center>
+
+## Boundary Test
+
+### Upper bound number of matching points (Not Ideal)
+
+> - Environment:
+>   - Section C
+>   - Size: 100
+>
+> - Result:
+>   - Pass
+>   - Time: 15418.6s
+>
+> <center>
+> <img style="border-radius: 0.3125em;
+> box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+> src="img/Figure_10.png">
+>   <br>
+> <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+> display: inline-block;
+> color: #999;
+> padding: 2px;">figure 3.5</div>
+> </center>
+>- As you can see, the effect is not ideal. That's because Voting Tree actually disrupted the geometric logical relationship between points. Because of the huge number of noise points, many points are matched successfully unexpectedly. Then the result becomes unacceptable.
+
+### Lower bound number of matching points (Pass)
+> Note: In order to allow the size to be 3, we should set the $CCL$ to 3 for this case.
+>
+> - Environment:
+>   - Section A
+>   - Size: 3
+> - Result:
+>   - Pass
+>   - Time: 2.5e-05s
+>
+> <center>
+> <img style="border-radius: 0.3125em;
+> box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+> src="img/Figure_9.png">
+>   <br>
+> <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+> display: inline-block;
+> color: #999;
+> padding: 2px;">figure 3.6</div>
+> </center>
 
 
 
@@ -914,9 +1510,164 @@ matchAccordingTalbe{
 
 # Chapter 4: Analysis and Comments
 
+## Time Complexity Analysis
 
+### 下界 | Lower Bound
 
+> 下界情况即所有策略都失配，即每次枚举到深度为 3 时都判断失败。
+>
+> 假设 $A$ 图有 $n$ 个点，$B$ 图有 $m$ 个点：
+>
+> - 对于根 $(i, j)$，$T_{lower}(i,j) = \Omega(C_{n-i}^{3}C_{m-1}^{3})=\Omega(\frac{(n-i)(n-i-1)(n-i-2)}{1\times 2\times 3}\frac{(m-1)(m-2)(m-3)}{1\times 2\times 3})=\Omega((n-i)^3m^3)$；
+> - 求和得 $\sum_{i=1}^{n}\sum_{j=1}^{m} T_{lower}(i,j) = \Omega(\sum_{i=1}^{n}\sum_{j=1}^{m}(n-i)^3m^3)=\Omega(m^4\sum_{k=0}^{n-1} k^3)=\Omega(m^4n^4)$；
 
+---
 
+> The lower bound case is that all strategies are mismatched, that is, each time the enumeration reaches a depth of 3, the judgment fails.
+> 
+> Suppose the $A$ graph has $n$ points and the $B$ graph has $m$ points:
+>
+> - For the root $(i, j)$, $T_{lower}(i,j) = \Omega(C_{n-i}^{3}C_{m-1}^{3})=\Omega(\ frac{(n-i)(n-i-1)(n-i-2)}{1\times 2\times 3}\frac{(m-1)(m-2)(m-3)}{1\times 2\ times 3})=\Omega((n-i)^3m^3)$.
+> - Sum to get $\sum_{i=1}^{n}\sum_{j=1}^{m} T_{lower}(i,j) = \Omega(\sum_{i=1}^{ n}\sum_{j=1}^{m}(n-i)^3m^3)=\Omega(m^4\sum_{k=0}^{n-1} k^3)=\Omega(m ^4n^4)$.
+>
 
+### 上界 | Upper Bound
+
+> 上界即 Section A 的情况，完全匹配。
+>
+> 假设 $A$ 图有 $n$ 个点，$B$ 图有 $m$ 个点：
+>
+> - 对于根 $(i,j)$，可以发现，对于 $A$ 图来说，我们只需要数从起点出发，最终到达 $A$ 图最后一个点的路径个数即可，因为任意不以最后一个点为结尾的路径，都可以扩展为到大 $A$ 的路径，而实际上这一步也会被优化进这一条扩展的路径中。所以 $T_{upper}(i,j)=\Omicron(\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^{k}C_{m-1}^{3})=\Omicron(m^3\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^k)$
+> - 求和得 $\sum_{i=1}^{n}\sum_{j=1}^{m}T_{upper}(i,j) = \Omicron(m^4\sum_{i=1}^{n}\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^{k})$
+>
+> ---
+>
+> The upper bound is the case of Section A, which matches exactly.
+>
+> Suppose the $A$ graph has $n$ points and the $B$ graph has $m$ points:
+>
+> - For the root $(i,j)$, it can be found that for the $A$ graph, we only need to count the number of paths starting from the starting point and finally reaching the last point of the $A$ graph. The path that ends with the last point can be extended to a path to the big $A$, and in fact this step will also be optimized into this extended path. So $T_{upper}(i,j)=\Omicron(\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^{k}C_{m-1}^{3})=\Omicron(m^3\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^k)$
+> - Sum to get $\sum_{i=1}^{n}\sum_{j=1}^{m}T_{upper}(i,j) = \Omicron(m^4\sum_{i=1}^{n}\sum_{k=CLL-2}^{n-i-1}C_{n-i-1}^{k})$
+
+## Space Complexity Analysis
+
+> 从原理上来说，我们可能需要维护一个和复杂度大小类似的树。但是实际上我们需要维护的只有正在搜索中的那一条“树枝”，即从根到当前节点的路径。对于之前的路径，我们不再需要他们，而对于之后的路径，我们只需要在枚举到他们的时候再处理即可。所以实际上我们不需要一个树状的数据结构，而是需要使用一个栈来存储当前的状态，在回溯时弹出，在深入时压栈即可。而这个栈的空间为 $\Theta(min(m,n))$。
+>
+> 此外，我们还需要一个二维表来存储投票的结果，其空间为 $\Theta(mn)$。
+
+---
+
+> In principle, we may need to maintain a tree of similar size and complexity. But in fact, all we need to maintain is the "branch" that is being searched, that is, the path from the root to the current node. For the previous paths, we no longer need them, and for the later paths, we only need to process them when they are enumerated. So in fact, we don't need a tree-like data structure, but need to use a stack to store the current state, pop it up when backtracking, and push the stack when it goes deep. And the space of this stack is $\Theta(min(m,n))$.
+>
+> In addition, we also need a two-dimensional table to store the voting results, and its space is $\Theta(mn)$.
+
+## Comments
+
+### STL 容器复现 | STL Containers Reproduction
+
+> 本项目中使用了 `vector` 容器，现给出我的复现，接口名称可能不一样，但是核心逻辑已经给出。
+
+---
+
+> The `vector` container is used in this project, and now my reproduction is given. The interface name may be different, but the core logic has been given.
+
+> ```cpp
+> template <class T>
+> class Vector{
+> public:
+>   	// creates an empty vector
+>     Vector(){
+>         m_nSize = m_nCapacity = 0;
+>         m_pElements = nullptr;
+>     }
+>   	// creates a vector for holding 'size' elements
+>     Vector(int size){
+>         m_nSize = 0;
+>         m_nCapacity = size;
+>         m_pElements = new T[size];
+>     }
+>   	// the copy C'tor
+>     Vector(const Vector& r){
+>         this->m_nSize = r.m_nSize;
+>         this->m_nCapacity = r.m_nCapacity;
+>         this->m_pElements = new T[r.m_nSize];
+>         for(int i = 0;i < this->size();++i){
+>             *(this->m_pElements + i) = *(r.m_pElements + i);
+>         }
+>     }
+>   	// destructs the vector 
+>     ~Vector(){
+>         delete[] m_pElements;
+>         std::cout << "D'tor done\n";
+>     }
+>   	// accesses the specified element without bounds checking
+>     T& operator[](int index){
+>         return *(m_pElements + index);
+>     }
+>   	// accesses the specified element, throws an exception of type 'std::out_of_range' when index <0 or >=m_nSize
+>     T& at(int index){
+>         if(0 <= index && index < m_nSize){
+>             return (*this)[index];
+>         } else {
+>             throw std::out_of_range("index out of range");
+>         }
+>     }
+>     // return the size of the container
+>     int size() const{
+>         return this->m_nSize;
+>     }
+>   	// adds an element to the end
+>     void push_back(const T& x){
+>     if(m_nSize == m_nCapacity) this->inflate();
+>         *(m_pElements + m_nSize++) = x;
+>     }
+>   	// clears the contents
+>     void clear(){
+>         this->m_nSize = 0;
+>     }
+>   	// checks whether the container is empty 
+>     bool empty() const{
+>         return m_nSize == 0;
+>     }
+> private:
+>   	// expand the storage of the container to a new capacity, e.g. 2*m_nCapacity
+>     void inflate(){                
+>         m_nCapacity <<= 1;
+>         T *tmp = new T[m_nCapacity];
+>         for(int i = 0;i < m_nSize;++i){
+>             *(tmp + i) = *(m_pElements + i);
+>         }
+>         delete[] m_pElements;
+>         m_pElements = tmp;
+>     }
+>   	// pointer to the dynamically allocated storage
+>     T *m_pElements;
+>   	// the number of elements in the container
+>     int m_nSize;
+>   	// the number of elements that can be held in currently allocated storage
+>     int m_nCapacity;
+> };
+> ```
+
+### 优化 | Optimization
+
+> 正如我在`2.2.1` 和 `3.4` 中提到的，对于 “从表中找到匹配路径” 这件事，我们可以查找 “邻域方差函数” 的突变点来找到数据团的分割点，即按照数据的数量级，对数据进行聚类。现给出 “邻域方差函数”  的定义如式 $(3)$。
+>
+> 如果一个地方突变了，那么在这个突变点附近，“邻域方差函数” 的图像在此处将会出现一个凸起。通过寻找这种凸起，即可找到突变点。当然，实际情况需要根据数据的特征调整判断凸起的敏感度。
+>
+> 得到突变点后，就可以将表格中的值分为离散的若干类，其中较低的几类应当是大量噪点，较高的几类则是若干能够匹配上的特征图形。
+
+---
+
+> As I mentioned in `2.2.1` and `3.4`, for the "find matching path from the table" thing, we can look for the mutation point of the "neighborhood variance function" to find the split point of the data blob, That is, according to the order of magnitude of the data, the data is clustered. Now the definition of "neighborhood variance function" is given as formula $(3)$.
+>
+> If a place is mutated, the graph of the "Neighborhood Variance Function" will have a bulge near the mutation point. By looking for this bulge, the point of mutation can be found.
+>
+> After reaching the mutation point, the values in the table can be divided into several discrete categories, the lower categories should be a lot of noise, and the higher categories are some feature patterns that can be matched.
+
+---
+
+$$
+f(n) = \sqrt{\frac{\sum_{i=n-n_\delta }^{n+n_\delta }(a_n-\overline{\theta(n,n_\delta )})^2}{(2\cdot n_\delta)}}\;\;,\;\;\;\overline{\theta(n,n_\delta )} = \sum_{i=n-n_\delta }^{n+n_\delta }a_n
+$$
 
