@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <vector>
 #include <random>
+#include <ctime>
 
 #include "../../lib/meta_data.h"
 

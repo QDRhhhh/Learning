@@ -391,7 +391,7 @@ classDiagram
 > |-|-|-|
 > |可信下界| 能够被认为是合法的最小的点的数量 |5|
 ---
-> 此外，类似的，我们还将给出几个常数的定义，这些参数的具体取值在运行前是可以修改的，在运行时是固定的。（如果您认为不理想，可以尝试**在接口外部**修改这些常数。）
+> In addition, similarly, we will give the definitions of several constants whose specific values of the parameters are modifiable before the runtime and fixed at runtime. (You can try to modify these constants outside the interface if you find them undesirable.)
 > | Param's Name   | Description                                           | Adopted |
 > |-|-|-|
 > |Credible Lower Limit(CLL)| The minimum number of points that can be considered legitimate. |5|

@@ -9,6 +9,8 @@ workDir=$(cd "$(dirname "$0")";pwd)
 cd $workDir
 
 mkdir -p test_data || true
+mkdir -p results || true
+mkdir -p results_tmp || true
 
 echo "  <<< Generating data... >>>"
 
@@ -31,7 +33,9 @@ do
     echo "   = Section [ $section ]..."
     ./solver.exe < ./test_data/$section.in > ./test_data/$section.out
     echo ./test_data/$section > cache
-    python3  ./painter/painter.py < cache
+    python  ./painter/painter.py < cache
+    mkdir -p ./results/$section
+    mv results_tmp/* ./results/$section/
 
 done
 

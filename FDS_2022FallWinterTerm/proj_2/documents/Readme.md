@@ -1,4 +1,6 @@
 > I had already prepared files compiled for Mac. They are in `./execute_file`.
+> In documents directory, the origin version of this file is provied. Check it if you can't run.
+
 
 # Requirements
 
@@ -31,20 +33,28 @@ In order to run all the module in the project, you are supposed to have those en
 - Then you should see following logs:
 
 ```
-You are supposed to run this scrips with bash!
-Start compiling algorithm codes!
-Done!
-Start generating test data!
-Done!
-Start testing codes! Don't edit output.txt!
-Check out the answer while N = 5!
-Accept!
-Check out the answer while N = 10!
-Accept!
-Check out the answer while N = 15!
-Accept!
-......
+<<< Compiling solver... >>>
+<<< Finish! >>>
+<<< Compiling judger... >>>
+<<< Finish! >>>
+<<< Judging... >>>
+  <<< Generating data... >>>
+   = Section [ A ]...
+   = Done.
+   = Section [ B ]...
+   = Done.
+   = Section [ C ]...
+   = Done.
+   = Section [ D ]...
+   = Done.
+  <<< Finish! >>>
+  <<< Testing... >>>
+   = Section [ A ]...
+ Test case 1 Start.
+	...
 ```
+
+And the result will be put in the `src/judger/result` directory and `src/judger/test_data/*.out` files.
 
 ## Clear useless files.
 
