@@ -39,3 +39,6 @@
 
 # zip files
 *.zip
+
+# .DS_Score
+.DS_Store

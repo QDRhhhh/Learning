@@ -1512,6 +1512,11 @@ padding: 2px;">figure 3.4</div>
 
 ## Time Complexity Analysis
 
+> 由于时间复杂度主要由 DFS 部分贡献，所以这里主要讨论的是前半部分的时间复杂度。至于后半部分的，从表中得到最佳匹配路径的部分，由于其结构简单，且具有对称性，所以很容易得到其复杂度为 $\Omicron(min(m,n)mn)$。
+---
+> Since the time complexity is mainly contributed by the DFS part, the main discussion here is the time complexity of the first half. As for the second half, the part of getting the best matching path from the table, its complexity is easily obtained as $\Omicron(min(m,n)mn)$ due to its simple structure and symmetry.
+
+
 ### 下界 | Lower Bound
 
 > 下界情况即所有策略都失配，即每次枚举到深度为 3 时都判断失败。
