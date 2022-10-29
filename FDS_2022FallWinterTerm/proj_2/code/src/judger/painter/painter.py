@@ -75,6 +75,7 @@ def foo():
             plt.plot([xxA[i], xxB[i]], [yyA[i], yyB[i]], color=(0.6*i/numOut+0.3, 0.95, 0.9-0.6*i/numOut), linestyle = 'dashed', linewidth=0.5)
         
         plt.show()
+        plt.savefig('result.png')
 
     fin.close()
     fout.close()
