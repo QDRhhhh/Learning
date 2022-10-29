@@ -1,17 +1,15 @@
 import matplotlib.pyplot as plt
-import numpy as np
-import warnings
-import copy
 
 def foo():
-    warnings.filterwarnings('ignore')
     # read in the data
     filename = input()
     fin = open(filename + ".in", "r")
     fout = open(filename + ".out", "r")
     # T test cases
     T = int(fin.readline())
+    id = 0
     while T != 0:
+        id = id + 1
         T -= 1
         # initialization
         xA = []; yA = []; xB = []; yB = []
@@ -74,9 +72,12 @@ def foo():
             plt.plot([xxB[i], xxB[i+1]], [yyB[i], yyB[i+1]], color=(0.6*i/numOut+0.3, 0.95, 0.9-0.6*i/numOut), linewidth=2.5)
             plt.plot([xxA[i], xxB[i]], [yyA[i], yyB[i]], color=(0.6*i/numOut+0.3, 0.95, 0.9-0.6*i/numOut), linestyle = 'dashed', linewidth=0.5)
         
-        plt.show()
-        plt.savefig('result.png')
+        # plt.show()
+        path = './results_tmp/' + str(id) + '.png'
+        print(path)
+        plt.savefig(path)
 
     fin.close()
     fout.close()
+
 foo()
