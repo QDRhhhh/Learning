@@ -112,7 +112,7 @@ private:
     MatchReferee &judger2;
     std::vector< std::pair<int,int> > optimalMatch;
     int credibleLowerLimit; // At least 3. Because any 2points-2points pair will match.
-    double mutationRatio; // The ratio of the mutation in 'matchAccordingTalbe' progress.
+    double mutationRatio; // The ratio of the mutation in 'matchAccordingTable' progress.
 
     /* 
      * <[ Class Methods Defination ]>
@@ -206,7 +206,7 @@ public:
     /* 
      * <[ Class Methods Defination ]>
      * [ Method Name ]:
-     * - VotingTree::matchAccordingTalbe()
+     * - VotingTree::matchAccordingTable()
      * [ Belonging Class ]:
      * - VotingTree
      * [ Description ]:
@@ -217,9 +217,9 @@ public:
      * - [ Return Description ]:
      * - - No params.
      * [ Usage ]:
-     * - "vt.matchAccordingTalbe()" will do the things above.
+     * - "vt.matchAccordingTable()" will do the things above.
      */
-    void matchAccordingTalbe();
+    void matchAccordingTable();
 
     /* 
      * <[ Class Methods Defination ]>

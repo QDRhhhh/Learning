@@ -215,10 +215,10 @@ Table2D VotingTree::getVotingTable(){
 }
 
 // // Detail comments are in `.h` file!
-// void VotingTree::matchAccordingTalbe(){
+// void VotingTree::matchAccordingTable(){
 //     // Reset the result space.
 //     this->optimalMatch.clear();
-//     // The vector to store the elements in talbe.
+//     // The vector to store the elements in table.
 //     std::vector<MatchPair> vec;
 //     // The set data structure to note whether the point is visited.
 //     std::set<int> visA, visB;
@@ -252,7 +252,7 @@ Table2D VotingTree::getVotingTable(){
 // }
 
 // Detail comments are in `.h` file!
-void VotingTree::matchAccordingTalbe(){
+void VotingTree::matchAccordingTable(){
     // Reset the result space.
     this->optimalMatch.clear();
     auto & vt = this->votingTable; 
@@ -344,7 +344,7 @@ void VotingTree::dealOptimalMatch(){
     // Search the matching programmes with dfs and initialize the voting table.
     this->searchAndVote();
     // Calculate the answer from the table.
-    this->matchAccordingTalbe();
+    this->matchAccordingTable();
     return;
 }
 

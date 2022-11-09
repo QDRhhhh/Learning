@@ -31,7 +31,8 @@
 *.out
 *.app
 
-# VSC files
+# editor
+.obsidian
 *.vscode
 
 # Log files
